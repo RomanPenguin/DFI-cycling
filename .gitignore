@@ -2402,3 +2402,5 @@
 .venv/lib/python3.8/site-packages/yaml/__pycache__/serializer.cpython-38.pyc
 .venv/lib/python3.8/site-packages/yaml/__pycache__/tokens.cpython-38.pyc
 .vscode/launch.json
+.vscode/settings.json
+transcript.csv
