@@ -22,3 +22,13 @@ You have to register an AWS account, and you will require to put in your credit 
 There are free tiers to test out the services, 60 minutes free per month for 12 months. 
 follow the guide here to set up https://docs.aws.amazon.com/transcribe/latest/dg/getting-started-python.html.
  
+
+ # Voice Activity Detection
+ You may choose to use Voice Activity Dectection (VAD) to reduce cost for cloud transcription. See https://github.com/NickWilkinson37/voxseg for more details about the implementation used 
+ @inproceedings{cnnbilstm_vad,
+    title = {A hybrid {CNN-BiLSTM} voice activity detector},
+    author = {Wilkinson, N. and Niesler, T.},
+    booktitle = {Proc. IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)},
+    year = {2021},
+    address = {Toronto, Canada},
+}
