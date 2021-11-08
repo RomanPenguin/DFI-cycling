@@ -52,8 +52,8 @@ def main(argv):
     transcribe.start_transcription_job(
         TranscriptionJobName=job_name,
         Media={'MediaFileUri': job_uri},
-        MediaFormat='mp3',
-        LanguageCode='en-US'
+        MediaFormat='mp3',           # MediaFormat='mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm',
+        LanguageCode='en-AU'
     )
 
     #waiting for async response
