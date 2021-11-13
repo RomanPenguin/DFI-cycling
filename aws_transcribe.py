@@ -4,6 +4,7 @@ import boto3
 import json
 from urllib.request import urlopen
 import csv
+import json
 import sys, getopt
 import logging
 from botocore.exceptions import ClientError
@@ -67,14 +68,20 @@ def main(argv):
 
     #save transcription as json
     result_url=status["TranscriptionJob"]["Transcript"]["TranscriptFileUri"]
+
     #print(result_url)
     response=urlopen(result_url)
+
     data_json = json.loads(response.read())
+    individual_word_analysis=data_json["results"]["items"]
+
+    # csv header
+    fieldnames = ['start_time', 'end_time', 'alternatives', 'type']
     #print(data_json)
-    with open(outputFilePath, 'a+') as csv_file:  
-        writer = csv.writer(csv_file)
-        for key, value in data_json.items():
-            writer.writerow([key, value])
+    with open(outputFilePath+".csv", 'w', encoding='UTF8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(individual_word_analysis)
 
 def upload_file(file_name, bucket, object_name=None):
     """Upload a file to an S3 bucket
