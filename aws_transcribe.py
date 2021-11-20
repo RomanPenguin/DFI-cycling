@@ -32,6 +32,18 @@ def main(argv):
     print('Output file is "' + outputFilePath)
     inputFileName = os.path.basename(inputFilePath)
 
+    filename, file_extension = os.path.splitext(inputFilePath)
+    audio_format=str(file_extension)
+    accepted_format = ["mp3","mp4","wav","flac","ogg","amr","webm"]
+    if audio_format[1:] in accepted_format:
+        print("audio format accepted")
+    else:
+        print("audio format not supported please convert to mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm'")
+        sys.exit()
+
+        
+
+
     
     s3 = boto3.client('s3')
     create_bucket("text-transcribe-test")
@@ -48,12 +60,13 @@ def main(argv):
         transcribe.delete_transcription_job(
                     TranscriptionJobName=job_name
                 )
+        timer_begin=time.perf_counter()
     except:
         print("no existing job name clash")            
     transcribe.start_transcription_job(
         TranscriptionJobName=job_name,
         Media={'MediaFileUri': job_uri},
-        MediaFormat='mp3',           # MediaFormat='mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm',
+        MediaFormat=audio_format[1:],           # MediaFormat='mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm',
         LanguageCode='en-AU'
     )
 
@@ -67,6 +80,8 @@ def main(argv):
     print(status)
 
     #save transcription as json
+    timer_end = time.perf_counter()
+    print("total time taken in seconds is "+str(timer_end-timer_begin))
     result_url=status["TranscriptionJob"]["Transcript"]["TranscriptFileUri"]
 
     #print(result_url)
@@ -74,6 +89,7 @@ def main(argv):
 
     data_json = json.loads(response.read())
     individual_word_analysis=data_json["results"]["items"]
+    paragraphed_result=data_json["results"]["transcripts"][0]["transcript"]
 
     # csv header
     fieldnames = ['start_time', 'end_time', 'alternatives', 'type']
@@ -82,6 +98,9 @@ def main(argv):
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(individual_word_analysis)
+
+    with open(outputFilePath+".txt","w") as f:
+        f.write(paragraphed_result)
 
 def upload_file(file_name, bucket, object_name=None):
     """Upload a file to an S3 bucket
