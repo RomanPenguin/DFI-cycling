@@ -17,7 +17,10 @@ def transcribe_file(speech_file):
         # encoding=speech.RecognitionConfig.AudioEncoding.FLAC,
         sample_rate_hertz=44100,
         language_code="en-US",
-        audio_channel_count=2
+        audio_channel_count=2,
+        enable_word_confidence="true",
+        enable_automatic_punctuation="true",
+        use_enhanced="true"
     )
 
 

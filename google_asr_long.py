@@ -1,7 +1,5 @@
 from google.cloud import storage
 
-from google_tts_short import transcribe_file
-
 
 def create_bucket_class_location(bucket_name):
     """Create a new bucket in specific location with storage class"""
@@ -54,15 +52,19 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
 
 def transcribe_gcs(gcs_uri):
     """Asynchronously transcribes the audio file specified by the gcs_uri."""
-    from google.cloud import speech
+    from google.cloud import speech_v1p1beta1 as speech
 
     client = speech.SpeechClient()
 
     audio = speech.RecognitionAudio(uri=gcs_uri)
     config = speech.RecognitionConfig(
-        encoding=speech.RecognitionConfig.AudioEncoding.FLAC,
+        encoding=speech.RecognitionConfig.AudioEncoding.MP3,
+        sample_rate_hertz=44100,
         audio_channel_count=2,
         language_code="en-AU",
+        enable_word_confidence=True,
+        enable_automatic_punctuation=True,
+        use_enhanced=True
     )
 
     operation = client.long_running_recognize(config=config, audio=audio)
@@ -81,6 +83,6 @@ def transcribe_gcs(gcs_uri):
 # print("deleted bucket")
 # create_bucket_class_location("tts-test-dfi")
 # print("bucket created")
-upload_blob("tts-test-dfi","data/ben1.flac","ben1.flac")
+upload_blob("tts-test-dfi","data/ben1.mp3","ben1.mp3")
 print("file uploaded")
-transcribe_gcs("gs://tts-test-dfi/ben1.flac")
+transcribe_gcs("gs://tts-test-dfi/ben1.mp3")
