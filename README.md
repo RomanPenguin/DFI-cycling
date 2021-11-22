@@ -26,8 +26,14 @@ Since this is an async operation, the audio files will be uploaded and stored te
 
 Following documentation assumes AWS is the implementation used and I recommend AWS over Google TTS for this use case. 
 
- # Voice Activity Detection
- You may choose to use Voice Activity Dectection (VAD) to reduce cost for cloud transcription. See https://github.com/NickWilkinson37/voxseg for more details about the implementation. This feature is currently not used and is under development. 
+## Audio pre-processing: best practices for improved results
+- sampling rate 16KHz or better is preferred 
+- losses codec such as FLAC or LINEAR16 is preferred 
+- Do not apply noise cancelling or reduction before sending to Google 
+- Use custom dictionaries for better results for commonly misheard words or proper nouns or phrases
+- Do not use automatic gain control 
+- avoid clipping 
+
 
 # Emotion Analysis 
 Emotion analysis is carried out with the deepface framework. (https://github.com/serengil/deepface) It provides robust feature sets including age, gender, race and emotion. Only emotion is used to speed up the detection. Current implementation takes a video and pulls out one frame per second and provides a prediction on the emotion exhibited. This can run on most video format. 
@@ -41,6 +47,18 @@ example use transcribing an audio file called ben1.mp3 from data subfolder and s
 
     aws_transcribe.py -i data/ben1.mp3 -o output/transcipt.txt
 
+
+## Google Transcription
+There are two options for Google ASR, one is for audio clips less than 1 minute in length, which can be directly sent to Google for transcription. Any clips longer than 1 minute will require the clip to be first uploaded to a storage bucket then start async compute for a result. 
+
+short clip:
+    
+
+
 ## Emotion Detection
     emotion_detection_deepface.py -i face_video.wmv -o output/face_video_frames 
 this function takes two arguments, input video file and output files location. Similar to AWS transcription with one key difference: it will generate image files alongside the emotion prediction to allow for human verification of the face.
+
+ # Voice Activity Detection
+ You may choose to use Voice Activity Dectection (VAD) to reduce cost for cloud transcription. See https://github.com/NickWilkinson37/voxseg for more details about the implementation. This feature is currently not used and is under development. 
+
