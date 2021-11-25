@@ -37,7 +37,7 @@ def main(argv):
     while True:
         vidcap.set(cv2.CAP_PROP_POS_MSEC,(count*1000))    # added this line 
         success,image = vidcap.read()
-        if success ==False :
+        if success ==False:
             break 
         print ('Read a new frame: ', success)
         framesList.append(image)
@@ -48,8 +48,13 @@ def main(argv):
     obj = df.analyze(img_path = framesList, actions = ['emotion'],enforce_detection= False)
     print(obj)
 
-    obj = {'obj': obj}
+    dominantEmotions =[]
+    secondaryEmotions =[]
+    
+    for instance in obj: #iterate through each frame and pick domininant emotions to add to a list 
+        dominantEmotions.append(obj[instance]['dominant_emotion'])
 
+    obj = {'obj': obj}
     with open(outputFilePath+'_emotions.txt', 'w') as file:
         file.write(json.dumps(obj)) # use `json.loads` to do the reverse
     file.close()

@@ -117,6 +117,12 @@ def main(argv):
     with open(outputFilePath+".txt","w") as f:
         f.write(paragraphed_result)
 
+    with open(outputFilePath+"_sentences.txt",'w') as f:
+        for items in sentences_and_times_1:
+            print(items,file=f)
+    
+
+
 def upload_file(file_name, bucket, object_name=None):
     """Upload a file to an S3 bucket
 
@@ -269,8 +275,9 @@ def show_conf_hist(all_scores):
     plt.title('Distribution of confidence scores')
     plt.xlabel('Confidence score')
     plt.ylabel('Frequency')
-
     plt.show()
+
+    
 
 def show_low_conf(all_scores):
     THRESHOLD = 0.4
@@ -284,8 +291,8 @@ def show_low_conf(all_scores):
     plt.title(f'Distribution of confidence scores less than {THRESHOLD}')
     plt.xlabel('Confidence score')
     plt.ylabel('Frequency')
-
     plt.show()
+    
 
 if __name__ == "__main__":
    main(sys.argv[1:])
