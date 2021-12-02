@@ -1,18 +1,32 @@
 from __future__ import print_function
-from deepface import DeepFace as df
-import argparse
-import time
-import json
-from urllib.request import urlopen
-import sys, getopt
-import os
-import cv2
+
 import csv
-from datetime import datetime
-from datetime import timedelta
+import getopt
+import json
+import os
+import sys
+from datetime import datetime, timedelta
+import time
+import cv2
+from deepface import DeepFace as df
+
 ms_delay = 1000 # Change this to increase or decrease the frame emotion sampling rate
 def creation_date(path_to_file):
-    return os.path.getmtime(path_to_file)
+    return os.path.getctime(path_to_file)
+
+
+def starting_time_from_title(file_name):
+    print(f"double checking the passing through went smoothly: {file_name}\n")
+    day = int(file_name[0:2])
+    month = int(file_name[2:4])
+    year = int(file_name[4:8])
+    hours = int(file_name[8:10])
+    minutes = int(file_name[10:12])
+    seconds = int(file_name[12:14])
+    print(f"day:{day} month: {month} year: {year}\n")
+    combined = datetime(year,month,day,hours,minutes, seconds)
+
+    return combined
 
 def main(argv):
     inputFilePath = ''
@@ -62,8 +76,15 @@ def main(argv):
     # Tyler code addition
     # This section pulls the creation or modified date of the video files being analysed and converts it into readable format
     # It also adds a variable (currently 1000ms) of time to the time variable for each frame
-    creation = creation_date(r"face_video.wmv")
-    initial_timestamp = datetime.fromtimestamp(creation)#.strftime('%H:%M:%S')
+    # Can use inputFilePath from earlier to save on redundant code
+
+    start_time = starting_time_from_title(inputFilePath)
+    # This section is somewhat shelved for now as the creation and modified date is unreliable
+    # creation = creation_date(file_name)
+    # print(f"Entire date and time pulled: {datetime.fromtimestamp(creation).strftime('%d/%m/%y , %H-%M-%S')}\n")
+    #initial_timestamp = datetime.fromtimestamp(start_time)#.strftime('%H:%M:%S')
+    initial_timestamp = time.mktime(start_time.timetuple()) #converting to uint_32 to add time and then convert for the csv work
+    initial_timestamp = datetime.fromtimestamp((initial_timestamp))
     additional_time = timedelta(seconds = ms_delay/1000) # adding 1 second with the division but keeping the variables consistent
     list_length = len(dominantEmotions)
     times = []
