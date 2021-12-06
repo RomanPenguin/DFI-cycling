@@ -1,0 +1,36 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>DFI_DataCollection</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-blue-50 font-serif leading-normal tracking-normal">
+		<div class="container mx-auto">
+			<section class="flex items-center justify-center h-20">
+				<h1 class="text-5xl text-blue-400">DFI Data Collection Portal</h1>
+			</section>
+		</div>
+
+
+<div class="container mx-auto bg-blue-50">
+    {% if latest_session_list %}
+<ul>
+{% for session in latest_session_list %}
+<li><a href="{% url 'awstranscription:detail' session.sessionID %}">{{ session.participantID }}</a></li>    {% endfor %}
+</ul>
+{% else %}
+<p>No sessions are available.</p>
+{% endif %}
+</div>
+	</body>
+</html>
+
+
+
+
+
