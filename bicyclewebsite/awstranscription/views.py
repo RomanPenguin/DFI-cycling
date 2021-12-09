@@ -1,15 +1,15 @@
 from django import http
 from django.shortcuts import render
 from django.template import loader
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 # Create your views here.
 from django.views import generic 
 from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
-
-from .models import RecordingSession
-
+from django import forms 
+from .models import AudioInput, RecordingSession
+from django.forms import ModelForm
 
 def index(request):
     latest_session_list=RecordingSession.objects.order_by('-participantID')[:5]
@@ -25,6 +25,25 @@ def detail(request, sessionID):
     return render(request, 'awstranscription/detail.html', {'session': session})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
-def upload(request, sessionID):
+def upload(request,sessionID):
+    class UploadForm(ModelForm):
+        class Meta:
+            model = AudioInput
+            fields = '__all__'
+
+    if request.method == 'POST':
+        form = UploadForm(request.POST, request.FILES)
+        
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('awstranscription:detail', args=(sessionID,))) 
+    else:
+        form = UploadForm()
+
+    return render(request, "awstranscription/upload.html", {
+        "form": form,
+        "sessionID": sessionID
+        
+    })
     return HttpResponse("you are looking at the upload page for session %s" % sessionID)
 
