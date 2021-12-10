@@ -10,6 +10,10 @@ class RecordingSession(models.Model):
     def __str__(self):
         return self.sessionID
     
+    def __iter__(self):
+       ''' Returns the Iterator object '''
+       return RecordingSession(self)
+    
     def was_published_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
@@ -17,7 +21,7 @@ class RecordingSession(models.Model):
 class AudioInput(models.Model):
     fileName=models.CharField(max_length=200)
     recordedTime=models.DateTimeField('date recorded')
-    recordingSession=models.ForeignKey(RecordingSession,on_delete=models.CASCADE)
+    recordingSession=models.OneToOneField(RecordingSession,on_delete=models.CASCADE)
     media = models.FileField(upload_to='media',null=True, blank=True)    
     def __str__(self):
         return self.fileName
@@ -26,7 +30,7 @@ class AudioInput(models.Model):
 class VideoInput(models.Model):
     filename=models.CharField(max_length=200)
     recordedTime=models.DateTimeField('date recorded')
-    recordingSession= models.ForeignKey(RecordingSession, on_delete=models.CASCADE)
+    recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
     media = models.FileField(upload_to="media", null=True, blank=True)      
     def __str__(self):
         return self.filename

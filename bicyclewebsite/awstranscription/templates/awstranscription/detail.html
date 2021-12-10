@@ -1,15 +1,33 @@
 {% extends "base.html" %}
 
-{% block title %}My amazing blog{% endblock %}
+{% block title %}detail{% endblock %}
 
 {% block content %}
-<h1>{{ session.participantID }}</h1>
-<ul>
 
-    <li>{{ session.participantID }}</li>
+		<div class="container mx-auto bg-blue-50 pl-2 justify-center">
+            <table>
+                <tr>
+                    <th>Field</th><th>Value</th>
+                </tr>
+                <tr>
+                    <td>session ID</td>
+                    <td>{{ session.sessionID }}</td>
+                </tr>
+        
+                 <tr>   
+                    <td>Audio File</td>
+                    <td>{{ audioInput.fileName }}</td>
+                </tr>
+                
+            </table>
+            hello
+        </div>
 
-</ul>
-{% endblock %}
+
+        {% endblock %}
+
+
+
 
 
 

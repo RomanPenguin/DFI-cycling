@@ -8,7 +8,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
 from django import forms 
-from .models import AudioInput, RecordingSession
+from .models import AudioInput, RecordingSession, VideoInput
 from django.forms import ModelForm
 
 def index(request):
@@ -20,9 +20,14 @@ def index(request):
 def detail(request, sessionID):
     try:
         session = RecordingSession.objects.get(sessionID=sessionID)
+        
     except RecordingSession.DoesNotExist:
         raise Http404("session does not exist")
-    return render(request, 'awstranscription/detail.html', {'session': session})
+    try:
+        audio = AudioInput.objects.get(recordingSession=session)
+    except AudioInput.DoesNotExist: 
+        raise Http404("Audio file does not exist")
+    return render(request, 'awstranscription/detail.html', {'session': session, 'audioInput':audio})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
 def upload(request,sessionID):
