@@ -5,7 +5,7 @@
 {% block content %}
 
 		<div class="container mx-auto bg-blue-50 pl-2 justify-center">
-            <table>
+            <table class="table-auto">
                 <tr>
                     <th>Field</th><th>Value</th>
                 </tr>
@@ -18,9 +18,13 @@
                     <td>Audio File</td>
                     <td>{{ audioInput.fileName }}</td>
                 </tr>
+                <tr>   
+                    <td>Video File</td>
+                    <td>{{ videoInput.fileName }}</td>
+                </tr>
                 
             </table>
-            hello
+            
         </div>
 
 

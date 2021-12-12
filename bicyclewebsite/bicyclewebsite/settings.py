@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'theme',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
