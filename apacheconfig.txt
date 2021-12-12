@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+ServerAdmin webmaster@example.com
+DocumentRoot /home/openface/Documents/cycling_project/DFI-cycling/bicyclewebsite/
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+Alias /static /home/openface/Documents/cycling_project/DFI-cycling/bicyclewebsite/static
+<Directory /home/openface/Documents/cycling_project/DFI-cycling/bicyclewebsite/static>
+Require all granted
+</Directory>
+<Directory /home/openface/Documents/cycling_project/DFI-cycling/bicyclewebsite/bicyclewebsite/>
+<Files wsgi.py>
+Require all granted
+</Files>
+</Directory>
+WSGIDaemonProcess bicyclewebsite python-path=/home/openface/Documents/cycling_project/DFI-cycling/bicyclewebsite python-home=/home/openface/Documents/cycling_project/DFI-cycling/.venv
+WSGIProcessGroup bicyclewebsite
+WSGIScriptAlias / /home/openface/Documents/cycling_project/DFI-cycling/bicyclewebsite/bicyclewebsite/wsgi.py
+</VirtualHost>
