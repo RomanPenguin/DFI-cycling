@@ -1,18 +1,18 @@
 <VirtualHost *:80>
 ServerAdmin webmaster@example.com
-DocumentRoot /home/ubuntu/websiteroot/DFI-cycling/bicyclewebsite/
+DocumentRoot /home/ubuntu/webserver/DFI-cycling/bicyclewebsite/
 ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
-Alias /static /home/ubuntu/websiteroot/DFI-cycling/bicyclewebsite/static
-<Directory /home/ubuntu/websiteroot/DFI-cycling/bicyclewebsite/static>
+Alias /static /home/ubuntu/webserver/DFI-cycling/bicyclewebsite/static
+<Directory /home/ubuntu/webserver/DFI-cycling/bicyclewebsite/static>
 Require all granted
 </Directory>
-<Directory /home/ubuntu/websiteroot/DFI-cycling/bicyclewebsite/bicyclewebsite/>
+<Directory /home/ubuntu/webserver/DFI-cycling/bicyclewebsite/bicyclewebsite/>
 <Files wsgi.py>
 Require all granted
 </Files>
 </Directory>
-WSGIDaemonProcess bicyclewebsite python-path=/home/ubuntu/websiteroot/DFI-cycling/bicyclewebsite python-home=/home/ubuntu/websiteroot/websiteenv
+WSGIDaemonProcess bicyclewebsite python-path=/home/ubuntu/webserver/DFI-cycling/bicyclewebsite python-home=/home/ubuntu/webserver/DFI-cycling/servervenv
 WSGIProcessGroup bicyclewebsite
-WSGIScriptAlias / /home/ubuntu/websiteroot/DFI-cycling/bicyclewebsite/bicyclewebsite/wsgi.py
+WSGIScriptAlias / /home/ubuntu/webserver/DFI-cycling/bicyclewebsite/bicyclewebsite/wsgi.py
 </VirtualHost>
