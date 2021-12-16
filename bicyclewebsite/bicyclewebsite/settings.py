@@ -140,3 +140,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/')
 
 LOGIN_REDIRECT_URL = "awstranscription:index"
 LOGOUT_REDIRECT_URL = "login"
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
