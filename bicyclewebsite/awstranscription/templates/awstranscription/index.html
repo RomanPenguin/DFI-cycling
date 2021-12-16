@@ -14,10 +14,10 @@
 	{% for session in latest_session_list %}
 	<tr><td class="hover:underline p-2 text-center"><a href="{% url 'awstranscription:detail' session.sessionID %}" ><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit session {{ session.participantID }}</button></a></td>
 		<td class ="text-center"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">delete</button></td></tr>    {% endfor %}
-	<tr class="hover:underline"> <td class="hover:underline text-center "><button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Add New Session</button></td></tr>
+	<tr class="hover:underline"> <td class="hover:underline text-center "><a href="{% url 'awstranscription:newSession' %}"><button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Add New Session</button></a> </td></tr>
 	
 	{% else %}
-	<tr><p>No sessions are available.</p><td>add new session</td></tr>
+	<tr><p>No sessions are available.</p><td><a href="{% url 'awstranscription:newSession' %}"><button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Add New Session</button></a></td></tr>
 	{% endif %}
 		
 	</table>

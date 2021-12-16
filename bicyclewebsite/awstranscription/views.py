@@ -14,12 +14,16 @@ from django import forms
 from .models import AudioInput, RecordingSession, VideoInput
 from django.forms import ModelForm
 from django.utils.timezone import localtime
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def index(request):
     latest_session_list=RecordingSession.objects.order_by('-participantID')[:5]
     context={'latest_session_list':latest_session_list,}
     #return HttpResponse(template.render(context,request))
     return render(request, 'awstranscription/index.html', context)
 
+@login_required
 def detail(request, sessionID):
     try:
         session = RecordingSession.objects.get(sessionID=sessionID)
@@ -36,9 +40,10 @@ def detail(request, sessionID):
     except session.videoInput.DoesNotExist: 
         raise Http404("Audio file does not exist")
 
-    return render(request, 'awstranscription/detail.html', {'session': session, 'audioInput':audio})
+    return render(request, 'awstranscription/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
+@login_required
 def upload(request,sessionID):
     class UploadForm(forms.Form):
         videoUpload=forms.FileField(allow_empty_file=True)
@@ -69,6 +74,7 @@ def upload(request,sessionID):
         
     })
 
+@login_required
 def newSession(request):
     class newSessionForm(forms.Form):
         videoUpload=forms.FileField(allow_empty_file=True)
