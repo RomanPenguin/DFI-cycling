@@ -7,15 +7,35 @@ To start, make sure to have Python 3 installed https://www.python.org/downloads/
 Highly recommended: create a virtual environment before continuing, see https://docs.python.org/3/library/venv.html.
 this will help making sure packages are not in conflict with other projects.
 
-# Google Speech to Text 
-All Monash accounts have the ability to use Google Cloud services, including student and staff accounts.
-You will need to enable Google additional services for your specific account https://www.monash.edu/esolutions/email-collaboration/google-apps. 
-You might have to enter your credit card details before you can use Google Cloud. 
-$300 USD free credit is provided for you to start.
+# Website initialisation
+This project is based on Django framework for ease of use and development. There is a web interface for easy management of the participants and researchers and safekeeping of data. To set up the website to run on a local machine (this example will be for Ubuntu 20.04 LTS) use the following instructions. 
 
+## initial steps
+Make sure everything is up to date on the system:
+    sudo apt update
+    sudo apt upgrade
+Install required packages 
+    sudo apt-get install python3-pip apache2 libapache2-mod-wsgi-py3
+    sudo apt install python3.8-venv
+Install Node Version Manager since Ubuntu included Node version is very old and not compatible 
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+restart the terminal or follow on screen instructions
 
-Once you are signed into the console, you can start setting up following the steps listed here https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries.
-You can use the code provided here in this repo and the sample audio files for testing.
+## download this repo
+create a new folder 
+    mkdir webserver
+    cd webserver
+clone the repo
+    git clone https://github.com/RomanPenguin/DFI-cycling.git
+create and activate a virtual environment for keeping python packages contained within this project 
+    cd DFI-cycling
+    python3 -m venv servervenv
+    source servervenv/bin/activate
+
+## install required python modules 
+    pip install -r requirements.txt
+    
+
 
 # AWS Transcribe 
 You have to register an AWS account, and you will require to put in your credit card details. 
@@ -47,18 +67,29 @@ example use transcribing an audio file called ben1.mp3 from data subfolder and s
 
     aws_transcribe.py -i data/ben1.mp3 -o output/transcipt.txt
 
-
-## Google Transcription
-There are two options for Google ASR, one is for audio clips less than 1 minute in length, which can be directly sent to Google for transcription. Any clips longer than 1 minute will require the clip to be first uploaded to a storage bucket then start async compute for a result. 
-
-short clip:
-    
-
-
 ## Emotion Detection
     emotion_detection_deepface.py -i face_video.wmv -o output/face_video_frames 
 this function takes two arguments, input video file and output files location. Similar to AWS transcription with one key difference: it will generate image files alongside the emotion prediction to allow for human verification of the face.
 
+# Past files
+# Google Speech to Text 
+All Monash accounts have the ability to use Google Cloud services, including student and staff accounts.
+You will need to enable Google additional services for your specific account https://www.monash.edu/esolutions/email-collaboration/google-apps. 
+You might have to enter your credit card details before you can use Google Cloud. 
+$300 USD free credit is provided for you to start.
+
+
+Once you are signed into the console, you can start setting up following the steps listed here https://cloud.google.com/speech-to-text/docs/quickstart-client-libraries.
+You can use the code provided here in this repo and the sample audio files for testing.
+
+
+## Google Transcription
+There are two options for Google ASR, one is for audio clips less than 1 minute in length, which can be directly sent to Google for transcription. Any clips longer than 1 minute will require the clip to be first uploaded to a storage bucket then start async compute for a result. 
+
+Google transcription is not in use currently. 
+
+
+
  # Voice Activity Detection
- You may choose to use Voice Activity Dectection (VAD) to reduce cost for cloud transcription. See https://github.com/NickWilkinson37/voxseg for more details about the implementation. This feature is currently not used and is under development. 
+ You may choose to use Voice Activity Dectection (VAD) to reduce cost for cloud transcription. See https://github.com/NickWilkinson37/voxseg for more details about the implementation. This feature is currently not used and is not under development. 
 
