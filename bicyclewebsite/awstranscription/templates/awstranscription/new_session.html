@@ -6,7 +6,7 @@
 <form action="/awstranscription/new_session/" method="POST" enctype="multipart/form-data" class ="pl-10">
     {% csrf_token %}
     {% for entry in form %}
-       <div> 
+       <div class="pt-5"> 
             {{ entry.label_tag }}
        </div>
        <div>
@@ -14,9 +14,12 @@
            {{entry}}
        </div>
     {% endfor %}
-    <button>
-        Save!
-    </button>
+    <div class='pt-5'>
+        <button class="bg-blue-400 hover:bg-blue-800 rounded-md p-3">
+            Save!
+        </button>
+    </div>
+    
 </form>
 
 {% endblock %}
