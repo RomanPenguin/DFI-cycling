@@ -21,7 +21,7 @@ def index(request):
     latest_session_list=RecordingSession.objects.order_by('-participantID')[:5]
     context={'latest_session_list':latest_session_list,}
     #return HttpResponse(template.render(context,request))
-    return render(request, 'awstranscription/index.html', context)
+    return render(request, 'dataportal/index.html', context)
 
 @login_required
 def detail(request, sessionID):
@@ -40,7 +40,7 @@ def detail(request, sessionID):
     except session.videoInput.DoesNotExist: 
         raise Http404("Audio file does not exist")
 
-    return render(request, 'awstranscription/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video})
+    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
 @login_required
@@ -64,11 +64,11 @@ def upload(request,sessionID):
             session.videoInput = newVideoFile
             session.save()
             print("success")
-            return HttpResponseRedirect(reverse('awstranscription:detail', args=(sessionID,))) 
+            return HttpResponseRedirect(reverse('dataportal:detail', args=(sessionID,))) 
     else:
         form = UploadForm()
 
-    return render(request, "awstranscription/upload.html", {
+    return render(request, "dataportal/upload.html", {
         "form": form,
         "sessionID": sessionID
         
@@ -94,11 +94,11 @@ def newSession(request):
             newVideoFile.save()
             session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile)
             session.save()
-            return HttpResponseRedirect(reverse('awstranscription:detail', args=(form.cleaned_data['sessionID'],))) 
+            return HttpResponseRedirect(reverse('dataportal:detail', args=(form.cleaned_data['sessionID'],))) 
     else:
         form = newSessionForm()
 
-    return render(request, "awstranscription/new_session.html", {
+    return render(request, "dataportal/new_session.html", {
         "form": form,
         
         

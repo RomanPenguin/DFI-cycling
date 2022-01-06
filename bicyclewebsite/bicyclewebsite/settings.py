@@ -31,7 +31,7 @@ ALLOWED_HOSTS=['ec2-3-144-173-225.us-east-2.compute.amazonaws.com','127.0.0.1','
 # Application definition
 
 INSTALLED_APPS = [
-    'awstranscription.apps.AwstranscriptionConfig',
+    'dataportal.apps.dataportalConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tailwind',
     'theme',
+    'django_rename_app',
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -138,6 +139,6 @@ INTERNAL_IPS = [
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/')
 
 
-LOGIN_REDIRECT_URL = "awstranscription:index"
+LOGIN_REDIRECT_URL = "dataportal:index"
 LOGOUT_REDIRECT_URL = "login"
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")

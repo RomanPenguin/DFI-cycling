@@ -3,10 +3,10 @@
 {% block title %}Detail{% endblock %}
 
 {% block content %}
-<form action="/awstranscription/new_session/" method="POST" enctype="multipart/form-data" class ="pl-10">
+<form action="/dataportal/{{ sessionID }}/upload/" method="POST" enctype="multipart/form-data" class ="pl-10">
     {% csrf_token %}
     {% for entry in form %}
-       <div class="pt-5"> 
+       <div> 
             {{ entry.label_tag }}
        </div>
        <div>
@@ -14,12 +14,9 @@
            {{entry}}
        </div>
     {% endfor %}
-    <div class='pt-5'>
-        <button class="bg-blue-400 hover:bg-blue-800 rounded-md p-3">
-            Save!
-        </button>
-    </div>
-    
+    <button>
+        Save!
+    </button>
 </form>
 
 {% endblock %}
