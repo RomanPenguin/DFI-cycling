@@ -11,7 +11,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
 from django import forms 
-from .models import AudioInput, RecordingSession, VideoInput
+from .models import AudioInput, RecordingSession,  VideoInput, SkinConductance, Fitbit, GPS, HRV
 from django.forms import ModelForm
 from django.utils.timezone import localtime
 from django.contrib.auth.decorators import login_required
@@ -40,7 +40,27 @@ def detail(request, sessionID):
     except session.videoInput.DoesNotExist: 
         raise Http404("Audio file does not exist")
 
-    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video})
+    try:
+        hrv = session.hRV
+    except session.hRV.DoesNotExist: 
+        raise Http404("HRV file does not exist")
+
+    try:
+        skinconductance = session.skinConductance
+    except session.skinConductance.DoesNotExist: 
+        raise Http404("skin conductance file does not exist")
+
+    try:
+        fitbit = session.fitbit
+    except session.fitbit.DoesNotExist: 
+        raise Http404("fitbit file does not exist")
+
+    try:
+        gps = session.gPS
+    except session.gPS.DoesNotExist: 
+        raise Http404("gps file does not exist")
+
+    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'skinConductance': skinconductance, 'fitbit':fitbit, 'gPS':gps})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
 @login_required
@@ -79,8 +99,14 @@ def newSession(request):
     class newSessionForm(forms.Form):
         videoUpload=forms.FileField(allow_empty_file=True)
         audioUpload=forms.FileField(allow_empty_file=True)
+        hrvUpload=forms.FileField(allow_empty_file=True)
+        skinconductanceUpload=forms.FileField(allow_empty_file=True)
+        fitbitUpload=forms.FileField(allow_empty_file=True)
+        gpsUpload=forms.FileField(allow_empty_file=True)
+
         sessionID=forms.CharField(max_length=100)
         participantID=forms.CharField(max_length=100)
+    
     if request.method == 'POST':
         form = newSessionForm(request.POST, request.FILES)
         
@@ -90,9 +116,20 @@ def newSession(request):
 
             newAudioFile=AudioInput(fileName=request.FILES['audioUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['audioUpload'])
             newVideoFile=VideoInput(fileName=request.FILES['videoUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['videoUpload'])
+            newHrvFile=HRV(fileName=request.FILES['hrvUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['hrvUpload'])
+            newSkinconductanceFile=SkinConductance(fileName=request.FILES['skinconductanceUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['skinconductanceUpload'])
+            newFitbitFile=Fitbit(fileName=request.FILES['fitbitUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['fitbitUpload'])
+            newGpsFile=GPS(fileName=request.FILES['gpsUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['gpsUpload'])
+            
             newAudioFile.save()
             newVideoFile.save()
-            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile)
+            newHrvFile.save()
+            newSkinconductanceFile.save()
+            newFitbitFile.save()
+            newGpsFile.save()
+
+
+            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile,hRV=newHrvFile,skinConductance=newSkinconductanceFile, fitbit=newFitbitFile, gPS=newGpsFile)
             session.save()
             return HttpResponseRedirect(reverse('dataportal:detail', args=(form.cleaned_data['sessionID'],))) 
     else:
