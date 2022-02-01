@@ -11,15 +11,30 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
 from django import forms 
-from .models import AudioInput, RecordingSession,  VideoInput, SkinConductance, Fitbit, GPS, HRV
+from .models import AudioInput, RecordingSession,  VideoInput, SkinConductance, Fitbit, GPS, HRV, Results
 from django.forms import ModelForm
 from django.utils.timezone import localtime
 from django.contrib.auth.decorators import login_required
+import time, threading
 
 @login_required
 def index(request):
     latest_session_list=RecordingSession.objects.order_by('-participantID')[:5]
-    context={'latest_session_list':latest_session_list,}
+    
+    status = {}
+    
+    for session in latest_session_list:
+        try:
+            check = session.results
+        except Results.DoesNotExist:
+            raise Http404("session does not exist")
+        if check == None:  
+            status[session]='no results'
+        else:
+            status[session]='results here'
+                
+    listLength=len(status)
+    context={'latest_session_list':latest_session_list,'status':status,'listLength':listLength}
     #return HttpResponse(template.render(context,request))
     return render(request, 'dataportal/index.html', context)
 
@@ -60,7 +75,12 @@ def detail(request, sessionID):
     except session.gPS.DoesNotExist: 
         raise Http404("gps file does not exist")
 
-    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'skinConductance': skinconductance, 'fitbit':fitbit, 'gPS':gps})
+    try:
+        results = session.results
+    except session.results.DoesNotExist: 
+        results = Results(fileNme='no results')
+
+    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'skinConductance': skinconductance, 'fitbit':fitbit, 'gPS':gps, 'results':results})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
 @login_required
@@ -140,4 +160,28 @@ def newSession(request):
         
         
     })
+
+def results_gen(sessionID):
+    
+    session=RecordingSession.objects.get(sessionID=sessionID)
+    session.results=Results(fileName="testing")
+    time.sleep(10)
+    session.results.save()
+    session.save()
+
+@login_required
+def generate_results(request,sessionID):
+    
+    try:
+         t = threading.Thread(target=results_gen,args=[sessionID])
+    except:
+        return HttpResponseForbidden()
+    t.setDaemon(True)
+    t.start()
+    return HttpResponse("process started")
+
+
+
+
+
 

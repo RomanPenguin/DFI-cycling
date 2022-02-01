@@ -53,6 +53,14 @@ class GPS(models.Model):
     def __str__(self):
         return self.fileName
 
+class Results(models.Model):
+    fileName=models.CharField(max_length=200)
+    #recordedTime=models.DateTimeField('date recorded')
+    #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
+    #media = models.FileField(upload_to="media", null=True, blank=True)      
+    def __str__(self):
+        return self.fileName
+
 class RecordingSession(models.Model):
     sessionID=models.CharField(max_length=200)
     participantID=models.CharField(max_length=200)
@@ -62,6 +70,7 @@ class RecordingSession(models.Model):
     skinConductance=models.OneToOneField(SkinConductance,on_delete=models.CASCADE)
     fitbit=models.OneToOneField(Fitbit,on_delete=models.CASCADE)
     gPS=models.OneToOneField(GPS,on_delete=models.CASCADE)
+    results=models.OneToOneField(Results,on_delete=models.CASCADE,null=True,blank=True)
     def __str__(self):
         return self.sessionID
 
