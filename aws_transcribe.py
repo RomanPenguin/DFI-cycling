@@ -68,8 +68,11 @@ def main(argv):
                     TranscriptionJobName=job_name
                 )
         timer_begin=time.perf_counter()
+        print('timer begin')
     except:
-        print("no existing job name clash")            
+        print("no existing job name clash")
+        timer_begin=time.perf_counter()
+        print('timer begin')            
     transcribe.start_transcription_job(
         TranscriptionJobName=job_name,
         Media={'MediaFileUri': job_uri},
@@ -94,10 +97,10 @@ def main(argv):
 
     #get the results from s3 bucket
     entire_transcript_1, sentences_and_times_1, confidences_1, scores_1=get_transcript_text_and_timestamps(output_transcription_bucket,job_name+".json")
-    show_conf_hist(scores_1)
-    show_conf_hist(scores_1)
+    #show_conf_hist(scores_1)
+    #show_conf_hist(scores_1)
 
-    show_low_conf(scores_1)
+    #show_low_conf(scores_1)
 
     s3_clientobj = s3.get_object(Bucket=output_transcription_bucket, Key=job_name+".json")
     s3_clientdata = s3_clientobj["Body"].read().decode("utf-8")
