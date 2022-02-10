@@ -16,6 +16,7 @@ from django.forms import ModelForm
 from django.utils.timezone import localtime
 from django.contrib.auth.decorators import login_required
 import time, threading
+from dataportal.generate_results import analysis
 
 @login_required
 def index(request):
@@ -169,6 +170,9 @@ def results_gen(sessionID):
     session.results.save()
     session.save()
 
+
+
+
 @login_required
 def generate_results(request,sessionID):
     
@@ -178,10 +182,19 @@ def generate_results(request,sessionID):
         return HttpResponseForbidden()
     t.setDaemon(True)
     t.start()
-    return HttpResponse("process started")
+    return render(request, 'dataportal/generate_results.html')
 
 
-
+@login_required
+def delete_results(request,sessionID):
+    
+    try:
+        session=RecordingSession.objects.get(sessionID=sessionID)
+    except:
+        return HttpResponse("session does not exist")
+    session.results=None
+    session.save()
+    return render(request, 'dataportal/delete_results.html')
 
 
 
