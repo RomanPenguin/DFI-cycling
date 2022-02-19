@@ -58,8 +58,15 @@ def emotions(inputFile,outputFile):
     success,image = vidcap.read()
     success = True
 
+    cap = cv2.VideoCapture(inputFilePath)
+
+    
+    
+    
+
     framesList=[]
     while True:
+
         vidcap.set(cv2.CAP_PROP_POS_MSEC,(count*ms_delay))    # added this line
         success,image = vidcap.read()
         if success ==False:
@@ -111,9 +118,11 @@ def emotions(inputFile,outputFile):
     file.close()
 
 
-if __name__ == "__main__":
-   emotions()
+#if __name__ == "__main__":
+#   emotions()
 
+emotions("/media/openface/datastorage/data/video/copy.mp4","pilottest")
+#emotions("facevideo.mp4","pilottest")
 
 
 # Save some time and copy and paste this into Terminal

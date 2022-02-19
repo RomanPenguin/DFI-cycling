@@ -47,7 +47,7 @@ def transcribe(inputFile,outputFile):
 
     filename, file_extension = os.path.splitext(inputFilePath)
     audio_format = str(file_extension)
-    accepted_format = ["mp3", "mp4", "wav", "flac", "ogg", "amr", "webm"]
+    accepted_format = ["mp3", "mp4", "wav", "flac", "ogg", "amr", "webm", "MP4", "MP3","WAV"]
     if audio_format[1:] in accepted_format:
         print("audio format accepted")
     else:
@@ -257,6 +257,12 @@ def transcribe(inputFile,outputFile):
         Media={'MediaFileUri': job_uri},
         MediaFormat=audio_format[1:],  # MediaFormat='mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm',
         LanguageCode='en-AU',
+        
+        # Settings = {
+        #     'VocabularyName':"DFI"
+        # },        
+        
+
         OutputBucketName=output_transcription_bucket
     )
 
