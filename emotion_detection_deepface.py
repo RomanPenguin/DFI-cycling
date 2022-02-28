@@ -118,10 +118,10 @@ def emotions(inputFile,outputFile):
     file.close()
 
 
-#if __name__ == "__main__":
-#   emotions()
+if __name__ == "__main__":
+  emotions()
 
-emotions("/media/openface/datastorage/data/video/copy.mp4","pilottest")
+#emotions("/media/openface/datastorage/data/video/copy.mp4","pilottest")
 #emotions("facevideo.mp4","pilottest")
 
 
