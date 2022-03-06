@@ -1,3 +1,4 @@
+from email.policy import default
 from typing import NamedTuple
 from django import http
 from django.http.response import HttpResponseForbidden, HttpResponseNotAllowed
@@ -11,12 +12,15 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
 from django import forms 
-from .models import AudioInput, RecordingSession,  VideoInput, SkinConductance, Fitbit, GPS, HRV, Results
+from .models import AudioInput, RecordingSession,  VideoInput, AudioWords, Fitbit, GPS, HRV, Results
 from django.forms import ModelForm
 from django.utils.timezone import localtime
 from django.contrib.auth.decorators import login_required
-import time, threading
+import time, threading, mimetypes, os.path, os, shutil
 from dataportal.generate_results import analysis
+
+
+default_save = '/home/openface/Documents/new_cycling/DFI-cycling/output/allresults/'
 
 @login_required
 def index(request):
@@ -25,6 +29,16 @@ def index(request):
     status = {}
     
     for session in latest_session_list:
+        if os.path.isdir(default_save + session.sessionID):
+            newResults=Results(fileName = default_save + session.sessionID + '/' + session.sessionID + '.zip')
+            newResults.save()
+            session.results = newResults
+            session.save()
+        else:
+            print ("File not exist")
+            
+        
+
         try:
             check = session.results
         except Results.DoesNotExist:
@@ -62,9 +76,9 @@ def detail(request, sessionID):
         raise Http404("HRV file does not exist")
 
     try:
-        skinconductance = session.skinConductance
-    except session.skinConductance.DoesNotExist: 
-        raise Http404("skin conductance file does not exist")
+        audioWords = session.audioWords
+    except session.audioWords.DoesNotExist: 
+        raise Http404("audio words file does not exist")
 
     try:
         fitbit = session.fitbit
@@ -81,11 +95,11 @@ def detail(request, sessionID):
     except session.results.DoesNotExist: 
         results = Results(fileNme='no results')
 
-    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'skinConductance': skinconductance, 'fitbit':fitbit, 'gPS':gps, 'results':results})
+    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'audioWords': audioWords, 'fitbit':fitbit, 'gPS':gps, 'results':results})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
 @login_required
-def upload(request,sessionID):
+def upload(request,sessionID): #not used for now
     class UploadForm(forms.Form):
         videoUpload=forms.FileField(allow_empty_file=True)
         audioUpload=forms.FileField(allow_empty_file=True)
@@ -118,12 +132,12 @@ def upload(request,sessionID):
 @login_required
 def newSession(request):
     class newSessionForm(forms.Form):
-        videoUpload=forms.FileField(allow_empty_file=True)
-        audioUpload=forms.FileField(allow_empty_file=True)
-        hrvUpload=forms.FileField(allow_empty_file=True)
-        skinconductanceUpload=forms.FileField(allow_empty_file=True)
-        fitbitUpload=forms.FileField(allow_empty_file=True)
-        gpsUpload=forms.FileField(allow_empty_file=True)
+        videoUpload=forms.FileField(allow_empty_file=True, required= False)
+        audioUpload=forms.FileField(allow_empty_file=True, required= False)
+        hrvUpload=forms.FileField(allow_empty_file=True, required= False)
+        audioWordsUpload=forms.FileField(allow_empty_file=True, required= False)
+        fitbitUpload=forms.FileField(allow_empty_file=True, required= False)
+        gpsUpload=forms.FileField(allow_empty_file=True, required= False)
 
         sessionID=forms.CharField(max_length=100)
         participantID=forms.CharField(max_length=100)
@@ -135,22 +149,39 @@ def newSession(request):
             if RecordingSession.objects.filter(sessionID=form.cleaned_data['sessionID']).exists():
                 return HttpResponseForbidden("session already exists!")
 
-            newAudioFile=AudioInput(fileName=request.FILES['audioUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['audioUpload'])
-            newVideoFile=VideoInput(fileName=request.FILES['videoUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['videoUpload'])
-            newHrvFile=HRV(fileName=request.FILES['hrvUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['hrvUpload'])
-            newSkinconductanceFile=SkinConductance(fileName=request.FILES['skinconductanceUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['skinconductanceUpload'])
-            newFitbitFile=Fitbit(fileName=request.FILES['fitbitUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['fitbitUpload'])
-            newGpsFile=GPS(fileName=request.FILES['gpsUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['gpsUpload'])
-            
-            newAudioFile.save()
-            newVideoFile.save()
-            newHrvFile.save()
-            newSkinconductanceFile.save()
-            newFitbitFile.save()
-            newGpsFile.save()
+            #use try statements 
+            try:
+                newAudioFile=AudioInput(fileName=request.FILES['audioUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['audioUpload'])
+                newAudioFile.save()
+            except: 
+                newAudioFile = None
+            try:
+                newVideoFile=VideoInput(fileName=request.FILES['videoUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['videoUpload'])
+                newVideoFile.save()
+            except:
+                newVideoFile = None
+            try:
+                newHrvFile=HRV(fileName=request.FILES['hrvUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['hrvUpload'])
+                newHrvFile.save()
+            except:
+                newHrvFile = None
+            try:
+                newAudioWordsFile=AudioWords(fileName=request.FILES['audioWordsUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['audioWordsUpload'])
+                newAudioWordsFile.save()
+            except:
+                newAudioFile = None
+            try:
+                newFitbitFile=Fitbit(fileName=request.FILES['fitbitUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['fitbitUpload'])
+                newFitbitFile.save()
+            except:
+                newFitbitFile = None
+            try:
+                newGpsFile=GPS(fileName=request.FILES['gpsUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['gpsUpload'])
+                newGpsFile.save()
+            except:
+                newGpsFile = None
 
-
-            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile,hRV=newHrvFile,skinConductance=newSkinconductanceFile, fitbit=newFitbitFile, gPS=newGpsFile)
+            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile,hRV=newHrvFile,audioWords=newAudioWordsFile, fitbit=newFitbitFile, gPS=newGpsFile)
             session.save()
             return HttpResponseRedirect(reverse('dataportal:detail', args=(form.cleaned_data['sessionID'],))) 
     else:
@@ -162,13 +193,13 @@ def newSession(request):
         
     })
 
-def results_gen(sessionID):
+# def results_gen(sessionID):
     
-    session=RecordingSession.objects.get(sessionID=sessionID)
-    session.results=Results(fileName="testing")
-    time.sleep(10)
-    session.results.save()
-    session.save()
+#     session=RecordingSession.objects.get(sessionID=sessionID)
+#     session.results=Results(fileName="testing")
+#     time.sleep(10)
+#     session.results.save()
+#     session.save()
 
 
 
@@ -177,12 +208,61 @@ def results_gen(sessionID):
 def generate_results(request,sessionID):
     
     try:
-         t = threading.Thread(target=results_gen,args=[sessionID])
+        session = RecordingSession.objects.get(sessionID=sessionID) 
+        try:
+            gpsFile = session.gPS.media.path
+        except:
+            gpsFile=''
+        try:     
+            emotionsFile = session.videoInput.media.path
+        except:
+            emotionsFile = ''
+        try:
+            audioSentencesFile = session.audioInput.media.path
+        except:
+            audioSentencesFile = ''
+        try:
+            audioWordsFile = session.audioWords.media.path
+        except:
+            audioWordsFile = ''
+        try:
+            dictionaryPathFile = 'Dictionary.txt'
+        except: 
+            dictionaryPathFile = ''
+        try:            
+            hRVFile = session.hRV.media.path
+        except:
+            hRVFile = ''
+        inputFile= {
+            'sessionID' : str(sessionID),
+            'gps' : gpsFile,
+            'emotions' : emotionsFile,
+            'audio_sentences' : audioSentencesFile,
+            'audio_words' : audioWordsFile,
+            'dictionary_path' : dictionaryPathFile, # This path will be a constant
+            'HRV_path' : hRVFile
+        }
+        # t = threading.Thread(target=results_gen,args=[sessionID])
+        t = threading.Thread(target=analysis,args=[inputFile,default_save+str(sessionID)])
+        
     except:
         return HttpResponseForbidden()
     t.setDaemon(True)
     t.start()
     return render(request, 'dataportal/generate_results.html')
+
+
+@login_required
+def download_results(request,sessionID):
+    
+    fl_path = default_save+str(sessionID)+'/'+str(sessionID)+'.zip'
+    filename = str(sessionID)+'.zip'
+
+    fl = open(fl_path, 'rb')
+    mime_type, _ = mimetypes.guess_type(fl_path)
+    response = HttpResponse(fl, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response
 
 
 @login_required
@@ -194,6 +274,13 @@ def delete_results(request,sessionID):
         return HttpResponse("session does not exist")
     session.results=None
     session.save()
+    try:
+        fl_path = default_save+str(sessionID)
+        shutil.rmtree(fl_path)
+
+    except:
+        return HttpResponse("file already deleted")
+
     return render(request, 'dataportal/delete_results.html')
 
 

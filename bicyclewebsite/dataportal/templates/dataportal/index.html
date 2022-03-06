@@ -20,7 +20,14 @@
 			<a href="{% url 'dataportal:delete_results' sessionID %}"><button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">delete results</button></a>
 			{% endif %}
 		</td>
-		<td class ="text-center"><a href="{% url 'dataportal:detail' sessionID %}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ results }}</button></a></td>
+		<td class ="text-center">
+			{% if results == 'no results' %}
+			<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ results }}</button>
+			{% else %}
+			<a href="{% url 'dataportal:download_results' sessionID %}"><button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ results }}</button></a>
+			{% endif %}
+			
+		</td>
 	</tr>    {% endfor %}	
 
 		<tr class="hover:underline"> <td class="hover:underline text-center "><a href="{% url 'dataportal:newSession' %}"><button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Add New Session</button></a> </td></tr>

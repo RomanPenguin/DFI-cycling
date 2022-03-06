@@ -29,7 +29,7 @@ class HRV(models.Model):
     def __str__(self):
         return self.fileName
 
-class SkinConductance(models.Model):
+class AudioWords(models.Model):
     fileName=models.CharField(max_length=200)
     recordedTime=models.DateTimeField('date recorded')
     #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
@@ -64,12 +64,12 @@ class Results(models.Model):
 class RecordingSession(models.Model):
     sessionID=models.CharField(max_length=200)
     participantID=models.CharField(max_length=200)
-    audioInput=models.OneToOneField(AudioInput,on_delete=models.CASCADE)
-    videoInput=models.OneToOneField(VideoInput,on_delete=models.CASCADE)
-    hRV=models.OneToOneField(HRV,on_delete=models.CASCADE)
-    skinConductance=models.OneToOneField(SkinConductance,on_delete=models.CASCADE)
-    fitbit=models.OneToOneField(Fitbit,on_delete=models.CASCADE)
-    gPS=models.OneToOneField(GPS,on_delete=models.CASCADE)
+    audioInput=models.OneToOneField(AudioInput,on_delete=models.CASCADE,null=True,blank=True)
+    videoInput=models.OneToOneField(VideoInput,on_delete=models.CASCADE,null=True,blank=True)
+    hRV=models.OneToOneField(HRV,on_delete=models.CASCADE,null=True,blank=True)
+    audioWords=models.OneToOneField(AudioWords,on_delete=models.CASCADE,null=True,blank=True)
+    fitbit=models.OneToOneField(Fitbit,on_delete=models.CASCADE,null=True,blank=True)
+    gPS=models.OneToOneField(GPS,on_delete=models.CASCADE,null=True,blank=True)
     results=models.OneToOneField(Results,on_delete=models.CASCADE,null=True,blank=True)
     def __str__(self):
         return self.sessionID

@@ -9,5 +9,7 @@ urlpatterns = [
     path('<int:sessionID>/upload/',views.upload,name='upload'),
     path('new_session/',views.newSession,name='newSession'),
     path('generate_results/<int:sessionID>/',views.generate_results,name='generate_results'),
+    path('download_results/<int:sessionID>/',views.download_results,name='download_results'),
+
     path('delete_results/<int:sessionID>/',views.delete_results,name='delete_results'),
 ]
