@@ -21,7 +21,7 @@ from dataportal.generate_results import analysis
 
 
 default_save = '/home/openface/Documents/new_cycling/DFI-cycling/output/allresults/'
-
+#default_save = '~/webserver/DFI-cycling/output/'
 @login_required
 def index(request):
     latest_session_list=RecordingSession.objects.order_by('-participantID')[:5]
