@@ -53,6 +53,8 @@ def analysis(inputFile, outputFile):
 
     # create the layer
     # This name will change and be dependant on input files
+    os.makedirs(outputFile)
+
     layer = data_source.CreateLayer(inputFile["sessionID"], srs, ogr.wkbPoint)
 
     # Add the fields we're interested in

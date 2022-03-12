@@ -21,7 +21,9 @@ from dataportal.generate_results import analysis
 
 
 default_save = '/home/openface/Documents/new_cycling/DFI-cycling/output/allresults/'
-#default_save = '~/webserver/DFI-cycling/output/'
+#default_save = '/home/ubuntu/webserver/DFI-cycling/output/'
+dictionaryPath = 'Dictionaary.txt'
+#dictionaryPath = '/home/ubuntu/webserver/DFI-cycling/Dictionary.txt'
 @login_required
 def index(request):
     latest_session_list=RecordingSession.objects.order_by('-participantID')[:5]
@@ -226,7 +228,7 @@ def generate_results(request,sessionID):
         except:
             audioWordsFile = ''
         try:
-            dictionaryPathFile = 'Dictionary.txt'
+            dictionaryPathFile = dictionaryPath
         except: 
             dictionaryPathFile = ''
         try:            
