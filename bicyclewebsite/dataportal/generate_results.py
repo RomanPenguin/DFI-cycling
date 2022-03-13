@@ -53,8 +53,10 @@ def analysis(inputFile, outputFile):
 
     # create the layer
     # This name will change and be dependant on input files
-    os.makedirs(outputFile)
-
+    try:
+        os.makedirs(outputFile)
+    except:
+        print('folder already exist')
     layer = data_source.CreateLayer(inputFile["sessionID"], srs, ogr.wkbPoint)
 
     # Add the fields we're interested in
@@ -341,7 +343,7 @@ def analysis(inputFile, outputFile):
     # Opening up csv file to write data into
     # Gonna need to change output location and naming and all of that good stuff
     #data_writer = open(r'E:\UNI\Research_assistant\Output results\Shape files\2022 test\collated_data.txt', 'w')
-    data_writer = open('/home/openface/Documents/new_cycling/DFI-cycling/output.txt', 'w')
+    data_writer = open(outputFile+'output.txt', 'w')
     writer = csv.writer(data_writer)
     with open(inputFile['gps']) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
