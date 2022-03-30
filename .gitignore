@@ -1,3 +1,5 @@
+myvenv/
+pilottest/
 .venv/
 .venv/pyvenv.cfg
 .venv/bin/activate
