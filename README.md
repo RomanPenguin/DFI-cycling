@@ -94,21 +94,19 @@ Following documentation assumes AWS is the implementation used and I recommend A
 - avoid clipping 
 
 
-## Emotion Analysis 
+## Emotion Analysis - deepface
 Emotion analysis is carried out with the deepface framework. (https://github.com/serengil/deepface) It provides robust feature sets including age, gender, race and emotion. Only emotion is used to speed up the detection. Current implementation takes a video and pulls out one frame per second and provides a prediction on the emotion exhibited. This can run on most video format. 
+
+
+## Emotion analysis - EmoNet
+Emonet is used to provide valence and arousal values to complement the specific categories of emotions (such as angry or happy) and allows for more mathematical analysis of the data. GitHub link (https://github.com/face-analysis/emonet)
+
+## AffectNet
+Affectnet dataset is used to test the models. (http://mohammadmahoor.com/affectnet/)  
 
 ## Examples
 This repo has some example files to test the functionality of the code 
-## AWS transcription
-    aws_transcribe.py -i [input_file] -o [output_file]
-this function takes two arguements, input file which is the audio recorded and an output file which the final result would be written to. 
-example use transcribing an audio file called ben1.mp3 from data subfolder and save the results to output/transcript.txt: 
 
-    aws_transcribe.py -i data/ben1.mp3 -o output/transcipt.txt
-
-## Emotion Detection
-    emotion_detection_deepface.py -i face_video.wmv -o output/face_video_frames 
-this function takes two arguments, input video file and output files location. Similar to AWS transcription with one key difference: it will generate image files alongside the emotion prediction to allow for human verification of the face.
 
 # Past files
 ## Google Speech to Text 
@@ -131,4 +129,15 @@ Google transcription is not in use currently.
 
  ## Voice Activity Detection
  You may choose to use Voice Activity Dectection (VAD) to reduce cost for cloud transcription. See https://github.com/NickWilkinson37/voxseg for more details about the implementation. This feature is currently not used and is not under development. 
+
+ ## AWS transcription
+    aws_transcribe.py -i [input_file] -o [output_file]
+this function takes two arguements, input file which is the audio recorded and an output file which the final result would be written to. 
+example use transcribing an audio file called ben1.mp3 from data subfolder and save the results to output/transcript.txt: 
+
+    aws_transcribe.py -i data/ben1.mp3 -o output/transcipt.txt
+
+## Emotion Detection
+    emotion_detection_deepface.py -i face_video.wmv -o output/face_video_frames 
+this function takes two arguments, input video file and output files location. Similar to AWS transcription with one key difference: it will generate image files alongside the emotion prediction to allow for human verification of the face.
 
