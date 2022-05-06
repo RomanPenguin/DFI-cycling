@@ -11,6 +11,7 @@ import cv2
 from deepface import DeepFace as df
 from emonet.basic import emonet_analysis
 
+
 def emotions(inputFile,outputFile):
 
     
@@ -87,10 +88,17 @@ def emotions(inputFile,outputFile):
 
 
     dominantEmotions =[]
-    secondaryEmotions =[]
+    valence = []
+    arousal = []
     
     for instance in emonet_results: #iterate through each frame and pick domininant emotions to add to a list 
         dominantEmotions.append(instance['emo_pred'])
+        bob = instance['valence_pred'][0]
+        bob = bob.item()
+        valence_num = instance['valence_pred'][0]
+        arousal_num = instance['arousal_pred'][0]
+        valence.append(valence_num.item())
+        arousal.append(arousal_num.item())
 
         #To Tyler: data structure of results are below
             #     result= {"filename":i, 
@@ -123,16 +131,18 @@ def emotions(inputFile,outputFile):
     with open(outputFilePath+'/dominant_emotions.txt', 'w') as f:
         writer = csv.writer(f)
         writer.writerow(dominantEmotions)
+        writer.writerow(arousal)
+        writer.writerow(valence)
         writer.writerow(times)
     f.close()
 
-    emonet = {'emonet_results': emonet_results}
-    with open(outputFilePath+'/emotions.txt', 'w') as file:
-        file.write(json.dumps(emonet)) # use `json.loads` to do the reverse
-    file.close()
+    #emonet = {'emonet_results': emonet_results}
+    #with open(outputFilePath+'/emotions.txt', 'w') as file:
+    #   file.write(json.dumps(emonet)) # use `json.loads` to do the reverse
+    #file.close()
 
 
-emotions("data/03022022104808.MP4","output/emo")
+emotions("30112021165512.wmv","output/")
 #emotions("/media/openface/datastorage/data/video/copy.mp4","pilottest")
 
 

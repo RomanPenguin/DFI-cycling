@@ -10,7 +10,8 @@ from torch import nn
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import WeightedRandomSampler
 from torchvision import transforms 
-from deepface import DeepFace  
+from deepface import DeepFace
+from natsort import natsorted
 
 from emonet.emonet.models import EmoNet
 import matplotlib.pyplot as plt
@@ -56,6 +57,7 @@ def emonet_analysis(inputImage):
 
     imagefolder = inputImage
     allpics = os.listdir(imagefolder)
+    allpics = natsorted(allpics)
     for i in allpics:
 
         image1 = DeepFace.detectFace(imagefolder+"/"+i, target_size = (256, 256), detector_backend = backends[0], enforce_detection = False )
