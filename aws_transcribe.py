@@ -11,7 +11,6 @@ from botocore.exceptions import ClientError
 import os
 from matplotlib import pyplot as plt
 import matplotlib
-import tkinter
 
 s3 = boto3.client('s3')
 #matplotlib.use('TkAgg')
@@ -19,8 +18,8 @@ s3 = boto3.client('s3')
 def main(argv):
 
     #define input file and output file
-    inputFilePath = ''
-    outputFilePath = 'transcript.csv'
+    inputFilePath = 'input/ZOOM0001.wav'
+    outputFilePath = 'output/transcript'
     try:
         opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
     except getopt.GetoptError:
@@ -50,8 +49,8 @@ def main(argv):
         
 
 
-    input_audio_bucket = "input-audio-dfi"
-    output_transcription_bucket="transcribe-output-dfi"
+    input_audio_bucket = "input-audio-dfi-tylernew"
+    output_transcription_bucket="transcribe-output-dfi-tylernew"
     create_bucket(input_audio_bucket)
     create_bucket(output_transcription_bucket)
     with open(inputFilePath, "rb") as f:
@@ -117,8 +116,8 @@ def main(argv):
         writer.writeheader()
         writer.writerows(individual_word_analysis)
 
-    with open(outputFilePath+".txt","w") as f:
-        f.write(paragraphed_result)
+    #with open(outputFilePath+".txt","w") as f:
+    #   f.write(paragraphed_result)
 
     with open(outputFilePath+"_sentences.txt",'w') as f:
         for items in sentences_and_times_1:

@@ -142,7 +142,7 @@ def emotions(inputFile,outputFile):
     #file.close()
 
 
-emotions("30112021165512.wmv","output/")
+emotions("05052022175512.MP4","output/")
 #emotions("/media/openface/datastorage/data/video/copy.mp4","pilottest")
 
 
