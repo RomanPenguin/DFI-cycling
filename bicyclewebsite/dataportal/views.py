@@ -12,7 +12,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
 from django import forms 
-from .models import AudioInput, RecordingSession,  VideoInput, AudioWords, Fitbit, GPS, HRV, Results
+from .models import AudioInput, Empatica_EDA, RecordingSession,  VideoInput, AudioWords, Empatica_EDA, Empatica_TEMP, TextFile, GPS, HRV, Results
 from django.forms import ModelForm
 from django.utils.timezone import localtime
 from django.contrib.auth.decorators import login_required
@@ -22,11 +22,11 @@ from dataportal.generate_results import analysis
 
 default_save = '/home/openface/Documents/new_cycling/DFI-cycling/output/allresults/'
 #default_save = '/home/ubuntu/webserver/DFI-cycling/output/'
-dictionaryPath = 'Dictionaary.txt'
+dictionaryPath = 'Dictionary.txt'
 #dictionaryPath = '/home/ubuntu/webserver/DFI-cycling/Dictionary.txt'
 @login_required
 def index(request):
-    latest_session_list=RecordingSession.objects.order_by('-participantID')[:5]
+    latest_session_list=RecordingSession.objects.order_by('-participantID')[:6]
     
     status = {}
     
@@ -83,9 +83,19 @@ def detail(request, sessionID):
         raise Http404("audio words file does not exist")
 
     try:
-        fitbit = session.fitbit
-    except session.fitbit.DoesNotExist: 
-        raise Http404("fitbit file does not exist")
+        empatica_EDA = session.empatica_EDA
+    except session.empatica_EDA.DoesNotExist: 
+        raise Http404("Empatica EDA file does not exist")
+    
+    try:
+        empatica_TEMP = session.empatica_TEMP
+    except session.empatica_TEMP.DoesNotExist: 
+        raise Http404("Empatica TEMP file does not exist")
+
+    try:
+        textFile = session.textFile
+    except session.textFile.DoesNotExist: 
+        raise Http404("textfile file does not exist")
 
     try:
         gps = session.gPS
@@ -97,7 +107,7 @@ def detail(request, sessionID):
     except session.results.DoesNotExist: 
         results = Results(fileNme='no results')
 
-    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'audioWords': audioWords, 'fitbit':fitbit, 'gPS':gps, 'results':results})
+    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'audioWords': audioWords, 'empatica_EDA':empatica_EDA, 'empatica_TEMP':empatica_TEMP, 'textFile':textFile, 'gPS':gps, 'results':results})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
 @login_required
@@ -138,7 +148,9 @@ def newSession(request):
         audioUpload=forms.FileField(allow_empty_file=True, required= False)
         hrvUpload=forms.FileField(allow_empty_file=True, required= False)
         audioWordsUpload=forms.FileField(allow_empty_file=True, required= False)
-        fitbitUpload=forms.FileField(allow_empty_file=True, required= False)
+        empatica_EDAUpload=forms.FileField(allow_empty_file=True, required= False)
+        empatica_TEMPUpload=forms.FileField(allow_empty_file=True, required= False)
+        textFileUpload=forms.FileField(allow_empty_file=True, required= False)
         gpsUpload=forms.FileField(allow_empty_file=True, required= False)
 
         sessionID=forms.CharField(max_length=100)
@@ -173,17 +185,30 @@ def newSession(request):
             except:
                 newAudioFile = None
             try:
-                newFitbitFile=Fitbit(fileName=request.FILES['fitbitUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['fitbitUpload'])
-                newFitbitFile.save()
+                newEmpatica_EDAFile=Empatica_EDA(fileName=request.FILES['empatica_EDAUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['empatica_EDAUpload'])
+                newEmpatica_EDAFile.save()
             except:
-                newFitbitFile = None
+                newEmpatica_EDAFile = None
+            
+            try:
+                newEmpatica_TEMPFile=Empatica_TEMP(fileName=request.FILES['empatica_TEMPUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['empatica_TEMPUpload'])
+                newEmpatica_TEMPFile.save()
+            except:
+                newEmpatica_TEMPFile = None
+
+            try:
+                newTextFileFile=TextFile(fileName=request.FILES['textFileUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['textFileUpload'])
+                newTextFileFile.save()
+            except:
+                newTextFileFile = None
+
             try:
                 newGpsFile=GPS(fileName=request.FILES['gpsUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['gpsUpload'])
                 newGpsFile.save()
             except:
                 newGpsFile = None
 
-            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile,hRV=newHrvFile,audioWords=newAudioWordsFile, fitbit=newFitbitFile, gPS=newGpsFile)
+            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile,hRV=newHrvFile,audioWords=newAudioWordsFile, empatica_EDA=newEmpatica_EDAFile,empatica_TEMP=newEmpatica_TEMPFile, textFile=newTextFileFile, gPS=newGpsFile)
             session.save()
             return HttpResponseRedirect(reverse('dataportal:detail', args=(form.cleaned_data['sessionID'],))) 
     else:
@@ -235,6 +260,18 @@ def generate_results(request,sessionID):
             hRVFile = session.hRV.media.path
         except:
             hRVFile = ''
+        try:            
+            empatica_EDAFile = session.empatica_EDA.media.path
+        except:
+            empatica_EDAFile = ''
+        try:            
+            empatica_TEMPFile = session.empatica_TEMP.media.path
+        except:
+            empatica_TEMPFile = ''
+        try:            
+            TextFileFile = session.textFile.media.path
+        except:
+            TextFileFile = ''
         inputFile= {
             'sessionID' : str(sessionID),
             'gps' : gpsFile,
@@ -242,7 +279,10 @@ def generate_results(request,sessionID):
             'audio_sentences' : audioSentencesFile,
             'audio_words' : audioWordsFile,
             'dictionary_path' : dictionaryPathFile, # This path will be a constant
-            'HRV_path' : hRVFile
+            'HRV_path' : hRVFile,
+            'empatica_EDA': empatica_EDAFile,
+            'empatica_TEMP': empatica_TEMPFile,
+            'txt_file': TextFileFile
         }
         # t = threading.Thread(target=results_gen,args=[sessionID])
         t = threading.Thread(target=analysis,args=[inputFile,default_save+str(sessionID)])

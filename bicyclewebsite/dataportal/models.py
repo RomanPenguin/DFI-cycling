@@ -37,7 +37,24 @@ class AudioWords(models.Model):
     def __str__(self):
         return self.fileName
 
-class Fitbit(models.Model):
+class Empatica_EDA(models.Model):
+    fileName=models.CharField(max_length=200)
+    recordedTime=models.DateTimeField('date recorded')
+    #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
+    media = models.FileField(upload_to="media", null=True, blank=True)      
+    def __str__(self):
+        return self.fileName
+
+
+class Empatica_TEMP(models.Model):
+    fileName=models.CharField(max_length=200)
+    recordedTime=models.DateTimeField('date recorded')
+    #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
+    media = models.FileField(upload_to="media", null=True, blank=True)      
+    def __str__(self):
+        return self.fileName
+
+class TextFile(models.Model):
     fileName=models.CharField(max_length=200)
     recordedTime=models.DateTimeField('date recorded')
     #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
@@ -68,7 +85,9 @@ class RecordingSession(models.Model):
     videoInput=models.OneToOneField(VideoInput,on_delete=models.CASCADE,null=True,blank=True)
     hRV=models.OneToOneField(HRV,on_delete=models.CASCADE,null=True,blank=True)
     audioWords=models.OneToOneField(AudioWords,on_delete=models.CASCADE,null=True,blank=True)
-    fitbit=models.OneToOneField(Fitbit,on_delete=models.CASCADE,null=True,blank=True)
+    empatica_EDA=models.OneToOneField(Empatica_EDA,on_delete=models.CASCADE,null=True,blank=True)
+    empatica_TEMP=models.OneToOneField(Empatica_TEMP,on_delete=models.CASCADE,null=True,blank=True)
+    textFile=models.OneToOneField(TextFile,on_delete=models.CASCADE,null=True,blank=True)
     gPS=models.OneToOneField(GPS,on_delete=models.CASCADE,null=True,blank=True)
     results=models.OneToOneField(Results,on_delete=models.CASCADE,null=True,blank=True)
     def __str__(self):
