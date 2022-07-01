@@ -14,26 +14,28 @@ import matplotlib
 
 s3 = boto3.client('s3')
 
+# this function has been copied to {workspace}/bicyclewebsite/dataportal/generate_raw_results.py
+#please update that file from now on, this is just for record keeping / testing
+
+
+
+
+
+
+
+
+
+
+
+
 
 # matplotlib.use('TkAgg')
 
-def main(argv):
+def transcribe(inputFile, outputFile):
     # define input file and output file
-    inputFilePath = 'input/JasperRoad3.wav'
-    outputFilePath = 'output/transcript'
-    try:
-        opts, args = getopt.getopt(argv, "hi:o:", ["ifile=", "ofile="])
-    except getopt.GetoptError:
-        print('test.py -i <inputfile> -o <outputfile>')
-        sys.exit(2)
-    for opt, arg in opts:
-        if opt == '-h':
-            print('test.py -i <input_audio_file> -o <out_csv_putfile>')
-            sys.exit()
-        elif opt in ("-i", "--ifile"):
-            inputFilePath = arg
-        elif opt in ("-o", "--ofile"):
-            outputFilePath = arg
+    inputFilePath = inputFile
+    outputFilePath = outputFile
+    
     print('Input file is "' + inputFilePath)
     print('Output file is "' + outputFilePath)
     inputFileName = os.path.basename(inputFilePath)
@@ -47,8 +49,8 @@ def main(argv):
         print("audio format not supported please convert to mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm'")
         sys.exit()
 
-    input_audio_bucket = "input-audio-dfi-tylernew"
-    output_transcription_bucket = "transcribe-output-dfi-tylernew"
+    input_audio_bucket = "input-audio-dfi-kevinnew"
+    output_transcription_bucket = "transcribe-output-dfi-kevinnew"
     create_bucket(input_audio_bucket)
     create_bucket(output_transcription_bucket)
     with open(inputFilePath, "rb") as f:
@@ -108,7 +110,7 @@ def main(argv):
     # csv header
     fieldnames = ['start_time', 'end_time', 'alternatives', 'type']
     # print(data_json)
-    with open(outputFilePath + ".csv", 'w', encoding='UTF8', newline='') as f:
+    with open(outputFilePath + "results.csv", 'w', encoding='UTF8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(individual_word_analysis)
@@ -120,7 +122,7 @@ def main(argv):
     #    for items in sentences_and_times_1:
     #        print(items, file=f)
 
-    with open(outputFilePath + "_sentences.csv", 'w', newline='') as f:
+    with open(outputFilePath + "results_sentences.csv", 'w', newline='') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerows(sentences_and_times_1)
         # writer.writerows(sentences_and_times_1)
@@ -324,5 +326,4 @@ def show_low_conf(all_scores):
     plt.show()
 
 
-if __name__ == "__main__":
-    main(sys.argv[1:])
+transcribe('/home/openface/Documents/new_cycling/DFI-cycling/data/ben1.mp3','/home/openface/Documents/new_cycling/DFI-cycling/data/output/')

@@ -93,3 +93,30 @@ class RecordingSession(models.Model):
     def __str__(self):
         return self.sessionID
 
+
+#pre-processing files (raw video file -> emotion)
+class RawVideoInput(models.Model):
+    fileName=models.CharField(max_length=200)
+    recordedTime=models.DateTimeField('date recorded')
+    #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
+    media = models.FileField(upload_to="media", null=True, blank=True)      
+    def __str__(self):
+        return self.fileName
+
+#pre-processing files (raw audio file -> transcription)
+class RawAudioInput (models.Model):
+    fileName=models.CharField(max_length=200)
+    recordedTime=models.DateTimeField('date recorded')
+    #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
+    media = models.FileField(upload_to="media", null=True, blank=True)      
+    def __str__(self):
+        return self.fileName
+
+class RawProcessingResults(models.Model):
+    sessionID=models.CharField(max_length=200)
+    rawVideoInput=models.OneToOneField(RawVideoInput,on_delete=models.CASCADE,null=True,blank=True)
+    rawAudioInput=models.OneToOneField(RawAudioInput,on_delete=models.CASCADE,null=True,blank=True)
+    results=models.OneToOneField(Results,on_delete=models.CASCADE,null=True,blank=True)
+    def __str__(self):
+        return self.sessionID
+

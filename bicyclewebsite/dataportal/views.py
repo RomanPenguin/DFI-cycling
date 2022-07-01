@@ -12,13 +12,13 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
 from django import forms 
-from .models import AudioInput, Empatica_EDA, RecordingSession,  VideoInput, AudioWords, Empatica_EDA, Empatica_TEMP, TextFile, GPS, HRV, Results
+from .models import AudioInput, Empatica_EDA, RecordingSession,  VideoInput, AudioWords, Empatica_EDA, Empatica_TEMP, TextFile, GPS, HRV, Results, RawVideoInput, RawAudioInput, RawProcessingResults
 from django.forms import ModelForm
 from django.utils.timezone import localtime
 from django.contrib.auth.decorators import login_required
 import time, threading, mimetypes, os.path, os, shutil
 from dataportal.generate_results import analysis
-
+from dataportal.generate_raw_results import raw_analysis
 
 default_save = '/home/openface/Documents/new_cycling/DFI-cycling/output/allresults/'
 #default_save = '/home/ubuntu/webserver/DFI-cycling/output/'
@@ -26,12 +26,13 @@ dictionaryPath = 'Dictionary.txt'
 #dictionaryPath = '/home/ubuntu/webserver/DFI-cycling/Dictionary.txt'
 @login_required
 def index(request):
-    latest_session_list=RecordingSession.objects.order_by('-participantID')[:6]
-    
+    latest_session_list=RecordingSession.objects.order_by('-participantID')[:10]
+    latest_raw_session_list = RawProcessingResults.objects.order_by('sessionID')[:10]
     status = {}
-    
+    raw_status = {}
+
     for session in latest_session_list:
-        if os.path.isdir(default_save + session.sessionID):
+        if os.path.exists(default_save + session.sessionID + "/" + session.sessionID + ".zip"):
             newResults=Results(fileName = default_save + session.sessionID + '/' + session.sessionID + '.zip')
             newResults.save()
             session.results = newResults
@@ -49,9 +50,30 @@ def index(request):
             status[session]='no results'
         else:
             status[session]='results here'
+
+    for session in latest_raw_session_list:
+        if os.path.exists(default_save + session.sessionID+ '/' + session.sessionID + 'raw.zip'):
+            newResults=Results(fileName = default_save + session.sessionID + '/' + session.sessionID + 'raw.zip')
+            newResults.save()
+            session.results = newResults
+            session.save()
+        else:
+            print ("File not exist")
+            
+        
+
+        try:
+            check = session.results
+        except Results.DoesNotExist:
+            raise Http404("session does not exist")
+        if check == None:  
+            raw_status[session]='no results'
+        else:
+            raw_status[session]='results here'
                 
     listLength=len(status)
-    context={'latest_session_list':latest_session_list,'status':status,'listLength':listLength}
+    raw_listLength = len(raw_status)
+    context={'latest_session_list':latest_session_list,'latest_raw_session_list': latest_raw_session_list, 'status':status,'raw_status':raw_status, 'listLength':listLength, 'raw_listLength': raw_listLength}
     #return HttpResponse(template.render(context,request))
     return render(request, 'dataportal/index.html', context)
 
@@ -308,7 +330,7 @@ def download_results(request,sessionID):
 
 
 @login_required
-def delete_results(request,sessionID):
+def delete_results(request,sessionID): #delete folder with results
     
     try:
         session=RecordingSession.objects.get(sessionID=sessionID)
@@ -325,5 +347,140 @@ def delete_results(request,sessionID):
 
     return render(request, 'dataportal/delete_results.html')
 
+@login_required
+def newRawSession(request): #upload new video/audio file for pre-processing
 
 
+    class newRawSessionForm(forms.Form):
+        rawVideoUpload=forms.FileField(allow_empty_file=True, required= False)
+        rawAudioUpload=forms.FileField(allow_empty_file=True, required= False)
+        
+
+        sessionID=forms.CharField(max_length=100)
+        
+    
+    if request.method == 'POST':
+        form = newRawSessionForm(request.POST, request.FILES)
+        
+        if form.is_valid():
+            if RecordingSession.objects.filter(sessionID=form.cleaned_data['sessionID']).exists():
+                return HttpResponseForbidden("session already exists!")
+
+            #use try statements 
+            try:
+                newRawAudioFile=RawAudioInput(fileName=request.FILES['rawAudioUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['rawAudioUpload'])
+                newRawAudioFile.save()
+            except: 
+                newRawAudioFile = None
+            try:
+                newRawVideoFile=RawVideoInput(fileName=request.FILES['rawVideoUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['rawVideoUpload'])
+                newRawVideoFile.save()
+            except:
+                newRawVideoFile = None
+           
+
+            session=RawProcessingResults(sessionID=form.cleaned_data['sessionID'],rawVideoInput=newRawVideoFile, rawAudioInput=newRawAudioFile)
+            session.save()
+            return HttpResponseRedirect(reverse('dataportal:raw_detail', args=(form.cleaned_data['sessionID'],))) 
+    else:
+        form = newRawSessionForm()
+
+    return render(request, "dataportal/new_raw_session.html", {
+        "form": form,
+        
+        
+    })
+
+@login_required
+def raw_detail(request, sessionID):
+    try:
+        rawSession = RawProcessingResults.objects.get(sessionID=sessionID)
+        
+    except RecordingSession.DoesNotExist:
+        raise Http404("session does not exist")
+    try:
+        audio = rawSession.rawAudioInput
+    except rawSession.rawAudioInput.DoesNotExist: 
+        raise Http404("Audio file does not exist")
+
+    try:
+        video = rawSession.rawVideoInput
+    except rawSession.rawVideoInput.DoesNotExist: 
+        raise Http404("Audio file does not exist")
+
+    
+    try:
+        results = rawSession.results
+    except rawSession.results.DoesNotExist: 
+        results = Results(fileNme='no results')
+
+    return render(request, 'dataportal/raw_detail.html', {'session': rawSession, 'rawAudioInput':audio, 'rawVideoInput':video,'results':results})
+    #return HttpResponse("You are looking at session %s" % sessionID)
+
+@login_required
+def generate_raw_results(request,sessionID):
+    
+    try:
+        session = RawProcessingResults.objects.get(sessionID=sessionID) 
+        try:
+            rawAudioFile = session.rawAudioInput.media.path
+        except:
+            rawAudioFile=''
+        try:     
+            rawVideoFile = session.rawVideoInput.media.path
+        except:
+            rawVideoFile = ''
+        
+        inputFile= {
+            'sessionID' : str(sessionID),
+            'rawAudioFile' : rawAudioFile,
+            'rawVideoFile' : rawVideoFile,
+            
+        }
+        # t = threading.Thread(target=results_gen,args=[sessionID])
+        t = threading.Thread(target=raw_analysis,args=[inputFile,default_save+str(sessionID)])
+        
+    except:
+        return HttpResponseForbidden()
+    t.setDaemon(True)
+    t.start()
+    return render(request, 'dataportal/generate_results.html')
+
+
+
+@login_required
+def download_raw_results(request,sessionID):
+    
+    fl_path = default_save+str(sessionID)+'/'+str(sessionID)+'raw.zip'
+    filename = str(sessionID)+'raw.zip'
+
+    fl = open(fl_path, 'rb')
+    mime_type, _ = mimetypes.guess_type(fl_path)
+    response = HttpResponse(fl, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response
+
+
+@login_required
+def delete_raw_results(request,sessionID): #delete folder with results
+    
+    try:
+        session=RawProcessingResults.objects.get(sessionID=sessionID)
+    except:
+        return HttpResponse("session does not exist")
+    session.results=None
+    session.save()
+    try:
+        fl_path = default_save+str(sessionID)+'/'+str(sessionID)+'raw.zip'
+        os.remove(fl_path)
+        fl_path = default_save+str(sessionID)+'/'+"words.csv"
+        os.remove(fl_path)
+        fl_path = default_save+str(sessionID)+'/'+'sentences.csv'
+        os.remove(fl_path)
+
+
+
+    except:
+        return HttpResponse("file already deleted")
+
+    return render(request, 'dataportal/delete_results.html')

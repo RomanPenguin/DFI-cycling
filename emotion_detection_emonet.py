@@ -12,6 +12,32 @@ from deepface import DeepFace as df
 from emonet.basic import emonet_analysis
 
 
+# this function has been copied to {workspace}/bicyclewebsite/dataportal/generate_raw_results.py
+#please update that file from now on, this is just for record keeping / testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def emotions(inputFile,outputFile):
 
     
@@ -143,6 +169,5 @@ def emotions(inputFile,outputFile):
 
 
 emotions("/media/openface/datastorage/data/10022022121421.MP4","output/ana")
-#emotions("/media/openface/datastorage/data/video/copy.mp4","pilottest")
-
+# emotions("/media/openface/datastorage/data/video/copy.mp4","pilottest")
 

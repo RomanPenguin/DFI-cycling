@@ -7,6 +7,9 @@ from datetime import datetime, timedelta
 import time
 import json
 from dataclasses import dataclass, field
+from zipfile import ZipFile 
+
+
 
 # examples of inputfile
 # inputFile= {
@@ -836,6 +839,15 @@ def analysis(inputFile, outputFile) -> None:
     end = time.perf_counter()
     print(f"\nTakes: {end-start}s to run\n")
 
+    def zip_write(zip, filename):
+        zip.write(filename, os.path.basename(filename))
+
+    z = ZipFile(outputFile+'/'+inputFile['sessionID']+'.zip', 'w')
+    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.dbf')
+    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.prj')
+    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.shp')
+    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.shx')
+    z.close()
 
 #outputFile = r"E:\UNI\Research_assistant\My test data\May 5th\output"  # windows path
 
@@ -844,6 +856,7 @@ def analysis(inputFile, outputFile) -> None:
 # Tommy data path
 # outputFile = "/home/openface/Downloads/for kevin/datawithout/19th May/output"
 # analysis(inputFile, outputFile)
+
 
 
 if __name__ == "__main__":

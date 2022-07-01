@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Detail{% endblock %}
+
+{% block content %}
+<form action="/dataportal/new_raw_session/" method="POST" enctype="multipart/form-data" class ="pl-10">
+    {% csrf_token %}
+    {% for entry in form %}
+       <div class="pt-5"> 
+            {{ entry.label_tag }}
+       </div>
+       <div>
+           
+           {{entry}}
+       </div>
+    {% endfor %}
+    <div class='pt-5'>
+        <button class="bg-blue-400 hover:bg-blue-800 rounded-md p-3">
+            Save!
+        </button>
+    </div>
+    
+</form>
+
+{% endblock %}
+

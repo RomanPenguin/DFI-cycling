@@ -1,6 +1,7 @@
 from ast import Expression
 from fileinput import filename
 from lzma import PRESET_DEFAULT
+from click import progressbar
 import numpy as np
 from pathlib import Path
 import argparse
@@ -54,14 +55,22 @@ def emonet_analysis(inputImage):
     # plt.imshow(image1)
     backends = ['opencv', 'ssd', 'dlib', 'mtcnn', 'retinaface', 'mediapipe']
 
-
+    allpics = []
     imagefolder = inputImage
-    allpics = os.listdir(imagefolder)
+    for file in os.listdir(imagefolder):
+        if file.endswith(".jpg"):
+            allpics.append(file)
+
     allpics = natsorted(allpics)
+
+    progress = 0
+    totalcount = len(allpics)
     for i in allpics:
+        progress += 1
+        print(progress+"/"+totalcount)
 
         image1 = DeepFace.detectFace(imagefolder+"/"+i, target_size = (256, 256), detector_backend = backends[0], enforce_detection = False )
-        plt.imshow(image1)
+        # plt.imshow(image1)
         
         # plt.imshow(  image1.permute(1, 2, 0) )
 
