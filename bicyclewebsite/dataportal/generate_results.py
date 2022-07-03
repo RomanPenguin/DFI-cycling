@@ -839,15 +839,7 @@ def analysis(inputFile, outputFile) -> None:
     end = time.perf_counter()
     print(f"\nTakes: {end-start}s to run\n")
 
-    def zip_write(zip, filename):
-        zip.write(filename, os.path.basename(filename))
-
-    z = ZipFile(outputFile+'/'+inputFile['sessionID']+'.zip', 'w')
-    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.dbf')
-    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.prj')
-    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.shp')
-    zip_write(z, outputFile+'/'+inputFile['sessionID']+'.shx')
-    z.close()
+    
 
 #outputFile = r"E:\UNI\Research_assistant\My test data\May 5th\output"  # windows path
 
