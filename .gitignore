@@ -8,6 +8,7 @@ transcript.csv
 trans
 
 output/
+data/
 
 # Django #
 *.log
