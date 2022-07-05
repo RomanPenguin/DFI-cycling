@@ -19,8 +19,9 @@ from django.contrib.auth.decorators import login_required
 import time, threading, mimetypes, os.path, os, shutil
 from dataportal.generate_results import analysis
 from dataportal.generate_raw_results import raw_analysis
+from zipfile import ZipFile 
 
-default_save = '/home/openface/Documents/new_cycling/DFI-cycling/output/allresults/'
+default_save = '/home/tommy/Documents/output'
 #default_save = '/home/ubuntu/webserver/DFI-cycling/output/'
 dictionaryPath = 'Dictionary.txt'
 #dictionaryPath = '/home/ubuntu/webserver/DFI-cycling/Dictionary.txt'
@@ -32,7 +33,7 @@ def index(request):
     raw_status = {}
 
     for session in latest_session_list:
-        if os.path.exists(default_save + session.sessionID + "/" + session.sessionID + ".zip"):
+        if os.path.exists(default_save + session.sessionID + "/" + session.sessionID + ".shp"):
             newResults=Results(fileName = default_save + session.sessionID + '/' + session.sessionID + '.zip')
             newResults.save()
             session.results = newResults
@@ -256,6 +257,9 @@ def newSession(request):
 @login_required
 def generate_results(request,sessionID):
     
+    if not(os.path.isdir(default_save)):
+        os.mkdir(default_save)
+        print("default save location created")
     try:
         session = RecordingSession.objects.get(sessionID=sessionID) 
         try:
@@ -319,6 +323,18 @@ def generate_results(request,sessionID):
 @login_required
 def download_results(request,sessionID):
     
+    def zip_write(zip, filename):
+        zip.write(filename, os.path.basename(filename))
+
+    if not(os.path.isfile(default_save+str(sessionID)+'/'+str(sessionID)+".zip")):
+
+        z = ZipFile(default_save+str(sessionID)+'/'+str(sessionID)+'.zip', 'w')
+        zip_write(z, default_save+str(sessionID)+'/'+str(sessionID)+'.dbf')
+        zip_write(z, default_save+str(sessionID)+'/'+str(sessionID)+'.prj')
+        zip_write(z, default_save+str(sessionID)+'/'+str(sessionID)+'.shp')
+        zip_write(z, default_save+str(sessionID)+'/'+str(sessionID)+'.shx')
+        z.close()
+
     fl_path = default_save+str(sessionID)+'/'+str(sessionID)+'.zip'
     filename = str(sessionID)+'.zip'
 
@@ -420,6 +436,9 @@ def raw_detail(request, sessionID):
 @login_required
 def generate_raw_results(request,sessionID):
     
+    if not(os.path.isdir(default_save)):
+        os.mkdir(default_save)
+        print("default save location created")
     try:
         session = RawProcessingResults.objects.get(sessionID=sessionID) 
         try:

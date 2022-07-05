@@ -21,7 +21,7 @@ cryptography==2.8
 cycler==0.11.0
 dbus-python==1.2.16
 decorator==4.4.2
-deepface==0.0.74
+deepface==0.0.75
 Django==3.2
 django-cleanup==5.2.0
 django-rename-app==0.1.3
