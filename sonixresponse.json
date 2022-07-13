@@ -1,0 +1,807 @@
+'{
+    "name": "ZOOM0007.WAV",
+    "transcript": [
+        {
+            "speaker": "Speaker1",
+            "start_time": 24.727,
+            "end_time": 661.507,
+            "words": [
+                {
+                    "text": "And.",
+                    "start_time": 28.21,
+                    "end_time": 28.72,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " I",
+                    "start_time": 119.49,
+                    "end_time": 119.52,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " realize",
+                    "start_time": 120.15,
+                    "end_time": 120.57,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " this",
+                    "start_time": 120.57,
+                    "end_time": 120.72,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " is",
+                    "start_time": 120.72,
+                    "end_time": 120.81,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " not",
+                    "start_time": 120.81,
+                    "end_time": 120.96,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " exactly",
+                    "start_time": 120.96,
+                    "end_time": 121.62,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " a",
+                    "start_time": 121.65,
+                    "end_time": 121.7,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " cycling",
+                    "start_time": 121.71,
+                    "end_time": 122.28,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " infrastructure,",
+                    "start_time": 122.28,
+                    "end_time": 123.06,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " but",
+                    "start_time": 123.06,
+                    "end_time": 123.27,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " it",
+                    "start_time": 123.3,
+                    "end_time": 123.42,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " certainly",
+                    "start_time": 123.42,
+                    "end_time": 123.99,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " makes",
+                    "start_time": 123.99,
+                    "end_time": 124.23,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " me",
+                    "start_time": 124.23,
+                    "end_time": 124.38,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " feel",
+                    "start_time": 124.38,
+                    "end_time": 124.77,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " undervalued.",
+                    "start_time": 124.77,
+                    "end_time": 126.18,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text":" We\'re",
+                    "start_time": 127.91,
+                    "end_time": 128.07,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " back",
+                    "start_time": 128.09,
+                    "end_time": 128.48,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " up.",
+                    "start_time": 128.48,
+                    "end_time": 128.84,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text":" Let\'s",
+                    "start_time": 130.56,
+                    "end_time": 130.74,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " walk",
+                    "start_time": 130.74,
+                    "end_time": 131.01,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " away.",
+                    "start_time": 131.01,
+                    "end_time": 131.55,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " Very",
+                    "start_time": 132.63,
+                    "end_time": 133.23,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " aggressively",
+                    "start_time": 134.16,
+                    "end_time": 134.88,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " signed.",
+                    "start_time": 134.88,
+                    "end_time": 135.72,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " And",
+                    "start_time": 139.05,
+                    "end_time": 139.17,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " squeeze",
+                    "start_time": 139.23,
+                    "end_time": 139.74,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " out",
+                    "start_time": 139.74,
+                    "end_time": 139.89,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " this",
+                    "start_time": 139.89,
+                    "end_time": 140.07,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " tiny",
+                    "start_time": 140.07,
+                    "end_time": 140.67,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " door.",
+                    "start_time": 140.67,
+                    "end_time": 141.45,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text":" That\'s",
+                    "start_time": 146.64,
+                    "end_time": 146.86,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " a",
+                    "start_time": 146.88,
+                    "end_time": 147.0,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " bit",
+                    "start_time": 147.0,
+                    "end_time": 147.12,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " ridiculous.",
+                    "start_time": 147.12,
+                    "end_time": 147.66,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " Try",
+                    "start_time": 244.81,
+                    "end_time": 244.99,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " to",
+                    "start_time": 244.99,
+                    "end_time": 245.11,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " do",
+                    "start_time": 245.11,
+                    "end_time": 245.26,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " something",
+                    "start_time": 245.26,
+                    "end_time": 245.53,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " on",
+                    "start_time": 245.53,
+                    "end_time": 245.68,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " a",
+                    "start_time": 245.68,
+                    "end_time": 245.74,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " Friday",
+                    "start_time": 245.74,
+                    "end_time": 246.46,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " in",
+                    "start_time": 246.73,
+                    "end_time": 246.78,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " a",
+                    "start_time": 246.79,
+                    "end_time": 246.88,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " city",
+                    "start_time": 246.88,
+                    "end_time": 247.51,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " sure",
+                    "start_time": 248.38,
+                    "end_time": 249.25,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " to",
+                    "start_time": 249.25,
+                    "end_time": 249.61,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " be",
+                    "start_time": 249.61,
+                    "end_time": 249.88,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " full",
+                    "start_time": 249.88,
+                    "end_time": 250.12,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " of,",
+                    "start_time": 250.12,
+                    "end_time": 250.24,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " but",
+                    "start_time": 250.24,
+                    "end_time": 250.72,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " definitely",
+                    "start_time": 252.06,
+                    "end_time": 252.52,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " worried",
+                    "start_time": 252.52,
+                    "end_time": 252.73,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " about",
+                    "start_time": 252.73,
+                    "end_time": 252.91,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " these",
+                    "start_time": 252.91,
+                    "end_time": 253.12,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " cars.",
+                    "start_time": 253.12,
+                    "end_time": 253.81,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " Will",
+                    "start_time": 254.65,
+                    "end_time": 254.86,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " they",
+                    "start_time": 254.86,
+                    "end_time": 255.01,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " see",
+                    "start_time": 255.01,
+                    "end_time": 255.25,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " me?",
+                    "start_time": 255.25,
+                    "end_time": 255.43,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " Will",
+                    "start_time": 255.46,
+                    "end_time": 255.64,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " they",
+                    "start_time": 255.64,
+                    "end_time": 255.79,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " care?",
+                    "start_time": 255.79,
+                    "end_time": 256.24,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " Classic",
+                    "start_time": 256.33,
+                    "end_time": 256.81,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " case.",
+                    "start_time": 256.81,
+                    "end_time": 257.41,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " I",
+                    "start_time": 258.27,
+                    "end_time": 258.33,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " was",
+                    "start_time": 258.39,
+                    "end_time": 258.51,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " like,",
+                    "start_time": 258.51,
+                    "end_time": 259.25,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " Oh,",
+                    "start_time": 259.26,
+                    "end_time": 259.68,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " shit.",
+                    "start_time": 259.68,
+                    "end_time": 260.07,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " I",
+                    "start_time": 264.53,
+                    "end_time": 264.62,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " think",
+                    "start_time": 264.62,
+                    "end_time": 265.01,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " like",
+                    "start_time": 265.01,
+                    "end_time": 265.25,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " the",
+                    "start_time": 265.25,
+                    "end_time": 265.34,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " green",
+                    "start_time": 265.34,
+                    "end_time": 265.61,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " painted",
+                    "start_time": 265.61,
+                    "end_time": 266.03,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " treatment",
+                    "start_time": 266.03,
+                    "end_time": 266.48,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " actually",
+                    "start_time": 266.48,
+                    "end_time": 266.81,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " does",
+                    "start_time": 266.81,
+                    "end_time": 267.05,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " help",
+                    "start_time": 267.05,
+                    "end_time": 267.62,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " the",
+                    "start_time": 268.97,
+                    "end_time": 269.06,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " sort",
+                    "start_time": 269.15,
+                    "end_time": 269.3,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " of",
+                    "start_time": 269.3,
+                    "end_time": 269.35,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " recently",
+                    "start_time": 269.36,
+                    "end_time": 269.72,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " put",
+                    "start_time": 269.72,
+                    "end_time": 269.87,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " in",
+                    "start_time": 269.87,
+                    "end_time": 270.01,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " on",
+                    "start_time": 270.05,
+                    "end_time": 270.21,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " intersections",
+                    "start_time": 270.22,
+                    "end_time": 270.95,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " sort",
+                    "start_time": 271.37,
+                    "end_time": 271.55,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " of",
+                    "start_time": 271.55,
+                    "end_time": 271.64,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " maybe",
+                    "start_time": 271.64,
+                    "end_time": 272.15,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " not",
+                    "start_time": 273.2,
+                    "end_time": 273.65,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " fixed",
+                    "start_time": 274.13,
+                    "end_time": 274.52,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " it.",
+                    "start_time": 274.52,
+                    "end_time": 275.0,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " But",
+                    "start_time": 275.95,
+                    "end_time": 276.19,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " I",
+                    "start_time": 276.19,
+                    "end_time": 276.25,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " think",
+                    "start_time": 276.25,
+                    "end_time": 276.4,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text":" there\'s",
+                    "start_time": 276.4,
+                    "end_time": 276.55,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " actually",
+                    "start_time": 276.55,
+                    "end_time": 276.82,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " been",
+                    "start_time": 276.82,
+                    "end_time": 276.97,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " a",
+                    "start_time": 276.97,
+                    "end_time": 277.06,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text": " pretty",
+                    "start_time": 277.06,
+                    "end_time": 277.33,
+                    "highlight": false,
+                    "strikethrough": false
+                },
+                {
+                    "text":"
+ big","start_time":277.33,"end_time":277.57,"highlight":false,"strikethrough":false},{"text":" reduction","start_time":277.57,"end_time":278.14,"highlight":false,"strikethrough":false},{"text":" in","start_time":278.14,"end_time":278.59,"highlight":false,"strikethrough":false},{"text":" people","start_time":279.55,"end_time":279.94,"highlight":false,"strikethrough":false},{"text":" just","start_time":279.94,"end_time":280.54,"highlight":false,"strikethrough":false},{"text":" hanging","start_time":280.57,"end_time":280.99,"highlight":false,"strikethrough":false},{"text":" out","start_time":280.99,"end_time":281.2,"highlight":false,"strikethrough":false},{"text":" there.","start_time":281.2,"end_time":281.65,"highlight":false,"strikethrough":false},{"text":" That\'s","start_time":282.32,"end_time":282.44,"highlight":false,"strikethrough":false},{"text":" sort","start_time":282.46,"end_time":282.58,"highlight":false,"strikethrough":false},{"text":" of","start_time":282.58,"end_time":282.67,"highlight":false,"strikethrough":false},{"text":" the","start_time":282.67,"end_time":282.73,"highlight":false,"strikethrough":false},{"text":" main","start_time":282.73,"end_time":283.03,"highlight":false,"strikethrough":false},{"text":" issue.","start_time":283.03,"end_time":283.66,"highlight":false,"strikethrough":false},{"text":" The","start_time":288.1,"end_time":288.19,"highlight":false,"strikethrough":false},{"text":" person","start_time":288.19,"end_time":288.52,"highlight":false,"strikethrough":false},{"text":" I","start_time":288.52,"end_time":288.64,"highlight":false,"strikethrough":false},{"text":" will","start_time":288.64,"end_time":288.79,"highlight":false,"strikethrough":false},{"text":" dub","start_time":288.79,"end_time":289.03,"highlight":false,"strikethrough":false},{"text":" the","start_time":289.03,"end_time":289.51,"highlight":false,"strikethrough":false},{"text":" creeper","start_time":290.17,"end_time":291.01,"highlight":false,"strikethrough":false},{"text":" I","start_time":291.04,"end_time":291.16,"highlight":false,"strikethrough":false},{"text":" like","start_time":291.16,"end_time":291.67,"highlight":false,"strikethrough":false},{"text":" not","start_time":292.09,"end_time":292.3,"highlight":false,"strikethrough":false},{"text":" stopped","start_time":292.3,"end_time":292.72,"highlight":false,"strikethrough":false},{"text":" not","start_time":292.75,"end_time":293.02,"highlight":false,"strikethrough":false},{"text":" going","start_time":293.02,"end_time":293.38,"highlight":false,"strikethrough":false},{"text":" there","start_time":293.38,"end_time":293.5,"highlight":false,"strikethrough":false},{"text":" just","start_time":293.5,"end_time":293.71,"highlight":false,"strikethrough":false},{"text":" like","start_time":293.71,"end_time":293.83,"highlight":false,"strikethrough":false},{"text":" creeping","start_time":293.83,"end_time":294.19,"highlight":false,"strikethrough":false},{"text":" forward,
+                    ","start_time":294.19,"end_time":294.49,"highlight":false,"strikethrough":false},{"text":" waiting","start_time":294.49,"end_time":294.7,"highlight":false,"strikethrough":false},{"text":" for","start_time":294.7,"end_time":294.82,"highlight":false,"strikethrough":false},{"text":" the","start_time":294.82,"end_time":294.91,"highlight":false,"strikethrough":false},{"text":" pedestrians,
+                    ","start_time":294.91,"end_time":295.9,"highlight":false,"strikethrough":false},{"text":" kind","start_time":296.32,"end_time":296.47,"highlight":false,"strikethrough":false},{"text":" of","start_time":296.47,"end_time":296.56,"highlight":false,"strikethrough":false},{"text":" bullying","start_time":296.56,"end_time":296.98,"highlight":false,"strikethrough":false},{"text":" them","start_time":296.98,"end_time":297.1,"highlight":false,"strikethrough":false},{"text":" a","start_time":297.1,"end_time":297.16,"highlight":false,"strikethrough":false},{"text":" little","start_time":297.16,"end_time":297.37,"highlight":false,"strikethrough":false},{"text":" bit.","start_time":297.37,"end_time":297.82,"highlight":false,"strikethrough":false},{"text":" But.","start_time":301.02,"end_time":301.26,"highlight":false,"strikethrough":false},{"text":" Yeah.","start_time":301.26,"end_time":301.7,"highlight":false,"strikethrough":false},{"text":" They?","start_time":319.33,"end_time":319.68,"highlight":false,"strikethrough":false},{"text":" Yep.","start_time":363.59,"end_time":364.07,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":368.07,"end_time":368.46,"highlight":false,"strikethrough":false},{"text":" just","start_time":368.46,"end_time":368.58,"highlight":false,"strikethrough":false},{"text":" going","start_time":368.58,"end_time":368.7,"highlight":false,"strikethrough":false},{"text":" to","start_time":368.7,"end_time":368.82,"highlight":false,"strikethrough":false},{"text":" chat","start_time":368.82,"end_time":369.11,"highlight":false,"strikethrough":false},{"text":" to","start_time":369.12,"end_time":369.27,"highlight":false,"strikethrough":false},{"text":" him.","start_time":369.27,"end_time":369.59,"highlight":false,"strikethrough":false},{"text":" That","start_time":369.6,"end_time":369.75,"highlight":false,"strikethrough":false},{"text":" was","start_time":369.75,"end_time":370.05,"highlight":false,"strikethrough":false},{"text":" he","start_time":370.05,"end_time":370.2,"highlight":false,"strikethrough":false},{"text":" wasn\'t","start_time":370.2,"end_time":370.44,"highlight":false,"strikethrough":false},{"text":" even","start_time":370.44,"end_time":370.68,"highlight":false,"strikethrough":false},{"text":" indicating","start_time":370.68,"end_time":371.78,"highlight":false,"strikethrough":false},{"text":" like","start_time":371.79,"end_time":372.19,"highlight":false,"strikethrough":false},{"text":" seriously.","start_time":372.21,"end_time":373.2,"highlight":false,"strikethrough":false},{"text":" You","start_time":385.72,"end_time":385.91,"highlight":false,"strikethrough":false},{"text":" see,
+                    ","start_time":385.92,"end_time":385.95,"highlight":false,"strikethrough":false},{"text":" we","start_time":386.02,"end_time":386.12,"highlight":false,"strikethrough":false},{"text":" got","start_time":386.13,"end_time":386.28,"highlight":false,"strikethrough":false},{"text":" those","start_time":386.28,"end_time":386.49,"highlight":false,"strikethrough":false},{"text":" little","start_time":386.49,"end_time":386.82,"highlight":false,"strikethrough":false},{"text":" arrows","start_time":386.82,"end_time":387.27,"highlight":false,"strikethrough":false},{"text":" in","start_time":387.27,"end_time":387.39,"highlight":false,"strikethrough":false},{"text":" the","start_time":387.39,"end_time":387.45,"highlight":false,"strikethrough":false},{"text":" mirror.","start_time":387.45,"end_time":387.93,"highlight":false,"strikethrough":false},{"text":" Excuse","start_time":404.4,"end_time":404.76,"highlight":false,"strikethrough":false},{"text":" me.","start_time":404.76,"end_time":405.24,"highlight":false,"strikethrough":false},{"text":" I","start_time":405.87,"end_time":405.94,"highlight":false,"strikethrough":false},{"text":" was","start_time":405.96,"end_time":406.05,"highlight":false,"strikethrough":false},{"text":" wondering","start_time":406.05,"end_time":406.29,"highlight":false,"strikethrough":false},{"text":" if","start_time":406.29,"end_time":406.35,"highlight":false,"strikethrough":false},{"text":" you\'re","start_time":406.35,"end_time":406.44,"highlight":false,"strikethrough":false},{"text":" aware","start_time":406.44,"end_time":406.68,"highlight":false,"strikethrough":false},{"text":" that","start_time":406.68,"end_time":406.74,"highlight":false,"strikethrough":false},{"text":" you","start_time":406.74,"end_time":406.83,"highlight":false,"strikethrough":false},{"text":" nearly","start_time":406.83,"end_time":407.1,"highlight":false,"strikethrough":false},{"text":" took","start_time":407.1,"end_time":407.28,"highlight":false,"strikethrough":false},{"text":" me","start_time":407.28,"end_time":407.43,"highlight":false,"strikethrough":false},{"text":" out","start_time":407.43,"end_time":407.67,"highlight":false,"strikethrough":false},{"text":" there.","start_time":407.67,"end_time":408.07,"highlight":false,"strikethrough":false},{"text":" Yeah.","start_time":408.9,"end_time":409.5,"highlight":false,"strikethrough":false},{"text":" So","start_time":409.5,"end_time":409.71,"highlight":false,"strikethrough":false},{"text":" when","start_time":409.71,"end_time":409.86,"highlight":false,"strikethrough":false},{"text":" you","start_time":409.86,"end_time":409.98,"highlight":false,"strikethrough":false},{"text":" turn","start_time":409.98,"end_time":410.25,"highlight":false,"strikethrough":false},{"text":" left.","start_time":410.25,"end_time":410.67,"highlight":false,"strikethrough":false},{"text":" Yeah,
+                    ","start_time":410.94,"end_time":411.39,"highlight":false,"strikethrough":false},{"text":" when","start_time":411.39,"end_time":411.51,"highlight":false,"strikethrough":false},{"text":" you","start_time":411.51,"end_time":411.6,"highlight":false,"strikethrough":false},{"text":" turn","start_time":411.6,"end_time":411.75,"highlight":false,"strikethrough":false},{"text":" left,
+                    ","start_time":411.75,"end_time":411.93,"highlight":false,"strikethrough":false},{"text":" you","start_time":411.93,"end_time":411.99,"highlight":false,"strikethrough":false},{"text":" up","start_time":411.99,"end_time":412.11,"highlight":false,"strikethrough":false},{"text":" to","start_time":412.11,"end_time":412.26,"highlight":false,"strikethrough":false},{"text":" indicate.","start_time":412.26,"end_time":412.8,"highlight":false,"strikethrough":false},{"text":" And","start_time":412.8,"end_time":412.92,"highlight":false,"strikethrough":false},{"text":" you","start_time":412.92,"end_time":413.01,"highlight":false,"strikethrough":false},{"text":" have","start_time":413.01,"end_time":413.13,"highlight":false,"strikethrough":false},{"text":"
+ to","start_time":413.13,"end_time":413.22,"highlight":false,"strikethrough":false},{"text":" give","start_time":413.22,"end_time":413.4,"highlight":false,"strikethrough":false},{"text":" way","start_time":413.4,"end_time":413.58,"highlight":false,"strikethrough":false},{"text":" to","start_time":413.58,"end_time":413.73,"highlight":false,"strikethrough":false},{"text":" bikes","start_time":413.73,"end_time":414.12,"highlight":false,"strikethrough":false},{"text":" in","start_time":414.12,"end_time":414.24,"highlight":false,"strikethrough":false},{"text":" the","start_time":414.24,"end_time":414.3,"highlight":false,"strikethrough":false},{"text":" bike","start_time":414.3,"end_time":414.57,"highlight":false,"strikethrough":false},{"text":" lane.","start_time":414.57,"end_time":415.14,"highlight":false,"strikethrough":false},{"text":" No,
+                    ","start_time":415.83,"end_time":416.22,"highlight":false,"strikethrough":false},{"text":" actually,
+                    ","start_time":416.85,"end_time":417.18,"highlight":false,"strikethrough":false},{"text":" I","start_time":417.18,"end_time":417.27,"highlight":false,"strikethrough":false},{"text":" scared","start_time":417.27,"end_time":417.48,"highlight":false,"strikethrough":false},{"text":" the","start_time":417.48,"end_time":417.6,"highlight":false,"strikethrough":false},{"text":" shit","start_time":417.6,"end_time":417.78,"highlight":false,"strikethrough":false},{"text":" out","start_time":417.78,"end_time":417.9,"highlight":false,"strikethrough":false},{"text":" of","start_time":417.9,"end_time":417.96,"highlight":false,"strikethrough":false},{"text":" me","start_time":417.96,"end_time":418.14,"highlight":false,"strikethrough":false},{"text":" because","start_time":418.14,"end_time":418.35,"highlight":false,"strikethrough":false},{"text":" I","start_time":418.35,"end_time":418.41,"highlight":false,"strikethrough":false},{"text":" didn\'t","start_time":418.41,"end_time":418.62,"highlight":false,"strikethrough":false},{"text":" even","start_time":418.62,"end_time":418.8,"highlight":false,"strikethrough":false},{"text":" know","start_time":418.8,"end_time":418.92,"highlight":false,"strikethrough":false},{"text":" you","start_time":418.92,"end_time":418.98,"highlight":false,"strikethrough":false},{"text":" were","start_time":418.98,"end_time":419.07,"highlight":false,"strikethrough":false},{"text":" going","start_time":419.07,"end_time":419.19,"highlight":false,"strikethrough":false},{"text":" to","start_time":419.19,"end_time":419.28,"highlight":false,"strikethrough":false},{"text":" turn.","start_time":419.28,"end_time":419.82,"highlight":false,"strikethrough":false},{"text":" Yeah.","start_time":421.66,"end_time":422.13,"highlight":false,"strikethrough":false},{"text":" Yeah.","start_time":423.01,"end_time":423.58,"highlight":false,"strikethrough":false},{"text":" Sorry.","start_time":423.72,"end_time":424.09,"highlight":false,"strikethrough":false},{"text":" Yeah,
+                    ","start_time":424.15,"end_time":424.47,"highlight":false,"strikethrough":false},{"text":" no","start_time":424.5,"end_time":424.68,"highlight":false,"strikethrough":false},{"text":" worries.","start_time":424.68,"end_time":425.16,"highlight":false,"strikethrough":false},{"text":" Just.","start_time":425.16,"end_time":425.49,"highlight":false,"strikethrough":false},{"text":" Yeah,
+                    ","start_time":425.49,"end_time":425.7,"highlight":false,"strikethrough":false},{"text":" thanks.","start_time":425.7,"end_time":426.24,"highlight":false,"strikethrough":false},{"text":" Oh.","start_time":429.57,"end_time":429.99,"highlight":false,"strikethrough":false},{"text":" What\'s","start_time":437.49,"end_time":437.62,"highlight":false,"strikethrough":false},{"text":" wrong","start_time":437.64,"end_time":437.82,"highlight":false,"strikethrough":false},{"text":" with","start_time":437.82,"end_time":437.97,"highlight":false,"strikethrough":false},{"text":" these","start_time":438.54,"end_time":438.69,"highlight":false,"strikethrough":false},{"text":" being","start_time":438.81,"end_time":439.02,"highlight":false,"strikethrough":false},{"text":" one","start_time":439.02,"end_time":439.17,"highlight":false,"strikethrough":false},{"text":" way?","start_time":439.17,"end_time":439.41,"highlight":false,"strikethrough":false},{"text":" Now","start_time":439.53,"end_time":439.71,"highlight":false,"strikethrough":false},{"text":" I","start_time":439.71,"end_time":439.77,"highlight":false,"strikethrough":false},{"text":" have","start_time":439.77,"end_time":439.98,"highlight":false,"strikethrough":false},{"text":" to","start_time":439.98,"end_time":440.4,"highlight":false,"strikethrough":false},{"text":" know","start_time":440.79,"end_time":441.03,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":441.03,"end_time":441.18,"highlight":false,"strikethrough":false},{"text":" deviated","start_time":441.18,"end_time":441.69,"highlight":false,"strikethrough":false},{"text":" from","start_time":441.69,"end_time":441.9,"highlight":false,"strikethrough":false},{"text":" my","start_time":441.9,"end_time":442.05,"highlight":false,"strikethrough":false},{"text":" course.","start_time":442.05,"end_time":442.86,"highlight":false,"strikethrough":false},{"text":" I\'ll","start_time":444.99,"end_time":445.17,"highlight":false,"strikethrough":false},{"text":" say.","start_time":445.17,"end_time":445.34,"highlight":false,"strikethrough":false},{"text":" Probably","start_time":445.35,"end_time":445.59,"highlight":false,"strikethrough":false},{"text":" thinks","start_time":445.59,"end_time":445.77,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":445.77,"end_time":445.86,"highlight":false,"strikethrough":false},{"text":" a","start_time":445.86,"end_time":445.92,"highlight":false,"strikethrough":false},{"text":" total","start_time":445.92,"end_time":446.31,"highlight":false,"strikethrough":false},{"text":" crackpot","start_time":446.31,"end_time":446.76,"highlight":false,"strikethrough":false},{"text":" for","start_time":446.76,"end_time":446.87,"highlight":false,"strikethrough":false},{"text":" talking","start_time":447.06,"end_time":447.51,"highlight":false,"strikethrough":false},{"text":" now.","start_time":447.51,"end_time":447.85,"highlight":false,"strikethrough":false},{"text":" Yeah.","start_time":477.22,"end_time":477.32,"highlight":false,"strikethrough":false},{"text":" I","start_time":477.52,"end_time":477.64,"highlight":false,"strikethrough":false},{"text":" mean,
+                    ","start_time":477.64,"end_time":477.76,"highlight":false,"strikethrough":false},{"text":" at","start_time":477.76,"end_time":477.82,"highlight":false,"strikethrough":false},{"text":" least","start_time":477.82,"end_time":478.03,"highlight":false,"strikethrough":false},{"text":" that\'s","start_time":478.12,"end_time":478.3,"highlight":false,"strikethrough":false},{"text":" what","start_time":478.3,"end_time":478.41,"highlight":false,"strikethrough":false},{"text":" counts","start_time":478.42,"end_time":478.72,"highlight":false,"strikethrough":false},{"text":" as","start_time":478.72,"end_time":478.84,"highlight":false,"strikethrough":false},{"text":" an","start_time":478.84,"end_time":478.93,"highlight":false,"strikethrough":false},{"text":" incident.","start_time":478.93,"end_time":479.47,"highlight":false,"strikethrough":false},{"text":" No,
+                    ","start_time":548.64,"end_time":548.75,"highlight":false,"strikethrough":false},{"text":" I","start_time":548.99,"end_time":549.41,"highlight":false,"strikethrough":false},{"text":" thought.","start_time":549.41,"end_time":549.59,"highlight":false,"strikethrough":false},{"text":" I","start_time":549.59,"end_time":549.71,"highlight":false,"strikethrough":false},{"text":" promise.","start_time":549.71,"end_time":550.46,"highlight":false,"strikethrough":false},{"text":" Actually,
+                    ","start_time":551.42,"end_time":551.93,"highlight":false,"strikethrough":false},{"text":" he","start_time":551.93,"end_time":552.05,"highlight":false,"strikethrough":false},{"text":" just","start_time":552.05,"end_time":552.44,"highlight":false,"strikethrough":false},{"text":" totally","start_time":552.44,"end_time":552.77,"highlight":false,"strikethrough":false},{"text":" terrified","start_time":552.77,"end_time":553.28,"highlight":false,"strikethrough":false},{"text":" me.","start_time":553.28,"end_time":553.7,"highlight":false,"strikethrough":false},{"text":" I","start_time":554.25,"end_time":554.33,"highlight":false,"strikethrough":false},{"text":" was","start_time":554.33,"end_time":554.42,"highlight":false,"strikethrough":false},{"text":" like,
+                    ","start_time":554.42,"end_time":554.54,"highlight":false,"strikethrough":false},{"text":" I","start_time":554.54,"end_time":554.6,"highlight":false,"strikethrough":false},{"text":" kind","start_time":554.6,"end_time":554.72,"highlight":false,"strikethrough":false},{"text":" of","start_time":554.72,"end_time":554.78,"highlight":false,"strikethrough":false},{"text":" get","start_time":554.78,"end_time":554.93,"highlight":false,"strikethrough":false},{"text":" a","start_time":554.93,"end_time":554.96,"highlight":false,"strikethrough":false},{"text":" left","start_time":554.96,"end_time":555.17,"highlight":false,"strikethrough":false},{"text":" handed","start_time":555.17,"end_time":555.38,"highlight":false,"strikethrough":false},{"text":" vibe","start_time":555.41,"end_time":555.71,"highlight":false,"strikethrough":false},{"text":" from","start_time":555.71,"end_time":555.92,"highlight":false,"strikethrough":false},{"text":" him.","start_time":555.92,"end_time":556.31,"highlight":false,"strikethrough":false},{"text":" It\'s","start_time":634.41,"end_time":634.53,"highlight":false,"strikethrough":false},{"text":" a","start_time":634.53,"end_time":634.59,"highlight":false,"strikethrough":false},{"text":" very","start_time":634.59,"end_time":634.8,"highlight":false,"strikethrough":false},{"text":" cute","start_time":634.8,"end_time":635.01,"highlight":false,"strikethrough":false},{"text":"
+ dog.","start_time":635.01,"end_time":635.55,"highlight":false,"strikethrough":false},{"text":" No.","start_time":637.56,"end_time":638.26,"highlight":false,"strikethrough":false},{"text":" I","start_time":660.04,"end_time":660.13,"highlight":false,"strikethrough":false},{"text":" appreciate","start_time":660.13,"end_time":660.7,"highlight":false,"strikethrough":false},{"text":" the","start_time":660.7,"end_time":660.79,"highlight":false,"strikethrough":false},{"text":" kind","start_time":660.79,"end_time":661.03,"highlight":false,"strikethrough":false},{"text":" of","start_time":661.03,"end_time":661.24,"highlight":false,"strikethrough":false},{"text":" effort","start_time":661.24,"end_time":661.69,"highlight":false,"strikethrough":false},{"text":" here,
+                    ","start_time":661.69,"end_time":661.99,"highlight":false,"strikethrough":false},{"text":" but","start_time":661.99,"end_time":662.56,"highlight":false,"strikethrough":false},{"text":" this","start_time":662.71,"end_time":662.92,"highlight":false,"strikethrough":false},{"text":" definitely","start_time":663.04,"end_time":663.34,"highlight":false,"strikethrough":false},{"text":" makes","start_time":663.34,"end_time":663.61,"highlight":false,"strikethrough":false},{"text":" me","start_time":663.61,"end_time":663.7,"highlight":false,"strikethrough":false},{"text":" feel","start_time":663.7,"end_time":664.03,"highlight":false,"strikethrough":false},{"text":" exposed.","start_time":664.03,"end_time":664.99,"highlight":false,"strikethrough":false}]},{"speaker":"","start_time":673.39,"end_time":675.1,"words":[{"text":"Going","start_time":673.39,"end_time":673.66,"highlight":false,"strikethrough":false},{"text":" around","start_time":673.66,"end_time":673.87,"highlight":false,"strikethrough":false},{"text":" that","start_time":673.87,"end_time":674.02,"highlight":false,"strikethrough":false},{"text":" construction","start_time":674.02,"end_time":674.68,"highlight":false,"strikethrough":false},{"text":" there.","start_time":674.68,"end_time":675.1,"highlight":false,"strikethrough":false}]},{"speaker":"Speaker1","start_time":680.98,"end_time":940.06,"words":[{"text":"And","start_time":680.98,"end_time":681.19,"highlight":false,"strikethrough":false},{"text":" this","start_time":681.19,"end_time":681.34,"highlight":false,"strikethrough":false},{"text":" bit","start_time":681.34,"end_time":681.46,"highlight":false,"strikethrough":false},{"text":" along","start_time":681.46,"end_time":681.76,"highlight":false,"strikethrough":false},{"text":" here,
+                    ","start_time":681.76,"end_time":682.03,"highlight":false,"strikethrough":false},{"text":" I","start_time":682.03,"end_time":682.12,"highlight":false,"strikethrough":false},{"text":" think","start_time":682.12,"end_time":682.27,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":682.27,"end_time":682.39,"highlight":false,"strikethrough":false},{"text":" the","start_time":682.39,"end_time":682.48,"highlight":false,"strikethrough":false},{"text":" problem","start_time":682.48,"end_time":682.72,"highlight":false,"strikethrough":false},{"text":" with","start_time":682.72,"end_time":682.87,"highlight":false,"strikethrough":false},{"text":" La","start_time":682.87,"end_time":682.99,"highlight":false,"strikethrough":false},{"text":" Trobe","start_time":682.99,"end_time":683.62,"highlight":false,"strikethrough":false},{"text":" is","start_time":684.4,"end_time":684.73,"highlight":false,"strikethrough":false},{"text":" that","start_time":684.73,"end_time":685.24,"highlight":false,"strikethrough":false},{"text":" it","start_time":686.86,"end_time":686.9,"highlight":false,"strikethrough":false},{"text":" does","start_time":687.07,"end_time":687.37,"highlight":false,"strikethrough":false},{"text":" tend","start_time":687.37,"end_time":687.58,"highlight":false,"strikethrough":false},{"text":" to","start_time":687.58,"end_time":687.7,"highlight":false,"strikethrough":false},{"text":" give","start_time":687.7,"end_time":687.91,"highlight":false,"strikethrough":false},{"text":" way","start_time":687.91,"end_time":688.09,"highlight":false,"strikethrough":false},{"text":" at","start_time":688.09,"end_time":688.18,"highlight":false,"strikethrough":false},{"text":" the","start_time":688.18,"end_time":688.3,"highlight":false,"strikethrough":false},{"text":" intersections.","start_time":688.3,"end_time":689.44,"highlight":false,"strikethrough":false},{"text":" Which","start_time":690.84,"end_time":691.53,"highlight":false,"strikethrough":false},{"text":" isn\'t","start_time":692.88,"end_time":693.18,"highlight":false,"strikethrough":false},{"text":" ideal.","start_time":693.18,"end_time":693.96,"highlight":false,"strikethrough":false},{"text":" Damn.","start_time":771.36,"end_time":771.96,"highlight":false,"strikethrough":false},{"text":" Only","start_time":773.12,"end_time":773.36,"highlight":false,"strikethrough":false},{"text":" the","start_time":773.36,"end_time":773.42,"highlight":false,"strikethrough":false},{"text":" electric","start_time":773.42,"end_time":773.78,"highlight":false,"strikethrough":false},{"text":" bikes.","start_time":773.78,"end_time":774.5,"highlight":false,"strikethrough":false},{"text":" Lucky","start_time":776.88,"end_time":777.18,"highlight":false,"strikethrough":false},{"text":" these","start_time":777.18,"end_time":777.45,"highlight":false,"strikethrough":false},{"text":" paths","start_time":777.45,"end_time":777.78,"highlight":false,"strikethrough":false},{"text":" are","start_time":777.78,"end_time":777.84,"highlight":false,"strikethrough":false},{"text":" so","start_time":777.84,"end_time":778.08,"highlight":false,"strikethrough":false},{"text":" wide.","start_time":778.08,"end_time":778.77,"highlight":false,"strikethrough":false},{"text":" They\'re","start_time":782.59,"end_time":782.98,"highlight":false,"strikethrough":false},{"text":" going.","start_time":783.1,"end_time":783.58,"highlight":false,"strikethrough":false},{"text":" Well,
+                    ","start_time":784.18,"end_time":784.77,"highlight":false,"strikethrough":false},{"text":" I","start_time":784.78,"end_time":784.96,"highlight":false,"strikethrough":false},{"text":" was","start_time":784.96,"end_time":785.23,"highlight":false,"strikethrough":false},{"text":" going","start_time":785.23,"end_time":785.5,"highlight":false,"strikethrough":false},{"text":" 18","start_time":785.52,"end_time":785.84,"highlight":false,"strikethrough":false},{"text":" k","start_time":785.86,"end_time":786.0,"highlight":false,"strikethrough":false},{"text":" up","start_time":786.07,"end_time":786.19,"highlight":false,"strikethrough":false},{"text":" the","start_time":786.19,"end_time":786.34,"highlight":false,"strikethrough":false},{"text":" hill.","start_time":786.34,"end_time":786.79,"highlight":false,"strikethrough":false},{"text":" His","start_time":886.15,"end_time":886.35,"highlight":false,"strikethrough":false},{"text":" lines","start_time":886.36,"end_time":886.63,"highlight":false,"strikethrough":false},{"text":" are","start_time":886.63,"end_time":886.69,"highlight":false,"strikethrough":false},{"text":" great,
+                    ","start_time":886.69,"end_time":887.32,"highlight":false,"strikethrough":false},{"text":" so","start_time":888.46,"end_time":888.6,"highlight":false,"strikethrough":false},{"text":" I","start_time":888.6,"end_time":888.63,"highlight":false,"strikethrough":false},{"text":" can","start_time":888.67,"end_time":888.76,"highlight":false,"strikethrough":false},{"text":" probably","start_time":888.76,"end_time":888.98,"highlight":false,"strikethrough":false},{"text":" go","start_time":889.02,"end_time":889.12,"highlight":false,"strikethrough":false},{"text":" set","start_time":889.12,"end_time":889.36,"highlight":false,"strikethrough":false},{"text":" every","start_time":889.36,"end_time":889.54,"highlight":false,"strikethrough":false},{"text":" time","start_time":889.54,"end_time":889.72,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":889.72,"end_time":889.87,"highlight":false,"strikethrough":false},{"text":" coming","start_time":889.87,"end_time":890.11,"highlight":false,"strikethrough":false},{"text":" up","start_time":890.11,"end_time":890.26,"highlight":false,"strikethrough":false},{"text":" here.","start_time":890.26,"end_time":890.68,"highlight":false,"strikethrough":false},{"text":" But","start_time":891.61,"end_time":892.04,"highlight":false,"strikethrough":false},{"text":" yeah,
+                    ","start_time":892.36,"end_time":892.52,"highlight":false,"strikethrough":false},{"text":" they\'re","start_time":892.6,"end_time":892.72,"highlight":false,"strikethrough":false},{"text":" just","start_time":892.72,"end_time":892.9,"highlight":false,"strikethrough":false},{"text":" so","start_time":892.9,"end_time":893.08,"highlight":false,"strikethrough":false},{"text":" safe.","start_time":893.08,"end_time":893.68,"highlight":false,"strikethrough":false},{"text":" So","start_time":909.35,"end_time":909.43,"highlight":false,"strikethrough":false},{"text":" nice","start_time":909.56,"end_time":909.77,"highlight":false,"strikethrough":false},{"text":" having","start_time":909.77,"end_time":910.01,"highlight":false,"strikethrough":false},{"text":" the","start_time":910.01,"end_time":910.1,"highlight":false,"strikethrough":false},{"text":" parked","start_time":910.1,"end_time":910.43,"highlight":false,"strikethrough":false},{"text":" cars","start_time":910.43,"end_time":910.76,"highlight":false,"strikethrough":false},{"text":" there.","start_time":910.76,"end_time":911.17,"highlight":false,"strikethrough":false},{"text":" Just","start_time":912.51,"end_time":912.75,"highlight":false,"strikethrough":false},{"text":" the","start_time":912.75,"end_time":912.83,"highlight":false,"strikethrough":false},{"text":" separation.","start_time":912.83,"end_time":913.91,"highlight":false,"strikethrough":false},{"text":" It\'s","start_time":918.81,"end_time":918.86,"highlight":false,"strikethrough":false},{"text":"
+ like","start_time":918.9,"end_time":919.29,"highlight":false,"strikethrough":false},{"text":" quite","start_time":919.29,"end_time":919.53,"highlight":false,"strikethrough":false},{"text":" a","start_time":919.53,"end_time":919.59,"highlight":false,"strikethrough":false},{"text":" good","start_time":919.59,"end_time":919.83,"highlight":false,"strikethrough":false},{"text":" sound","start_time":919.83,"end_time":920.16,"highlight":false,"strikethrough":false},{"text":" barrier","start_time":920.16,"end_time":920.97,"highlight":false,"strikethrough":false},{"text":" kind","start_time":921.57,"end_time":921.78,"highlight":false,"strikethrough":false},{"text":" of","start_time":921.78,"end_time":921.9,"highlight":false,"strikethrough":false},{"text":" buffeting","start_time":921.9,"end_time":922.47,"highlight":false,"strikethrough":false},{"text":" barrier.","start_time":922.47,"end_time":923.28,"highlight":false,"strikethrough":false},{"text":" Which","start_time":928.48,"end_time":928.66,"highlight":false,"strikethrough":false},{"text":" I","start_time":928.66,"end_time":928.69,"highlight":false,"strikethrough":false},{"text":" guess","start_time":928.69,"end_time":928.84,"highlight":false,"strikethrough":false},{"text":" is","start_time":928.84,"end_time":928.93,"highlight":false,"strikethrough":false},{"text":" one","start_time":928.93,"end_time":929.02,"highlight":false,"strikethrough":false},{"text":" of","start_time":929.02,"end_time":929.08,"highlight":false,"strikethrough":false},{"text":" the","start_time":929.08,"end_time":929.14,"highlight":false,"strikethrough":false},{"text":" problems","start_time":929.14,"end_time":929.44,"highlight":false,"strikethrough":false},{"text":" with","start_time":929.44,"end_time":929.56,"highlight":false,"strikethrough":false},{"text":" the","start_time":929.56,"end_time":929.65,"highlight":false,"strikethrough":false},{"text":" Clearway","start_time":929.65,"end_time":930.13,"highlight":false,"strikethrough":false},{"text":" model,
+                    ","start_time":930.13,"end_time":930.49,"highlight":false,"strikethrough":false},{"text":" because","start_time":930.49,"end_time":931.0,"highlight":false,"strikethrough":false},{"text":" then","start_time":931.78,"end_time":931.91,"highlight":false,"strikethrough":false},{"text":" when","start_time":931.93,"end_time":932.08,"highlight":false,"strikethrough":false},{"text":" traffic","start_time":932.08,"end_time":932.47,"highlight":false,"strikethrough":false},{"text":" is","start_time":932.47,"end_time":932.62,"highlight":false,"strikethrough":false},{"text":" high,
+                    ","start_time":932.62,"end_time":933.28,"highlight":false,"strikethrough":false},{"text":" you","start_time":934.45,"end_time":934.57,"highlight":false,"strikethrough":false},{"text":" don\'t","start_time":934.57,"end_time":934.72,"highlight":false,"strikethrough":false},{"text":" have","start_time":934.72,"end_time":934.87,"highlight":false,"strikethrough":false},{"text":" the","start_time":934.87,"end_time":934.96,"highlight":false,"strikethrough":false},{"text":" cars,
+                    ","start_time":934.96,"end_time":935.62,"highlight":false,"strikethrough":false},{"text":" but","start_time":936.43,"end_time":936.73,"highlight":false,"strikethrough":false},{"text":" there\'s","start_time":936.73,"end_time":936.91,"highlight":false,"strikethrough":false},{"text":" more","start_time":936.91,"end_time":937.06,"highlight":false,"strikethrough":false},{"text":" traffic.","start_time":937.06,"end_time":937.63,"highlight":false,"strikethrough":false},{"text":" So","start_time":938.44,"end_time":938.55,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":938.56,"end_time":938.68,"highlight":false,"strikethrough":false},{"text":" more","start_time":938.68,"end_time":938.83,"highlight":false,"strikethrough":false},{"text":" to","start_time":938.83,"end_time":938.95,"highlight":false,"strikethrough":false},{"text":" be","start_time":938.95,"end_time":939.07,"highlight":false,"strikethrough":false},{"text":" protected","start_time":939.07,"end_time":939.46,"highlight":false,"strikethrough":false},{"text":" against.","start_time":939.46,"end_time":940.06,"highlight":false,"strikethrough":false}]},{"speaker":"","start_time":997.18,"end_time":999.1,"words":[{"text":"They\'re","start_time":997.18,"end_time":997.36,"highlight":false,"strikethrough":false},{"text":" worried","start_time":997.36,"end_time":997.63,"highlight":false,"strikethrough":false},{"text":" about","start_time":997.63,"end_time":997.84,"highlight":false,"strikethrough":false},{"text":" that","start_time":997.84,"end_time":998.23,"highlight":false,"strikethrough":false},{"text":" pulse.","start_time":998.23,"end_time":999.1,"highlight":false,"strikethrough":false}]},{"speaker":"Speaker1","start_time":1002.36,"end_time":1129.36,"words":[{"text":"I","start_time":1002.36,"end_time":1002.38,"highlight":false,"strikethrough":false},{"text":" was","start_time":1002.44,"end_time":1002.62,"highlight":false,"strikethrough":false},{"text":" worried","start_time":1002.62,"end_time":1002.86,"highlight":false,"strikethrough":false},{"text":" about","start_time":1002.86,"end_time":1003.37,"highlight":false,"strikethrough":false},{"text":" buses","start_time":1003.37,"end_time":1003.73,"highlight":false,"strikethrough":false},{"text":" like","start_time":1003.73,"end_time":1003.94,"highlight":false,"strikethrough":false},{"text":" that","start_time":1003.94,"end_time":1004.22,"highlight":false,"strikethrough":false},{"text":" cause","start_time":1004.24,"end_time":1004.66,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":1004.69,"end_time":1004.9,"highlight":false,"strikethrough":false},{"text":" like.","start_time":1004.9,"end_time":1005.44,"highlight":false,"strikethrough":false},{"text":" They","start_time":1006.15,"end_time":1006.27,"highlight":false,"strikethrough":false},{"text":" could","start_time":1006.27,"end_time":1006.42,"highlight":false,"strikethrough":false},{"text":" just","start_time":1006.42,"end_time":1006.63,"highlight":false,"strikethrough":false},{"text":" pop","start_time":1006.63,"end_time":1006.93,"highlight":false,"strikethrough":false},{"text":" their","start_time":1006.93,"end_time":1007.62,"highlight":false,"strikethrough":false},{"text":" indicator","start_time":1008.73,"end_time":1009.21,"highlight":false,"strikethrough":false},{"text":" on","start_time":1009.21,"end_time":1009.36,"highlight":false,"strikethrough":false},{"text":" at","start_time":1009.36,"end_time":1009.42,"highlight":false,"strikethrough":false},{"text":" any","start_time":1009.42,"end_time":1009.63,"highlight":false,"strikethrough":false},{"text":" moment","start_time":1009.63,"end_time":1010.22,"highlight":false,"strikethrough":false},{"text":" and","start_time":1010.23,"end_time":1010.41,"highlight":false,"strikethrough":false},{"text":" then","start_time":1010.41,"end_time":1010.65,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":1010.65,"end_time":1010.83,"highlight":false,"strikethrough":false},{"text":" the","start_time":1010.83,"end_time":1010.95,"highlight":false,"strikethrough":false},{"text":" asshole.","start_time":1010.95,"end_time":1011.55,"highlight":false,"strikethrough":false},{"text":" But,
+                    ","start_time":1012.84,"end_time":1013.47,"highlight":false,"strikethrough":false},{"text":" like,
+                    ","start_time":1013.86,"end_time":1014.34,"highlight":false,"strikethrough":false},{"text":" I","start_time":1014.34,"end_time":1014.55,"highlight":false,"strikethrough":false},{"text":" can\'t","start_time":1014.55,"end_time":1014.88,"highlight":false,"strikethrough":false},{"text":" just","start_time":1014.88,"end_time":1015.3,"highlight":false,"strikethrough":false},{"text":" stop","start_time":1015.3,"end_time":1015.63,"highlight":false,"strikethrough":false},{"text":" on","start_time":1015.63,"end_time":1015.78,"highlight":false,"strikethrough":false},{"text":" a","start_time":1015.78,"end_time":1015.84,"highlight":false,"strikethrough":false},{"text":" dime","start_time":1015.84,"end_time":1016.2,"highlight":false,"strikethrough":false},{"text":" as","start_time":1016.2,"end_time":1016.35,"highlight":false,"strikethrough":false},{"text":" well.","start_time":1016.35,"end_time":1017.01,"highlight":false,"strikethrough":false},{"text":" Like,
+                    ","start_time":1018.12,"end_time":1018.24,"highlight":false,"strikethrough":false},{"text":" they","start_time":1018.24,"end_time":1018.36,"highlight":false,"strikethrough":false},{"text":" should","start_time":1018.36,"end_time":1018.48,"highlight":false,"strikethrough":false},{"text":" have","start_time":1018.48,"end_time":1018.63,"highlight":false,"strikethrough":false},{"text":" some","start_time":1018.63,"end_time":1018.75,"highlight":false,"strikethrough":false},{"text":" sort","start_time":1018.75,"end_time":1018.9,"highlight":false,"strikethrough":false},{"text":" of","start_time":1018.9,"end_time":1019.05,"highlight":false,"strikethrough":false},{"text":" interim","start_time":1019.05,"end_time":1019.62,"highlight":false,"strikethrough":false},{"text":" step","start_time":1019.62,"end_time":1019.92,"highlight":false,"strikethrough":false},{"text":" where","start_time":1019.92,"end_time":1020.04,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":1020.04,"end_time":1020.16,"highlight":false,"strikethrough":false},{"text":" like","start_time":1020.16,"end_time":1020.34,"highlight":false,"strikethrough":false},{"text":" the","start_time":1020.34,"end_time":1020.46,"highlight":false,"strikethrough":false},{"text":" indicating","start_time":1020.46,"end_time":1020.88,"highlight":false,"strikethrough":false},{"text":" left","start_time":1020.88,"end_time":1021.09,"highlight":false,"strikethrough":false},{"text":" when","start_time":1021.09,"end_time":1021.24,"highlight":false,"strikethrough":false},{"text":" they\'re","start_time":1021.24,"end_time":1021.36,"highlight":false,"strikethrough":false},{"text":"
+ stopped.","start_time":1021.36,"end_time":1022.02,"highlight":false,"strikethrough":false},{"text":" Then","start_time":1022.44,"end_time":1022.59,"highlight":false,"strikethrough":false},{"text":" they","start_time":1022.59,"end_time":1022.71,"highlight":false,"strikethrough":false},{"text":" have","start_time":1022.71,"end_time":1022.86,"highlight":false,"strikethrough":false},{"text":" like","start_time":1022.86,"end_time":1023.07,"highlight":false,"strikethrough":false},{"text":" three","start_time":1023.07,"end_time":1023.46,"highlight":false,"strikethrough":false},{"text":" flashes","start_time":1023.46,"end_time":1023.91,"highlight":false,"strikethrough":false},{"text":" with","start_time":1023.91,"end_time":1024.03,"highlight":false,"strikethrough":false},{"text":" their","start_time":1024.03,"end_time":1024.18,"highlight":false,"strikethrough":false},{"text":" hazards","start_time":1024.18,"end_time":1024.99,"highlight":false,"strikethrough":false},{"text":" and","start_time":1025.32,"end_time":1025.56,"highlight":false,"strikethrough":false},{"text":" then","start_time":1025.56,"end_time":1025.71,"highlight":false,"strikethrough":false},{"text":" they","start_time":1025.71,"end_time":1025.8,"highlight":false,"strikethrough":false},{"text":" get","start_time":1025.8,"end_time":1025.98,"highlight":false,"strikethrough":false},{"text":" right","start_time":1025.98,"end_time":1026.61,"highlight":false,"strikethrough":false},{"text":" and","start_time":1027.39,"end_time":1027.54,"highlight":false,"strikethrough":false},{"text":" like","start_time":1027.54,"end_time":1027.69,"highlight":false,"strikethrough":false},{"text":" the","start_time":1027.69,"end_time":1027.78,"highlight":false,"strikethrough":false},{"text":" three","start_time":1027.78,"end_time":1028.02,"highlight":false,"strikethrough":false},{"text":" flash","start_time":1028.02,"end_time":1028.42,"highlight":false,"strikethrough":false},{"text":" flashes","start_time":1028.47,"end_time":1028.83,"highlight":false,"strikethrough":false},{"text":" with","start_time":1028.83,"end_time":1028.95,"highlight":false,"strikethrough":false},{"text":" the","start_time":1028.95,"end_time":1029.04,"highlight":false,"strikethrough":false},{"text":" hazards,
+                    ","start_time":1029.04,"end_time":1029.43,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":1029.43,"end_time":1029.52,"highlight":false,"strikethrough":false},{"text":" like,
+                    ","start_time":1029.52,"end_time":1029.91,"highlight":false,"strikethrough":false},{"text":" you","start_time":1030.22,"end_time":1030.48,"highlight":false,"strikethrough":false},{"text":" know,
+                    ","start_time":1030.48,"end_time":1030.67,"highlight":false,"strikethrough":false},{"text":" the","start_time":1030.9,"end_time":1031.05,"highlight":false,"strikethrough":false},{"text":" orange","start_time":1031.05,"end_time":1031.38,"highlight":false,"strikethrough":false},{"text":" light,
+                    ","start_time":1031.38,"end_time":1031.86,"highlight":false,"strikethrough":false},{"text":" like,
+                    ","start_time":1032.82,"end_time":1033.09,"highlight":false,"strikethrough":false},{"text":" stop","start_time":1033.12,"end_time":1033.36,"highlight":false,"strikethrough":false},{"text":" if","start_time":1033.36,"end_time":1033.48,"highlight":false,"strikethrough":false},{"text":" you","start_time":1033.48,"end_time":1033.57,"highlight":false,"strikethrough":false},{"text":" can","start_time":1033.57,"end_time":1034.26,"highlight":false,"strikethrough":false},{"text":" keep","start_time":1034.83,"end_time":1035.1,"highlight":false,"strikethrough":false},{"text":" going.","start_time":1035.1,"end_time":1035.34,"highlight":false,"strikethrough":false},{"text":" If","start_time":1035.34,"end_time":1035.46,"highlight":false,"strikethrough":false},{"text":" they","start_time":1035.46,"end_time":1035.55,"highlight":false,"strikethrough":false},{"text":" can\'t.","start_time":1035.55,"end_time":1036.21,"highlight":false,"strikethrough":false},{"text":" But","start_time":1036.93,"end_time":1037.2,"highlight":false,"strikethrough":false},{"text":" when","start_time":1037.2,"end_time":1037.35,"highlight":false,"strikethrough":false},{"text":" they","start_time":1037.35,"end_time":1037.47,"highlight":false,"strikethrough":false},{"text":" turn","start_time":1037.47,"end_time":1037.71,"highlight":false,"strikethrough":false},{"text":" right,
+                    ","start_time":1037.71,"end_time":1038.34,"highlight":false,"strikethrough":false},{"text":" you","start_time":1038.97,"end_time":1039.09,"highlight":false,"strikethrough":false},{"text":" got","start_time":1039.11,"end_time":1039.25,"highlight":false,"strikethrough":false},{"text":" stop.","start_time":1039.28,"end_time":1039.86,"highlight":false,"strikethrough":false},{"text":" As","start_time":1047.99,"end_time":1048.39,"highlight":false,"strikethrough":false},{"text":" much","start_time":1048.63,"end_time":1048.75,"highlight":false,"strikethrough":false},{"text":" as","start_time":1048.78,"end_time":1048.79,"highlight":false,"strikethrough":false},{"text":" I","start_time":1048.87,"end_time":1048.96,"highlight":false,"strikethrough":false},{"text":" like","start_time":1048.96,"end_time":1049.14,"highlight":false,"strikethrough":false},{"text":" Rap","start_time":1049.14,"end_time":1049.38,"highlight":false,"strikethrough":false},{"text":" Down","start_time":1049.38,"end_time":1049.88,"highlight":false,"strikethrough":false},{"text":" Street,
+                    ","start_time":1049.89,"end_time":1050.49,"highlight":false,"strikethrough":false},{"text":" this","start_time":1051.12,"end_time":1051.3,"highlight":false,"strikethrough":false},{"text":" is","start_time":1051.3,"end_time":1051.45,"highlight":false,"strikethrough":false},{"text":" kind","start_time":1051.45,"end_time":1051.75,"highlight":false,"strikethrough":false},{"text":" of","start_time":1051.75,"end_time":1051.84,"highlight":false,"strikethrough":false},{"text":" the","start_time":1051.84,"end_time":1051.93,"highlight":false,"strikethrough":false},{"text":" issue","start_time":1051.93,"end_time":1052.23,"highlight":false,"strikethrough":false},{"text":" with","start_time":1052.23,"end_time":1052.38,"highlight":false,"strikethrough":false},{"text":" it","start_time":1052.38,"end_time":1052.47,"highlight":false,"strikethrough":false},{"text":" as","start_time":1052.47,"end_time":1052.59,"highlight":false,"strikethrough":false},{"text":" it","start_time":1052.59,"end_time":1052.68,"highlight":false,"strikethrough":false},{"text":" was","start_time":1052.79,"end_time":1052.9,"highlight":false,"strikethrough":false},{"text":" this","start_time":1053.07,"end_time":1053.24,"highlight":false,"strikethrough":false},{"text":" whole","start_time":1053.28,"end_time":1053.42,"highlight":false,"strikethrough":false},{"text":" bus","start_time":1053.43,"end_time":1053.7,"highlight":false,"strikethrough":false},{"text":" route.","start_time":1053.7,"end_time":1054.15,"highlight":false,"strikethrough":false},{"text":" So","start_time":1054.99,"end_time":1055.17,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":1055.17,"end_time":1055.32,"highlight":false,"strikethrough":false},{"text":" probably","start_time":1055.32,"end_time":1055.83,"highlight":false,"strikethrough":false},{"text":" going","start_time":1055.83,"end_time":1055.95,"highlight":false,"strikethrough":false},{"text":" to","start_time":1055.95,"end_time":1056.04,"highlight":false,"strikethrough":false},{"text":" be","start_time":1056.04,"end_time":1056.16,"highlight":false,"strikethrough":false},{"text":" playing.","start_time":1056.16,"end_time":1056.58,"highlight":false,"strikethrough":false},{"text":" Tag","start_time":1057.8,"end_time":1058.31,"highlight":false,"strikethrough":false},{"text":" with","start_time":1058.31,"end_time":1058.49,"highlight":false,"strikethrough":false},{"text":" this","start_time":1058.49,"end_time":1058.7,"highlight":false,"strikethrough":false},{"text":" bus","start_time":1058.7,"end_time":1059.15,"highlight":false,"strikethrough":false},{"text":" all","start_time":1060.08,"end_time":1060.26,"highlight":false,"strikethrough":false},{"text":" the","start_time":1060.26,"end_time":1060.35,"highlight":false,"strikethrough":false},{"text":" way","start_time":1060.35,"end_time":1060.53,"highlight":false,"strikethrough":false},{"text":" up.","start_time":1060.53,"end_time":1061.07,"highlight":false,"strikethrough":false},{"text":" Oh,
+                    ","start_time":1061.94,"end_time":1062.09,"highlight":false,"strikethrough":false},{"text":" yeah.","start_time":1062.09,"end_time":1062.6,"highlight":false,"strikethrough":false},{"text":" Jeez,
+                    ","start_time":1063.73,"end_time":1064.0,"highlight":false,"strikethrough":false},{"text":" buddy.","start_time":1064.0,"end_time":1064.51,"highlight":false,"strikethrough":false},{"text":" But","start_time":1069.6,"end_time":1069.72,"highlight":false,"strikethrough":false},{"text":" I","start_time":1069.81,"end_time":1069.93,"highlight":false,"strikethrough":false},{"text":" wasn\'t","start_time":1069.93,"end_time":1070.17,"highlight":false,"strikethrough":false},{"text":" 20","start_time":1070.17,"end_time":1070.41,"highlight":false,"strikethrough":false},{"text":" metres","start_time":1070.41,"end_time":1071.1,"highlight":false,"strikethrough":false},{"text":" ahead","start_time":1071.13,"end_time":1071.43,"highlight":false,"strikethrough":false},{"text":" of","start_time":1071.43,"end_time":1071.88,"highlight":false,"strikethrough":false},{"text":" where","start_time":1072.42,"end_time":1072.6,"highlight":false,"strikethrough":false},{"text":" I","start_time":1072.6,"end_time":1072.75,"highlight":false,"strikethrough":false},{"text":" am","start_time":1072.75,"end_time":1072.87,"highlight":false,"strikethrough":false},{"text":" now.","start_time":1072.87,"end_time":1073.32,"highlight":false,"strikethrough":false},{"text":" Is","start_time":1074.32,"end_time":1074.43,"highlight":false,"strikethrough":false},{"text":"
+ this","start_time":1074.43,"end_time":1074.58,"highlight":false,"strikethrough":false},{"text":" guy","start_time":1074.58,"end_time":1074.76,"highlight":false,"strikethrough":false},{"text":" doing?","start_time":1074.79,"end_time":1075.24,"highlight":false,"strikethrough":false},{"text":" Just","start_time":1075.27,"end_time":1075.54,"highlight":false,"strikethrough":false},{"text":" hanging","start_time":1075.54,"end_time":1075.87,"highlight":false,"strikethrough":false},{"text":" out","start_time":1075.87,"end_time":1076.01,"highlight":false,"strikethrough":false},{"text":" middle","start_time":1076.02,"end_time":1076.26,"highlight":false,"strikethrough":false},{"text":" of","start_time":1076.26,"end_time":1076.35,"highlight":false,"strikethrough":false},{"text":" the","start_time":1076.35,"end_time":1076.41,"highlight":false,"strikethrough":false},{"text":" lanes?","start_time":1076.41,"end_time":1077.25,"highlight":false,"strikethrough":false},{"text":" Yes.","start_time":1115.83,"end_time":1116.28,"highlight":false,"strikethrough":false},{"text":" I\'d","start_time":1116.28,"end_time":1116.37,"highlight":false,"strikethrough":false},{"text":" love","start_time":1116.37,"end_time":1116.61,"highlight":false,"strikethrough":false},{"text":" protection","start_time":1116.61,"end_time":1117.21,"highlight":false,"strikethrough":false},{"text":" along","start_time":1117.21,"end_time":1117.6,"highlight":false,"strikethrough":false},{"text":" here.","start_time":1117.6,"end_time":1118.25,"highlight":false,"strikethrough":false},{"text":" I","start_time":1118.26,"end_time":1118.38,"highlight":false,"strikethrough":false},{"text":" think","start_time":1118.38,"end_time":1118.53,"highlight":false,"strikethrough":false},{"text":" our","start_time":1118.77,"end_time":1118.89,"highlight":false,"strikethrough":false},{"text":" village","start_time":1118.89,"end_time":1119.16,"highlight":false,"strikethrough":false},{"text":" would","start_time":1119.16,"end_time":1119.28,"highlight":false,"strikethrough":false},{"text":" be","start_time":1119.28,"end_time":1119.43,"highlight":false,"strikethrough":false},{"text":" amazing","start_time":1119.43,"end_time":1120.24,"highlight":false,"strikethrough":false},{"text":" with","start_time":1120.24,"end_time":1120.39,"highlight":false,"strikethrough":false},{"text":" protective","start_time":1120.39,"end_time":1120.81,"highlight":false,"strikethrough":false},{"text":" lanes,
+                    ","start_time":1120.81,"end_time":1121.56,"highlight":false,"strikethrough":false},{"text":" but","start_time":1121.89,"end_time":1122.73,"highlight":false,"strikethrough":false},{"text":" it","start_time":1123.9,"end_time":1124.08,"highlight":false,"strikethrough":false},{"text":" does","start_time":1124.08,"end_time":1124.32,"highlight":false,"strikethrough":false},{"text":" feel","start_time":1124.32,"end_time":1124.56,"highlight":false,"strikethrough":false},{"text":" okay.","start_time":1124.56,"end_time":1125.28,"highlight":false,"strikethrough":false},{"text":" I","start_time":1125.31,"end_time":1125.4,"highlight":false,"strikethrough":false},{"text":" think","start_time":1125.4,"end_time":1125.88,"highlight":false,"strikethrough":false},{"text":" that\'s","start_time":1126.9,"end_time":1127.01,"highlight":false,"strikethrough":false},{"text":" I","start_time":1127.17,"end_time":1127.23,"highlight":false,"strikethrough":false},{"text":" got","start_time":1127.23,"end_time":1127.38,"highlight":false,"strikethrough":false},{"text":" north","start_time":1127.38,"end_time":1127.71,"highlight":false,"strikethrough":false},{"text":" of","start_time":1127.71,"end_time":1127.98,"highlight":false,"strikethrough":false},{"text":" north","start_time":1127.98,"end_time":1128.31,"highlight":false,"strikethrough":false},{"text":" of","start_time":1128.31,"end_time":1128.43,"highlight":false,"strikethrough":false},{"text":" princes.","start_time":1128.43,"end_time":1129.36,"highlight":false,"strikethrough":false}]},{"speaker":"Speaker1","start_time":1132.89,"end_time":1327.32,"words":[{"text":"It\'s","start_time":1129.99,"end_time":1130.83,"highlight":false,"strikethrough":false},{"text":" like","start_time":1130.83,"end_time":1131.39,"highlight":false,"strikethrough":false},{"text":" much","start_time":1132.12,"end_time":1132.42,"highlight":false,"strikethrough":false},{"text":" better,
+                    ","start_time":1132.42,"end_time":1132.93,"highlight":false,"strikethrough":false},{"text":" I","start_time":1132.96,"end_time":1133.06,"highlight":false,"strikethrough":false},{"text":" say,
+                    ","start_time":1133.21,"end_time":1133.31,"highlight":false,"strikethrough":false},{"text":" like","start_time":1133.32,"end_time":1133.47,"highlight":false,"strikethrough":false},{"text":" looking","start_time":1133.47,"end_time":1133.71,"highlight":false,"strikethrough":false},{"text":" out","start_time":1133.71,"end_time":1133.83,"highlight":false,"strikethrough":false},{"text":" for","start_time":1133.83,"end_time":1133.95,"highlight":false,"strikethrough":false},{"text":" car","start_time":1133.95,"end_time":1134.19,"highlight":false,"strikethrough":false},{"text":" doors.","start_time":1134.19,"end_time":1134.97,"highlight":false,"strikethrough":false},{"text":" But","start_time":1137.04,"end_time":1137.16,"highlight":false,"strikethrough":false},{"text":" look,
+                    ","start_time":1137.16,"end_time":1137.37,"highlight":false,"strikethrough":false},{"text":" there","start_time":1137.37,"end_time":1137.49,"highlight":false,"strikethrough":false},{"text":" are","start_time":1137.49,"end_time":1137.55,"highlight":false,"strikethrough":false},{"text":" like","start_time":1137.55,"end_time":1137.7,"highlight":false,"strikethrough":false},{"text":" four","start_time":1137.7,"end_time":1137.97,"highlight":false,"strikethrough":false},{"text":" cyclists","start_time":1137.97,"end_time":1138.48,"highlight":false,"strikethrough":false},{"text":" ahead","start_time":1138.48,"end_time":1138.72,"highlight":false,"strikethrough":false},{"text":" of","start_time":1138.72,"end_time":1138.81,"highlight":false,"strikethrough":false},{"text":" me.","start_time":1138.81,"end_time":1139.26,"highlight":false,"strikethrough":false},{"text":" So","start_time":1143.48,"end_time":1144.32,"highlight":false,"strikethrough":false},{"text":" it","start_time":1144.93,"end_time":1144.98,"highlight":false,"strikethrough":false},{"text":" definitely","start_time":1145.27,"end_time":1145.55,"highlight":false,"strikethrough":false},{"text":" has","start_time":1145.55,"end_time":1145.73,"highlight":false,"strikethrough":false},{"text":" like","start_time":1145.73,"end_time":1145.86,"highlight":false,"strikethrough":false},{"text":" the","start_time":1145.88,"end_time":1145.97,"highlight":false,"strikethrough":false},{"text":" safety","start_time":1145.97,"end_time":1146.36,"highlight":false,"strikethrough":false},{"text":" numbers","start_time":1146.36,"end_time":1146.81,"highlight":false,"strikethrough":false},{"text":" feeling.","start_time":1146.81,"end_time":1147.5,"highlight":false,"strikethrough":false},{"text":" Almost","start_time":1148.67,"end_time":1149.06,"highlight":false,"strikethrough":false},{"text":" all","start_time":1149.06,"end_time":1149.21,"highlight":false,"strikethrough":false},{"text":" people","start_time":1149.21,"end_time":1149.51,"highlight":false,"strikethrough":false},{"text":" stopping","start_time":1149.51,"end_time":1149.87,"highlight":false,"strikethrough":false},{"text":" in","start_time":1149.87,"end_time":1149.99,"highlight":false,"strikethrough":false},{"text":" the","start_time":1149.99,"end_time":1150.29,"highlight":false,"strikethrough":false},{"text":" cycle","start_time":1153.11,"end_time":1153.56,"highlight":false,"strikethrough":false},{"text":" route.","start_time":1153.56,"end_time":1154.01,"highlight":false,"strikethrough":false},{"text":" So","start_time":1156.85,"end_time":1156.95,"highlight":false,"strikethrough":false},{"text":" stop.","start_time":1157.0,"end_time":1157.45,"highlight":false,"strikethrough":false},{"text":" I","start_time":1159.5,"end_time":1159.65,"highlight":false,"strikethrough":false},{"text":" mean,
+                    ","start_time":1159.65,"end_time":1159.83,"highlight":false,"strikethrough":false},{"text":" the","start_time":1159.83,"end_time":1159.92,"highlight":false,"strikethrough":false},{"text":" silly","start_time":1159.94,"end_time":1160.13,"highlight":false,"strikethrough":false},{"text":" thing","start_time":1160.16,"end_time":1160.4,"highlight":false,"strikethrough":false},{"text":" is","start_time":1160.4,"end_time":1160.58,"highlight":false,"strikethrough":false},{"text":" I","start_time":1160.58,"end_time":1160.67,"highlight":false,"strikethrough":false},{"text":" feel","start_time":1160.67,"end_time":1160.82,"highlight":false,"strikethrough":false},{"text":" like","start_time":1160.82,"end_time":1160.91,"highlight":false,"strikethrough":false},{"text":" that\'s","start_time":1160.91,"end_time":1161.09,"highlight":false,"strikethrough":false},{"text":" actually","start_time":1161.09,"end_time":1161.36,"highlight":false,"strikethrough":false},{"text":" legal","start_time":1161.36,"end_time":1162.11,"highlight":false,"strikethrough":false},{"text":" because","start_time":1162.41,"end_time":1162.56,"highlight":false,"strikethrough":false},{"text":" I","start_time":1162.56,"end_time":1162.62,"highlight":false,"strikethrough":false},{"text":" think","start_time":1162.62,"end_time":1162.8,"highlight":false,"strikethrough":false},{"text":" you","start_time":1162.8,"end_time":1162.92,"highlight":false,"strikethrough":false},{"text":" can","start_time":1162.92,"end_time":1163.1,"highlight":false,"strikethrough":false},{"text":" use","start_time":1163.1,"end_time":1163.31,"highlight":false,"strikethrough":false},{"text":" them","start_time":1163.31,"end_time":1163.46,"highlight":false,"strikethrough":false},{"text":" to","start_time":1163.46,"end_time":1163.61,"highlight":false,"strikethrough":false},{"text":"
+ set","start_time":1163.61,"end_time":1163.85,"highlight":false,"strikethrough":false},{"text":" off","start_time":1163.85,"end_time":1164.0,"highlight":false,"strikethrough":false},{"text":" passengers,
+                    ","start_time":1164.0,"end_time":1164.93,"highlight":false,"strikethrough":false},{"text":" which","start_time":1165.53,"end_time":1165.77,"highlight":false,"strikethrough":false},{"text":" makes","start_time":1165.77,"end_time":1165.95,"highlight":false,"strikethrough":false},{"text":" zero","start_time":1165.95,"end_time":1166.28,"highlight":false,"strikethrough":false},{"text":" sense.","start_time":1166.28,"end_time":1166.88,"highlight":false,"strikethrough":false},{"text":" He\'s","start_time":1225.27,"end_time":1225.51,"highlight":false,"strikethrough":false},{"text":" a","start_time":1226.2,"end_time":1226.2,"highlight":false,"strikethrough":false},{"text":" cyclist.","start_time":1226.23,"end_time":1226.86,"highlight":false,"strikethrough":false},{"text":" Or","start_time":1229.28,"end_time":1229.85,"highlight":false,"strikethrough":false},{"text":" feel","start_time":1230.84,"end_time":1230.91,"highlight":false,"strikethrough":false},{"text":" like","start_time":1230.96,"end_time":1231.11,"highlight":false,"strikethrough":false},{"text":" that","start_time":1231.11,"end_time":1231.23,"highlight":false,"strikethrough":false},{"text":" car","start_time":1231.23,"end_time":1231.44,"highlight":false,"strikethrough":false},{"text":" driver","start_time":1231.44,"end_time":1231.74,"highlight":false,"strikethrough":false},{"text":" didn\'t","start_time":1231.74,"end_time":1231.95,"highlight":false,"strikethrough":false},{"text":" see","start_time":1231.95,"end_time":1232.13,"highlight":false,"strikethrough":false},{"text":" those","start_time":1232.13,"end_time":1232.58,"highlight":false,"strikethrough":false},{"text":" people","start_time":1232.76,"end_time":1233.12,"highlight":false,"strikethrough":false},{"text":" crossing","start_time":1233.12,"end_time":1233.48,"highlight":false,"strikethrough":false},{"text":" either.","start_time":1233.48,"end_time":1233.96,"highlight":false,"strikethrough":false},{"text":" It\'s","start_time":1237.69,"end_time":1237.81,"highlight":false,"strikethrough":false},{"text":" actually","start_time":1237.81,"end_time":1238.02,"highlight":false,"strikethrough":false},{"text":" quite","start_time":1238.02,"end_time":1238.23,"highlight":false,"strikethrough":false},{"text":" a","start_time":1238.23,"end_time":1238.29,"highlight":false,"strikethrough":false},{"text":" bad","start_time":1238.29,"end_time":1238.47,"highlight":false,"strikethrough":false},{"text":" spot","start_time":1238.47,"end_time":1238.71,"highlight":false,"strikethrough":false},{"text":" for","start_time":1238.71,"end_time":1238.83,"highlight":false,"strikethrough":false},{"text":" a","start_time":1238.83,"end_time":1238.89,"highlight":false,"strikethrough":false},{"text":" crossing.","start_time":1238.89,"end_time":1239.37,"highlight":false,"strikethrough":false},{"text":" Like","start_time":1239.43,"end_time":1239.91,"highlight":false,"strikethrough":false},{"text":" I","start_time":1240.72,"end_time":1240.84,"highlight":false,"strikethrough":false},{"text":" don\'t","start_time":1240.84,"end_time":1240.96,"highlight":false,"strikethrough":false},{"text":" think","start_time":1240.96,"end_time":1241.14,"highlight":false,"strikethrough":false},{"text":" they","start_time":1241.14,"end_time":1241.26,"highlight":false,"strikethrough":false},{"text":" have","start_time":1241.26,"end_time":1241.44,"highlight":false,"strikethrough":false},{"text":" good","start_time":1241.44,"end_time":1241.62,"highlight":false,"strikethrough":false},{"text":" lighting","start_time":1241.62,"end_time":1242.01,"highlight":false,"strikethrough":false},{"text":" on","start_time":1242.01,"end_time":1242.13,"highlight":false,"strikethrough":false},{"text":" this","start_time":1242.13,"end_time":1242.28,"highlight":false,"strikethrough":false},{"text":" side.","start_time":1242.28,"end_time":1242.94,"highlight":false,"strikethrough":false},{"text":" I","start_time":1254.38,"end_time":1254.47,"highlight":false,"strikethrough":false},{"text":" don\'t","start_time":1254.47,"end_time":1254.59,"highlight":false,"strikethrough":false},{"text":" really","start_time":1254.59,"end_time":1254.77,"highlight":false,"strikethrough":false},{"text":" like","start_time":1254.77,"end_time":1254.98,"highlight":false,"strikethrough":false},{"text":" these","start_time":1254.98,"end_time":1255.36,"highlight":false,"strikethrough":false},{"text":" lights","start_time":1255.37,"end_time":1255.82,"highlight":false,"strikethrough":false},{"text":" coming","start_time":1255.82,"end_time":1256.15,"highlight":false,"strikethrough":false},{"text":" up.","start_time":1256.15,"end_time":1256.75,"highlight":false,"strikethrough":false},{"text":" Kind","start_time":1260.16,"end_time":1260.4,"highlight":false,"strikethrough":false},{"text":" of","start_time":1260.4,"end_time":1260.49,"highlight":false,"strikethrough":false},{"text":" find","start_time":1260.49,"end_time":1260.67,"highlight":false,"strikethrough":false},{"text":" it","start_time":1260.67,"end_time":1260.76,"highlight":false,"strikethrough":false},{"text":" hard","start_time":1260.76,"end_time":1261.03,"highlight":false,"strikethrough":false},{"text":" to","start_time":1261.03,"end_time":1261.15,"highlight":false,"strikethrough":false},{"text":" decide","start_time":1261.15,"end_time":1262.02,"highlight":false,"strikethrough":false},{"text":" whether","start_time":1263.01,"end_time":1263.4,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":1263.4,"end_time":1263.55,"highlight":false,"strikethrough":false},{"text":" better","start_time":1263.55,"end_time":1263.79,"highlight":false,"strikethrough":false},{"text":" to","start_time":1263.79,"end_time":1264.0,"highlight":false,"strikethrough":false},{"text":" keep","start_time":1264.0,"end_time":1264.87,"highlight":false,"strikethrough":false},{"text":" cyclist","start_time":1265.5,"end_time":1266.1,"highlight":false,"strikethrough":false},{"text":" central","start_time":1266.1,"end_time":1267.06,"highlight":false,"strikethrough":false},{"text":" and","start_time":1267.96,"end_time":1268.14,"highlight":false,"strikethrough":false},{"text":" have","start_time":1268.14,"end_time":1268.29,"highlight":false,"strikethrough":false},{"text":" a","start_time":1268.29,"end_time":1268.38,"highlight":false,"strikethrough":false},{"text":" lane","start_time":1268.38,"end_time":1269.1,"highlight":false,"strikethrough":false},{"text":" pick","start_time":1270.12,"end_time":1270.27,"highlight":false,"strikethrough":false},{"text":" ours","start_time":1270.27,"end_time":1270.48,"highlight":false,"strikethrough":false},{"text":" off","start_time":1270.48,"end_time":1270.81,"highlight":false,"strikethrough":false},{"text":" or","start_time":1270.81,"end_time":1270.96,"highlight":false,"strikethrough":false},{"text":" have","start_time":1270.96,"end_time":1271.08,"highlight":false,"strikethrough":false},{"text":" it","start_time":1271.08,"end_time":1271.17,"highlight":false,"strikethrough":false},{"text":" in","start_time":1271.17,"end_time":1271.26,"highlight":false,"strikethrough":false},{"text":" this","start_time":1271.26,"end_time":1271.41,"highlight":false,"strikethrough":false},{"text":" configuration","start_time":1271.41,"end_time":1272.52,"highlight":false,"strikethrough":false},{"text":" like.","start_time":1273.54,"end_time":1274.26,"highlight":false,"strikethrough":false},{"text":" In","start_time":1280.28,"end_time":1280.4,"highlight":false,"strikethrough":false},{"text":" theory,
+                    ","start_time":1280.4,"end_time":1280.67,"highlight":false,"strikethrough":false},{"text":" that\'s","start_time":1280.67,"end_time":1280.85,"highlight":false,"strikethrough":false},{"text":" better","start_time":1280.85,"end_time":1281.09,"highlight":false,"strikethrough":false},{"text":" because","start_time":1281.09,"end_time":1281.33,"highlight":false,"strikethrough":false},{"text":" they\'re","start_time":1281.33,"end_time":1281.75,"highlight":false,"strikethrough":false},{"text":" turning","start_time":1282.23,"end_time":1282.62,"highlight":false,"strikethrough":false},{"text":" left","start_time":1282.62,"end_time":1282.86,"highlight":false,"strikethrough":false},{"text":" from","start_time":1282.86,"end_time":1283.37,"highlight":false,"strikethrough":false},{"text":" a","start_time":1284.12,"end_time":1284.3,"highlight":false,"strikethrough":false},{"text":" stop.","start_time":1284.3,"end_time":1285.17,"highlight":false,"strikethrough":false},{"text":" But","start_time":1286.49,"end_time":1286.7,"highlight":false,"strikethrough":false},{"text":" also,
+                    ","start_time":1286.7,"end_time":1287.3,"highlight":false,"strikethrough":false},{"text":" I","start_time":1287.33,"end_time":1287.45,"highlight":false,"strikethrough":false},{"text":" don\'t","start_time":1287.45,"end_time":1287.57,"highlight":false,"strikethrough":false},{"text":" know,
+                    ","start_time":1287.57,"end_time":1287.99,"highlight":false,"strikethrough":false},{"text":" just.","start_time":1288.08,"end_time":1288.65,"highlight":false,"strikethrough":false},{"text":" Well,
+                    ","start_time":1291.63,"end_time":1291.69,"highlight":false,"strikethrough":false},{"text":" I","start_time":1291.78,"end_time":1291.84,"highlight":false,"strikethrough":false},{"text":" don\'t","start_time":1291.84,"end_time":1291.96,"highlight":false,"strikethrough":false},{"text":" think","start_time":1291.96,"end_time":1292.08,"highlight":false,"strikethrough":false},{"text":" that\'s","start_time":1292.08,"end_time":1292.23,"highlight":false,"strikethrough":false},{"text":" an","start_time":1292.23,"end_time":1292.32,"highlight":false,"strikethrough":false},{"text":" optimal","start_time":1292.32,"end_time":1292.62,"highlight":false,"strikethrough":false},{"text":"
+ solution.","start_time":1292.62,"end_time":1293.25,"highlight":false,"strikethrough":false},{"text":" Well,
+                    ","start_time":1294.36,"end_time":1294.72,"highlight":false,"strikethrough":false},{"text":" there","start_time":1294.72,"end_time":1294.9,"highlight":false,"strikethrough":false},{"text":" is","start_time":1294.9,"end_time":1295.17,"highlight":false,"strikethrough":false},{"text":" obviously","start_time":1295.17,"end_time":1295.95,"highlight":false,"strikethrough":false},{"text":" timed","start_time":1296.49,"end_time":1297.24,"highlight":false,"strikethrough":false},{"text":" signal","start_time":1298.26,"end_time":1298.59,"highlight":false,"strikethrough":false},{"text":" timing","start_time":1298.59,"end_time":1298.89,"highlight":false,"strikethrough":false},{"text":" differences.","start_time":1298.89,"end_time":1299.82,"highlight":false,"strikethrough":false},{"text":" See,
+                    ","start_time":1321.27,"end_time":1321.66,"highlight":false,"strikethrough":false},{"text":" that\'s","start_time":1322.8,"end_time":1322.99,"highlight":false,"strikethrough":false},{"text":" only","start_time":1323.01,"end_time":1323.25,"highlight":false,"strikethrough":false},{"text":" leapfrog","start_time":1323.25,"end_time":1323.67,"highlight":false,"strikethrough":false},{"text":" me","start_time":1323.67,"end_time":1323.79,"highlight":false,"strikethrough":false},{"text":" once.","start_time":1323.79,"end_time":1324.42,"highlight":false,"strikethrough":false}]},{"speaker":"","start_time":1327.32,"end_time":1328.18,"words":[{"text":"Certainly","start_time":1327.32,"end_time":1327.7,"highlight":false,"strikethrough":false},{"text":" something","start_time":1327.79,"end_time":1328.0,"highlight":false,"strikethrough":false},{"text":" like.","start_time":1328.05,"end_time":1328.18,"highlight":false,"strikethrough":false}]},{"speaker":"Speaker1","start_time":1329.71,"end_time":1339.32,"words":[{"text":"That.","start_time":1329.71,"end_time":1329.88,"highlight":false,"strikethrough":false},{"text":" What\'s","start_time":1335.48,"end_time":1335.66,"highlight":false,"strikethrough":false},{"text":" the","start_time":1335.66,"end_time":1335.75,"highlight":false,"strikethrough":false},{"text":" point","start_time":1335.75,"end_time":1335.96,"highlight":false,"strikethrough":false},{"text":" in","start_time":1335.96,"end_time":1336.05,"highlight":false,"strikethrough":false},{"text":" having","start_time":1336.05,"end_time":1336.26,"highlight":false,"strikethrough":false},{"text":" a","start_time":1336.26,"end_time":1336.35,"highlight":false,"strikethrough":false},{"text":" smart","start_time":1336.35,"end_time":1336.65,"highlight":false,"strikethrough":false},{"text":" app","start_time":1336.65,"end_time":1337.1,"highlight":false,"strikethrough":false},{"text":" that","start_time":1337.88,"end_time":1338.0,"highlight":false,"strikethrough":false},{"text":" tells","start_time":1338.0,"end_time":1338.21,"highlight":false,"strikethrough":false},{"text":" you","start_time":1338.21,"end_time":1338.27,"highlight":false,"strikethrough":false},{"text":" when","start_time":1338.27,"end_time":1338.39,"highlight":false,"strikethrough":false},{"text":" your","start_time":1338.39,"end_time":1338.48,"highlight":false,"strikethrough":false},{"text":" lights","start_time":1338.48,"end_time":1338.72,"highlight":false,"strikethrough":false},{"text":" are","start_time":1338.72,"end_time":1338.78,"highlight":false,"strikethrough":false},{"text":" dead?","start_time":1338.78,"end_time":1339.32,"highlight":false,"strikethrough":false}]},{"speaker":"","start_time":1344.6,"end_time":1405.07,"words":[{"text":"Bloody","start_time":1344.6,"end_time":1344.85,"highlight":false,"strikethrough":false},{"text":" hell.","start_time":1345.09,"end_time":1345.39,"highlight":false,"strikethrough":false},{"text":" It\'s","start_time":1404.41,"end_time":1404.58,"highlight":false,"strikethrough":false},{"text":" so.","start_time":1404.64,"end_time":1405.07,"highlight":false,"strikethrough":false}]},{"speaker":"Speaker1","start_time":1414.86,"end_time":1992.19,"words":[{"text":"So","start_time":1414.86,"end_time":1415.09,"highlight":false,"strikethrough":false},{"text":" changed","start_time":1415.28,"end_time":1415.55,"highlight":false,"strikethrough":false},{"text":" my","start_time":1415.55,"end_time":1415.7,"highlight":false,"strikethrough":false},{"text":" route","start_time":1415.7,"end_time":1415.94,"highlight":false,"strikethrough":false},{"text":" slightly","start_time":1415.94,"end_time":1416.39,"highlight":false,"strikethrough":false},{"text":" because","start_time":1416.39,"end_time":1416.63,"highlight":false,"strikethrough":false},{"text":" I","start_time":1416.63,"end_time":1416.72,"highlight":false,"strikethrough":false},{"text":" was","start_time":1416.72,"end_time":1416.87,"highlight":false,"strikethrough":false},{"text":" going","start_time":1416.87,"end_time":1417.02,"highlight":false,"strikethrough":false},{"text":" to","start_time":1417.02,"end_time":1417.08,"highlight":false,"strikethrough":false},{"text":" go","start_time":1417.08,"end_time":1417.62,"highlight":false,"strikethrough":false},{"text":" out","start_time":1418.52,"end_time":1418.66,"highlight":false,"strikethrough":false},{"text":" Park","start_time":1418.73,"end_time":1419.06,"highlight":false,"strikethrough":false},{"text":" Street.","start_time":1419.06,"end_time":1419.81,"highlight":false,"strikethrough":false},{"text":" But","start_time":1420.98,"end_time":1421.64,"highlight":false,"strikethrough":false},{"text":" I","start_time":1422.78,"end_time":1422.91,"highlight":false,"strikethrough":false},{"text":" will","start_time":1422.93,"end_time":1423.04,"highlight":false,"strikethrough":false},{"text":" stick","start_time":1423.05,"end_time":1423.26,"highlight":false,"strikethrough":false},{"text":" to","start_time":1423.26,"end_time":1423.38,"highlight":false,"strikethrough":false},{"text":" trails","start_time":1423.38,"end_time":1424.25,"highlight":false,"strikethrough":false},{"text":" because","start_time":1424.34,"end_time":1424.55,"highlight":false,"strikethrough":false},{"text":" I","start_time":1424.55,"end_time":1424.61,"highlight":false,"strikethrough":false},{"text":" just","start_time":1424.61,"end_time":1424.76,"highlight":false,"strikethrough":false},{"text":" have","start_time":1424.76,"end_time":1424.88,"highlight":false,"strikethrough":false},{"text":" my","start_time":1424.88,"end_time":1425.06,"highlight":false,"strikethrough":false},{"text":" phone,
+                    ","start_time":1425.06,"end_time":1425.4,"highlight":false,"strikethrough":false},{"text":" the","start_time":1425.42,"end_time":1425.54,"highlight":false,"strikethrough":false},{"text":" light.","start_time":1425.54,"end_time":1426.02,"highlight":false,"strikethrough":false},{"text":" Not","start_time":1515.62,"end_time":1515.95,"highlight":false,"strikethrough":false},{"text":" just","start_time":1515.95,"end_time":1516.4,"highlight":false,"strikethrough":false},{"text":" because","start_time":1516.4,"end_time":1517.3,"highlight":false,"strikethrough":false},{"text":" I","start_time":1517.3,"end_time":1517.54,"highlight":false,"strikethrough":false},{"text":" have","start_time":1517.54,"end_time":1517.93,"highlight":false,"strikethrough":false},{"text":" inadequate","start_time":1517.93,"end_time":1518.41,"highlight":false,"strikethrough":false},{"text":" front","start_time":1518.41,"end_time":1518.65,"highlight":false,"strikethrough":false},{"text":" lines","start_time":1518.65,"end_time":1518.92,"highlight":false,"strikethrough":false},{"text":" at","start_time":1518.92,"end_time":1518.98,"highlight":false,"strikethrough":false},{"text":" the","start_time":1518.98,"end_time":1519.07,"highlight":false,"strikethrough":false},{"text":" moment,
+                    ","start_time":1519.07,"end_time":1519.49,"highlight":false,"strikethrough":false},{"text":" but","start_time":1519.49,"end_time":1519.73,"highlight":false,"strikethrough":false},{"text":" also","start_time":1519.73,"end_time":1520.21,"highlight":false,"strikethrough":false},{"text":" in","start_time":1520.21,"end_time":1520.33,"highlight":false,"strikethrough":false},{"text":" general.","start_time":1520.33,"end_time":1521.08,"highlight":false,"strikethrough":false},{"text":" I","start_time":1521.56,"end_time":1521.58,"highlight":false,"strikethrough":false},{"text":" feel","start_time":1521.62,"end_time":1521.83,"highlight":false,"strikethrough":false},{"text":" like","start_time":1521.83,"end_time":1522.31,"highlight":false,"strikethrough":false},{"text":" capital","start_time":1522.31,"end_time":1522.7,"highlight":false,"strikethrough":false},{"text":" city","start_time":1522.7,"end_time":1522.94,"highlight":false,"strikethrough":false},{"text":" trail","start_time":1522.94,"end_time":1523.21,"highlight":false,"strikethrough":false},{"text":" is","start_time":1523.21,"end_time":1523.33,"highlight":false,"strikethrough":false},{"text":" great,
+                    ","start_time":1523.33,"end_time":1523.96,"highlight":false,"strikethrough":false},{"text":" but","start_time":1524.5,"end_time":1524.74,"highlight":false,"strikethrough":false},{"text":" it","start_time":1524.74,"end_time":1524.83,"highlight":false,"strikethrough":false},{"text":" could","start_time":1524.83,"end_time":1525.01,"highlight":false,"strikethrough":false},{"text":" benefit","start_time":1525.01,"end_time":1525.4,"highlight":false,"strikethrough":false},{"text":" from","start_time":1525.4,"end_time":1525.61,"highlight":false,"strikethrough":false},{"text":" better","start_time":1525.61,"end_time":1525.85,"highlight":false,"strikethrough":false},{"text":" lighting.","start_time":1525.85,"end_time":1526.6,"highlight":false,"strikethrough":false},{"text":" The","start_time":1527.71,"end_time":1527.83,"highlight":false,"strikethrough":false},{"text":" stretch","start_time":1527.83,"end_time":1528.16,"highlight":false,"strikethrough":false},{"text":"
+ on","start_time":1528.16,"end_time":1528.37,"highlight":false,"strikethrough":false},{"text":" here","start_time":1528.4,"end_time":1528.64,"highlight":false,"strikethrough":false},{"text":" is","start_time":1528.64,"end_time":1528.79,"highlight":false,"strikethrough":false},{"text":" quite","start_time":1528.79,"end_time":1529.33,"highlight":false,"strikethrough":false},{"text":" dark.","start_time":1529.33,"end_time":1530.08,"highlight":false,"strikethrough":false},{"text":" The","start_time":1530.95,"end_time":1531.04,"highlight":false,"strikethrough":false},{"text":" street","start_time":1531.04,"end_time":1531.37,"highlight":false,"strikethrough":false},{"text":" is","start_time":1531.37,"end_time":1531.52,"highlight":false,"strikethrough":false},{"text":" lit,
+                    ","start_time":1531.52,"end_time":1532.09,"highlight":false,"strikethrough":false},{"text":" a","start_time":1532.12,"end_time":1532.24,"highlight":false,"strikethrough":false},{"text":" trail","start_time":1532.24,"end_time":1532.54,"highlight":false,"strikethrough":false},{"text":" is","start_time":1532.54,"end_time":1532.66,"highlight":false,"strikethrough":false},{"text":" not.","start_time":1532.66,"end_time":1533.26,"highlight":false,"strikethrough":false},{"text":" It","start_time":1534.09,"end_time":1534.13,"highlight":false,"strikethrough":false},{"text":" could","start_time":1534.19,"end_time":1534.34,"highlight":false,"strikethrough":false},{"text":" really","start_time":1534.34,"end_time":1534.91,"highlight":false,"strikethrough":false},{"text":" use","start_time":1534.91,"end_time":1535.18,"highlight":false,"strikethrough":false},{"text":" some","start_time":1535.18,"end_time":1535.36,"highlight":false,"strikethrough":false},{"text":" nice","start_time":1535.36,"end_time":1536.02,"highlight":false,"strikethrough":false},{"text":" low","start_time":1536.89,"end_time":1537.13,"highlight":false,"strikethrough":false},{"text":" level","start_time":1537.13,"end_time":1537.49,"highlight":false,"strikethrough":false},{"text":" stuff.","start_time":1537.49,"end_time":1538.24,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":1543.27,"end_time":1543.32,"highlight":false,"strikethrough":false},{"text":" just","start_time":1543.53,"end_time":1543.65,"highlight":false,"strikethrough":false},{"text":" going","start_time":1543.65,"end_time":1543.77,"highlight":false,"strikethrough":false},{"text":" to","start_time":1543.77,"end_time":1543.83,"highlight":false,"strikethrough":false},{"text":" slow","start_time":1543.83,"end_time":1544.13,"highlight":false,"strikethrough":false},{"text":" down","start_time":1544.13,"end_time":1544.37,"highlight":false,"strikethrough":false},{"text":" here","start_time":1544.37,"end_time":1544.58,"highlight":false,"strikethrough":false},{"text":" because","start_time":1544.58,"end_time":1544.79,"highlight":false,"strikethrough":false},{"text":" cars","start_time":1544.79,"end_time":1545.21,"highlight":false,"strikethrough":false},{"text":" don\'t","start_time":1545.21,"end_time":1545.66,"highlight":false,"strikethrough":false},{"text":" always","start_time":1545.66,"end_time":1546.62,"highlight":false,"strikethrough":false},{"text":" know","start_time":1546.62,"end_time":1547.01,"highlight":false,"strikethrough":false},{"text":" that","start_time":1547.01,"end_time":1547.13,"highlight":false,"strikethrough":false},{"text":" they","start_time":1547.13,"end_time":1547.31,"highlight":false,"strikethrough":false},{"text":" have","start_time":1547.31,"end_time":1547.46,"highlight":false,"strikethrough":false},{"text":" to","start_time":1547.46,"end_time":1547.55,"highlight":false,"strikethrough":false},{"text":" give","start_time":1547.55,"end_time":1547.7,"highlight":false,"strikethrough":false},{"text":" way","start_time":1547.7,"end_time":1548.21,"highlight":false,"strikethrough":false},{"text":" at","start_time":1548.85,"end_time":1549.0,"highlight":false,"strikethrough":false},{"text":" some","start_time":1550.22,"end_time":1550.4,"highlight":false,"strikethrough":false},{"text":" point.","start_time":1550.4,"end_time":1550.97,"highlight":false,"strikethrough":false},{"text":" Like","start_time":1552.02,"end_time":1552.59,"highlight":false,"strikethrough":false},{"text":" I","start_time":1553.18,"end_time":1553.21,"highlight":false,"strikethrough":false},{"text":" thought","start_time":1553.4,"end_time":1553.58,"highlight":false,"strikethrough":false},{"text":" that","start_time":1553.58,"end_time":1553.69,"highlight":false,"strikethrough":false},{"text":" it","start_time":1553.7,"end_time":1553.79,"highlight":false,"strikethrough":false},{"text":" was","start_time":1553.79,"end_time":1553.91,"highlight":false,"strikethrough":false},{"text":" stopped","start_time":1553.91,"end_time":1554.12,"highlight":false,"strikethrough":false},{"text":" for","start_time":1554.12,"end_time":1554.24,"highlight":false,"strikethrough":false},{"text":" me.","start_time":1554.24,"end_time":1554.6,"highlight":false,"strikethrough":false},{"text":" Funnily","start_time":1560.46,"end_time":1560.76,"highlight":false,"strikethrough":false},{"text":" enough,
+                    ","start_time":1560.76,"end_time":1560.97,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":1560.97,"end_time":1561.15,"highlight":false,"strikethrough":false},{"text":" a","start_time":1561.15,"end_time":1561.42,"highlight":false,"strikethrough":false},{"text":" situation","start_time":1561.42,"end_time":1561.84,"highlight":false,"strikethrough":false},{"text":" where","start_time":1561.84,"end_time":1561.93,"highlight":false,"strikethrough":false},{"text":" wearing","start_time":1561.93,"end_time":1562.14,"highlight":false,"strikethrough":false},{"text":" dark","start_time":1562.14,"end_time":1562.32,"highlight":false,"strikethrough":false},{"text":" clothes","start_time":1562.32,"end_time":1562.62,"highlight":false,"strikethrough":false},{"text":" is","start_time":1562.62,"end_time":1562.74,"highlight":false,"strikethrough":false},{"text":" actually","start_time":1562.74,"end_time":1562.98,"highlight":false,"strikethrough":false},{"text":" beneficial","start_time":1562.98,"end_time":1563.49,"highlight":false,"strikethrough":false},{"text":" because","start_time":1563.49,"end_time":1563.97,"highlight":false,"strikethrough":false},{"text":" brightly","start_time":1564.48,"end_time":1564.81,"highlight":false,"strikethrough":false},{"text":" lit","start_time":1564.81,"end_time":1564.99,"highlight":false,"strikethrough":false},{"text":" and","start_time":1564.99,"end_time":1565.09,"highlight":false,"strikethrough":false},{"text":" I","start_time":1565.09,"end_time":1565.14,"highlight":false,"strikethrough":false},{"text":" have","start_time":1565.14,"end_time":1565.29,"highlight":false,"strikethrough":false},{"text":" a","start_time":1565.29,"end_time":1565.35,"highlight":false,"strikethrough":false},{"text":" bright","start_time":1565.35,"end_time":1565.56,"highlight":false,"strikethrough":false},{"text":" background.","start_time":1565.56,"end_time":1566.25,"highlight":false,"strikethrough":false},{"text":" See,
+                    ","start_time":1590.49,"end_time":1590.7,"highlight":false,"strikethrough":false},{"text":" this","start_time":1590.7,"end_time":1590.85,"highlight":false,"strikethrough":false},{"text":" is","start_time":1590.85,"end_time":1590.97,"highlight":false,"strikethrough":false},{"text":" well","start_time":1590.97,"end_time":1591.24,"highlight":false,"strikethrough":false},{"text":" lit.","start_time":1591.24,"end_time":1591.78,"highlight":false,"strikethrough":false},{"text":" It","start_time":1592.31,"end_time":1592.37,"highlight":false,"strikethrough":false},{"text":" could","start_time":1592.37,"end_time":1592.59,"highlight":false,"strikethrough":false},{"text":" be","start_time":1592.59,"end_time":1592.71,"highlight":false,"strikethrough":false},{"text":" wider,
+                    ","start_time":1592.71,"end_time":1593.07,"highlight":false,"strikethrough":false},{"text":" though.","start_time":1593.07,"end_time":1593.67,"highlight":false,"strikethrough":false},{"text":" It","start_time":1594.48,"end_time":1594.63,"highlight":false,"strikethrough":false},{"text":" is","start_time":1594.63,"end_time":1595.14,"highlight":false,"strikethrough":false},{"text":" very","start_time":1595.14,"end_time":1595.44,"highlight":false,"strikethrough":false},{"text":" busy,
+                    ","start_time":1595.44,"end_time":1596.16,"highlight":false,"strikethrough":false},{"text":" sort","start_time":1601.02,"end_time":1601.26,"highlight":false,"strikethrough":false},{"text":" of","start_time":1601.26,"end_time":1601.41,"highlight":false,"strikethrough":false},{"text":" a","start_time":1601.41,"end_time":1601.47,"highlight":false,"strikethrough":false},{"text":" recreational","start_time":1601.47,"end_time":1602.19,"highlight":false,"strikethrough":false},{"text":" walking","start_time":1602.19,"end_time":1602.64,"highlight":false,"strikethrough":false},{"text":" trail,
+                    ","start_time":1602.64,"end_time":1603.36,"highlight":false,"strikethrough":false},{"text":" a","start_time":1604.38,"end_time":1605.13,"highlight":false,"strikethrough":false},{"text":" major","start_time":1605.79,"end_time":1606.3,"highlight":false,"strikethrough":false},{"text":" East-West","start_time":1606.3,"end_time":1606.96,"highlight":false,"strikethrough":false},{"text":" cycling","start_time":1606.96,"end_time":1607.5,"highlight":false,"strikethrough":false},{"text":" trail.","start_time":1607.5,"end_time":1608.22,"highlight":false,"strikethrough":false},{"text":" And","start_time":1618.82,"end_time":1619.0,"highlight":false,"strikethrough":false},{"text":" there","start_time":1619.0,"end_time":1619.15,"highlight":false,"strikethrough":false},{"text":" is","start_time":1619.15,"end_time":1619.3,"highlight":false,"strikethrough":false},{"text":" a","start_time":1619.3,"end_time":1619.36,"highlight":false,"strikethrough":false},{"text":"
+ lot","start_time":1619.36,"end_time":1619.48,"highlight":false,"strikethrough":false},{"text":" of","start_time":1619.48,"end_time":1619.57,"highlight":false,"strikethrough":false},{"text":" width","start_time":1619.57,"end_time":1619.9,"highlight":false,"strikethrough":false},{"text":" because","start_time":1619.9,"end_time":1620.14,"highlight":false,"strikethrough":false},{"text":" obviously","start_time":1620.23,"end_time":1620.62,"highlight":false,"strikethrough":false},{"text":" two","start_time":1620.8,"end_time":1621.07,"highlight":false,"strikethrough":false},{"text":" trains","start_time":1621.07,"end_time":1621.37,"highlight":false,"strikethrough":false},{"text":" at","start_time":1621.37,"end_time":1621.43,"highlight":false,"strikethrough":false},{"text":" one","start_time":1621.43,"end_time":1621.58,"highlight":false,"strikethrough":false},{"text":" point","start_time":1621.58,"end_time":1622.15,"highlight":false,"strikethrough":false},{"text":" just","start_time":1624.55,"end_time":1624.73,"highlight":false,"strikethrough":false},{"text":" need","start_time":1624.73,"end_time":1624.88,"highlight":false,"strikethrough":false},{"text":" to","start_time":1624.88,"end_time":1624.97,"highlight":false,"strikethrough":false},{"text":" like","start_time":1624.97,"end_time":1625.15,"highlight":false,"strikethrough":false},{"text":" double","start_time":1625.15,"end_time":1625.45,"highlight":false,"strikethrough":false},{"text":" the","start_time":1625.45,"end_time":1625.75,"highlight":false,"strikethrough":false},{"text":" double","start_time":1628.96,"end_time":1629.18,"highlight":false,"strikethrough":false},{"text":" the","start_time":1629.29,"end_time":1629.55,"highlight":false,"strikethrough":false},{"text":" footpath,
+                    ","start_time":1629.56,"end_time":1630.3,"highlight":false,"strikethrough":false},{"text":" make","start_time":1630.31,"end_time":1630.51,"highlight":false,"strikethrough":false},{"text":" half","start_time":1630.55,"end_time":1630.73,"highlight":false,"strikethrough":false},{"text":" of","start_time":1630.73,"end_time":1630.85,"highlight":false,"strikethrough":false},{"text":" it","start_time":1630.85,"end_time":1630.97,"highlight":false,"strikethrough":false},{"text":" cycling.","start_time":1630.97,"end_time":1631.69,"highlight":false,"strikethrough":false},{"text":" Oh,
+                    ","start_time":1634.09,"end_time":1634.33,"highlight":false,"strikethrough":false},{"text":" isn\'t","start_time":1634.99,"end_time":1635.2,"highlight":false,"strikethrough":false},{"text":" that","start_time":1635.2,"end_time":1635.56,"highlight":false,"strikethrough":false},{"text":" right?","start_time":1637.66,"end_time":1637.81,"highlight":false,"strikethrough":false},{"text":" Everyone","start_time":1637.87,"end_time":1638.2,"highlight":false,"strikethrough":false},{"text":" else","start_time":1638.2,"end_time":1638.38,"highlight":false,"strikethrough":false},{"text":" has","start_time":1638.38,"end_time":1638.53,"highlight":false,"strikethrough":false},{"text":" lights.","start_time":1638.53,"end_time":1639.1,"highlight":false,"strikethrough":false},{"text":" See","start_time":1656.22,"end_time":1656.55,"highlight":false,"strikethrough":false},{"text":" these","start_time":1656.55,"end_time":1656.88,"highlight":false,"strikethrough":false},{"text":" lights","start_time":1656.88,"end_time":1657.15,"highlight":false,"strikethrough":false},{"text":" up","start_time":1657.15,"end_time":1657.27,"highlight":false,"strikethrough":false},{"text":" ahead","start_time":1657.27,"end_time":1657.57,"highlight":false,"strikethrough":false},{"text":" of","start_time":1657.57,"end_time":1657.75,"highlight":false,"strikethrough":false},{"text":" all","start_time":1657.75,"end_time":1657.85,"highlight":false,"strikethrough":false},{"text":" the","start_time":1657.87,"end_time":1657.99,"highlight":false,"strikethrough":false},{"text":" tennis","start_time":1657.99,"end_time":1658.44,"highlight":false,"strikethrough":false},{"text":" court.","start_time":1658.44,"end_time":1659.04,"highlight":false,"strikethrough":false},{"text":" Kind","start_time":1660.06,"end_time":1660.42,"highlight":false,"strikethrough":false},{"text":" of","start_time":1660.42,"end_time":1660.81,"highlight":false,"strikethrough":false},{"text":" ridiculous","start_time":1660.81,"end_time":1661.77,"highlight":false,"strikethrough":false},{"text":" how","start_time":1662.31,"end_time":1662.4,"highlight":false,"strikethrough":false},{"text":" much","start_time":1662.4,"end_time":1662.64,"highlight":false,"strikethrough":false},{"text":" we\'re","start_time":1662.64,"end_time":1662.76,"highlight":false,"strikethrough":false},{"text":" willing","start_time":1662.76,"end_time":1663.03,"highlight":false,"strikethrough":false},{"text":" to","start_time":1663.06,"end_time":1663.18,"highlight":false,"strikethrough":false},{"text":" light","start_time":1663.18,"end_time":1663.48,"highlight":false,"strikethrough":false},{"text":" things,
+                    ","start_time":1663.48,"end_time":1664.14,"highlight":false,"strikethrough":false},{"text":" you","start_time":1667.05,"end_time":1667.23,"highlight":false,"strikethrough":false},{"text":" know,
+                    ","start_time":1667.23,"end_time":1667.71,"highlight":false,"strikethrough":false},{"text":" not","start_time":1668.31,"end_time":1668.52,"highlight":false,"strikethrough":false},{"text":" practical","start_time":1668.52,"end_time":1669.06,"highlight":false,"strikethrough":false},{"text":" things.","start_time":1669.06,"end_time":1669.78,"highlight":false,"strikethrough":false},{"text":" It\'s","start_time":1675.9,"end_time":1676.05,"highlight":false,"strikethrough":false},{"text":" like","start_time":1676.05,"end_time":1676.23,"highlight":false,"strikethrough":false},{"text":" daylight","start_time":1676.23,"end_time":1676.65,"highlight":false,"strikethrough":false},{"text":" in","start_time":1676.65,"end_time":1676.77,"highlight":false,"strikethrough":false},{"text":" there.","start_time":1676.77,"end_time":1677.25,"highlight":false,"strikethrough":false},{"text":" The.","start_time":1696.88,"end_time":1696.99,"highlight":false,"strikethrough":false},{"text":" How","start_time":1728.85,"end_time":1728.97,"highlight":false,"strikethrough":false},{"text":" many?","start_time":1728.97,"end_time":1729.24,"highlight":false,"strikethrough":false},{"text":" 6","start_time":1729.24,"end_time":1729.51,"highlight":false,"strikethrough":false},{"text":" minutes","start_time":1729.51,"end_time":1729.78,"highlight":false,"strikethrough":false},{"text":" away.","start_time":1729.78,"end_time":1730.31,"highlight":false,"strikethrough":false},{"text":" And","start_time":1730.32,"end_time":1731.07,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":1731.97,"end_time":1732.04,"highlight":false,"strikethrough":false},{"text":" only","start_time":1732.09,"end_time":1732.45,"highlight":false,"strikethrough":false},{"text":" signalised","start_time":1732.45,"end_time":1733.11,"highlight":false,"strikethrough":false},{"text":" crossings","start_time":1733.11,"end_time":1733.74,"highlight":false,"strikethrough":false},{"text":" until","start_time":1733.74,"end_time":1734.04,"highlight":false,"strikethrough":false},{"text":" I","start_time":1734.04,"end_time":1734.16,"highlight":false,"strikethrough":false},{"text":" turn","start_time":1734.16,"end_time":1734.43,"highlight":false,"strikethrough":false},{"text":" left.","start_time":1734.43,"end_time":1735.12,"highlight":false,"strikethrough":false},{"text":" But","start_time":1739.72,"end_time":1739.9,"highlight":false,"strikethrough":false},{"text":" again,
+                    ","start_time":1739.9,"end_time":1740.35,"highlight":false,"strikethrough":false},{"text":" block.","start_time":1740.35,"end_time":1741.06,"highlight":false,"strikethrough":false},{"text":" Respond","start_time":1807.99,"end_time":1808.31,"highlight":false,"strikethrough":false},{"text":" to","start_time":1808.59,"end_time":1808.68,"highlight":false,"strikethrough":false},{"text":" this","start_time":1808.89,"end_time":1809.01,"highlight":false,"strikethrough":false},{"text":" crossing.","start_time":1809.05,"end_time":1809.67,"highlight":false,"strikethrough":false},{"text":" Well,
+                    ","start_time":1873.69,"end_time":1874.01,"highlight":false,"strikethrough":false},{"text":" it","start_time":1874.05,"end_time":1874.1,"highlight":false,"strikethrough":false},{"text":" seems","start_time":1874.11,"end_time":1874.35,"highlight":false,"strikethrough":false},{"text":" like","start_time":1874.35,"end_time":1874.47,"highlight":false,"strikethrough":false},{"text":" both","start_time":1874.47,"end_time":1874.65,"highlight":false,"strikethrough":false},{"text":" cameras","start_time":1874.65,"end_time":1874.98,"highlight":false,"strikethrough":false},{"text":" just","start_time":1874.98,"end_time":1875.49,"highlight":false,"strikethrough":false},{"text":" died,
+                    ","start_time":1875.49,"end_time":1876.45,"highlight":false,"strikethrough":false},{"text":" even","start_time":1877.2,"end_time":1877.5,"highlight":false,"strikethrough":false},{"text":" though","start_time":1877.5,"end_time":1877.62,"highlight":false,"strikethrough":false},{"text":" I","start_time":1877.62,"end_time":1877.68,"highlight":false,"strikethrough":false},{"text":" only","start_time":1877.68,"end_time":1877.95,"highlight":false,"strikethrough":false},{"text":" charged","start_time":1877.95,"end_time":1878.43,"highlight":false,"strikethrough":false},{"text":" them","start_time":1878.43,"end_time":1878.61,"highlight":false,"strikethrough":false},{"text":" two","start_time":1878.61,"end_time":1878.82,"highlight":false,"strikethrough":false},{"text":" nights","start_time":1878.82,"end_time":1879.09,"highlight":false,"strikethrough":false},{"text":" ago.","start_time":1879.09,"end_time":1879.57,"highlight":false,"strikethrough":false},{"text":" So","start_time":1880.62,"end_time":1881.25,"highlight":false,"strikethrough":false},{"text":"
+ I","start_time":1882.54,"end_time":1882.78,"highlight":false,"strikethrough":false},{"text":" will","start_time":1882.78,"end_time":1882.96,"highlight":false,"strikethrough":false},{"text":" just","start_time":1882.96,"end_time":1883.14,"highlight":false,"strikethrough":false},{"text":" charge","start_time":1883.14,"end_time":1883.33,"highlight":false,"strikethrough":false},{"text":" them","start_time":1883.35,"end_time":1883.47,"highlight":false,"strikethrough":false},{"text":" every","start_time":1883.47,"end_time":1883.65,"highlight":false,"strikethrough":false},{"text":" night","start_time":1883.65,"end_time":1883.8,"highlight":false,"strikethrough":false},{"text":" now.","start_time":1883.8,"end_time":1884.25,"highlight":false,"strikethrough":false},{"text":" I","start_time":1888.54,"end_time":1888.63,"highlight":false,"strikethrough":false},{"text":" can","start_time":1888.63,"end_time":1888.84,"highlight":false,"strikethrough":false},{"text":" try","start_time":1888.84,"end_time":1889.05,"highlight":false,"strikethrough":false},{"text":" to","start_time":1889.05,"end_time":1889.17,"highlight":false,"strikethrough":false},{"text":" describe","start_time":1889.17,"end_time":1889.56,"highlight":false,"strikethrough":false},{"text":" my","start_time":1889.56,"end_time":1889.71,"highlight":false,"strikethrough":false},{"text":" facial","start_time":1889.71,"end_time":1890.07,"highlight":false,"strikethrough":false},{"text":" expressions.","start_time":1890.07,"end_time":1890.94,"highlight":false,"strikethrough":false},{"text":" So","start_time":1924.23,"end_time":1924.5,"highlight":false,"strikethrough":false},{"text":" on","start_time":1924.5,"end_time":1924.62,"highlight":false,"strikethrough":false},{"text":" the","start_time":1924.62,"end_time":1924.68,"highlight":false,"strikethrough":false},{"text":" outfield,
+                    ","start_time":1924.68,"end_time":1925.58,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":1926.12,"end_time":1926.27,"highlight":false,"strikethrough":false},{"text":" kind","start_time":1926.27,"end_time":1926.51,"highlight":false,"strikethrough":false},{"text":" of","start_time":1926.51,"end_time":1926.63,"highlight":false,"strikethrough":false},{"text":" lit","start_time":1926.63,"end_time":1926.84,"highlight":false,"strikethrough":false},{"text":" because","start_time":1926.84,"end_time":1927.14,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":1927.14,"end_time":1927.29,"highlight":false,"strikethrough":false},{"text":" behind","start_time":1927.29,"end_time":1927.59,"highlight":false,"strikethrough":false},{"text":" the","start_time":1927.59,"end_time":1927.71,"highlight":false,"strikethrough":false},{"text":" pool.","start_time":1927.71,"end_time":1929.15,"highlight":false,"strikethrough":false},{"text":" I","start_time":1931.19,"end_time":1931.19,"highlight":false,"strikethrough":false},{"text":" wasn\'t","start_time":1931.21,"end_time":1931.43,"highlight":false,"strikethrough":false},{"text":" sure","start_time":1931.43,"end_time":1931.61,"highlight":false,"strikethrough":false},{"text":" if","start_time":1931.61,"end_time":1931.79,"highlight":false,"strikethrough":false},{"text":" a","start_time":1931.79,"end_time":1932.18,"highlight":false,"strikethrough":false},{"text":" cyclist","start_time":1932.18,"end_time":1932.69,"highlight":false,"strikethrough":false},{"text":" overtaking","start_time":1932.69,"end_time":1933.17,"highlight":false,"strikethrough":false},{"text":" another","start_time":1933.17,"end_time":1933.41,"highlight":false,"strikethrough":false},{"text":" cyclist","start_time":1933.41,"end_time":1933.86,"highlight":false,"strikethrough":false},{"text":" had","start_time":1933.86,"end_time":1934.01,"highlight":false,"strikethrough":false},{"text":" seen","start_time":1934.01,"end_time":1934.28,"highlight":false,"strikethrough":false},{"text":" me","start_time":1934.28,"end_time":1934.46,"highlight":false,"strikethrough":false},{"text":" there.","start_time":1934.46,"end_time":1935.03,"highlight":false,"strikethrough":false},{"text":" It\'s","start_time":1937.49,"end_time":1937.64,"highlight":false,"strikethrough":false},{"text":" got","start_time":1937.64,"end_time":1937.82,"highlight":false,"strikethrough":false},{"text":" to","start_time":1937.82,"end_time":1937.91,"highlight":false,"strikethrough":false},{"text":" be","start_time":1937.91,"end_time":1938.08,"highlight":false,"strikethrough":false},{"text":" something","start_time":1938.09,"end_time":1938.34,"highlight":false,"strikethrough":false},{"text":" that.","start_time":1938.36,"end_time":1938.5,"highlight":false,"strikethrough":false},{"text":" But","start_time":1947.56,"end_time":1948.19,"highlight":false,"strikethrough":false},{"text":" 2","start_time":1948.43,"end_time":1948.65,"highlight":false,"strikethrough":false},{"text":" minutes","start_time":1948.65,"end_time":1948.88,"highlight":false,"strikethrough":false},{"text":" to","start_time":1948.88,"end_time":1948.97,"highlight":false,"strikethrough":false},{"text":" my","start_time":1948.97,"end_time":1949.09,"highlight":false,"strikethrough":false},{"text":" destination.","start_time":1949.09,"end_time":1949.9,"highlight":false,"strikethrough":false},{"text":" Gosh.","start_time":1957.39,"end_time":1957.9,"highlight":false,"strikethrough":false},{"text":" Just","start_time":1957.9,"end_time":1958.23,"highlight":false,"strikethrough":false},{"text":" a","start_time":1958.23,"end_time":1958.31,"highlight":false,"strikethrough":false},{"text":" really","start_time":1958.32,"end_time":1958.71,"highlight":false,"strikethrough":false},{"text":" battery.","start_time":1958.71,"end_time":1959.37,"highlight":false,"strikethrough":false},{"text":" A","start_time":1959.37,"end_time":1959.81,"highlight":false,"strikethrough":false},{"text":" battery","start_time":1959.82,"end_time":1960.21,"highlight":false,"strikethrough":false},{"text":" fueled","start_time":1960.21,"end_time":1960.63,"highlight":false,"strikethrough":false},{"text":" evening.","start_time":1960.63,"end_time":1961.35,"highlight":false,"strikethrough":false},{"text":" Camera","start_time":1962.34,"end_time":1962.65,"highlight":false,"strikethrough":false},{"text":" is","start_time":1962.67,"end_time":1962.79,"highlight":false,"strikethrough":false},{"text":" my","start_time":1962.79,"end_time":1962.94,"highlight":false,"strikethrough":false},{"text":" light.","start_time":1962.94,"end_time":1963.57,"highlight":false,"strikethrough":false},{"text":" I","start_time":1964.55,"end_time":1964.64,"highlight":false,"strikethrough":false},{"text":" I\'m","start_time":1964.71,"end_time":1964.89,"highlight":false,"strikethrough":false},{"text":" a","start_time":1964.89,"end_time":1964.98,"highlight":false,"strikethrough":false},{"text":" responsible","start_time":1964.98,"end_time":1965.64,"highlight":false,"strikethrough":false},{"text":" adult.","start_time":1965.64,"end_time":1965.93,"highlight":false,"strikethrough":false},{"text":" I","start_time":1965.94,"end_time":1966.03,"highlight":false,"strikethrough":false},{"text":" promise.","start_time":1966.03,"end_time":1966.75,"highlight":false,"strikethrough":false},{"text":" Just","start_time":1987.68,"end_time":1988.22,"highlight":false,"strikethrough":false},{"text":" made","start_time":1988.22,"end_time":1988.73,"highlight":false,"strikethrough":false},{"text":" it","start_time":1988.73,"end_time":1989.0,"highlight":false,"strikethrough":false},{"text":" to","start_time":1990.96,"end_time":1991.17,"highlight":false,"strikethrough":false},{"text":" the","start_time":1991.46,"end_time":1991.53,"highlight":false,"strikethrough":false},{"text":" princess.","start_time":1991.56,"end_time":1992.19,"highlight":false,"strikethrough":false}]},{"speaker":"","start_time":2029.26,"end_time":2051.72,"words":[{"text":"Are","start_time":2029.26,"end_time":2029.36,"highlight":false,"strikethrough":false},{"text":" they?","start_time":2029.41,"end_time":2029.65,"highlight":false,"strikethrough":false},{"text":" No.","start_time":2049.82,"end_time":2050.02,"highlight":false,"strikethrough":false},{"text":" Stay","start_time":2050.57,"end_time":2050.76,"highlight":false,"strikethrough":false},{"text":" in","start_time":2051.26,"end_time":2051.44,"highlight":false,"strikethrough":false},{"text":" there.","start_time":2051.47,"end_time":2051.72,"highlight":false,"strikethrough":false}]},{"speaker":"Speaker1","start_time":2051.74,"end_time":2061.94,"words":[{"text":"Oh,
+                    ","start_time":2051.74,"end_time":2052.16,"highlight":false,"strikethrough":false},{"text":" no.","start_time":2052.16,"end_time":2052.88,"highlight":false,"strikethrough":false},{"text":" I","start_time":2054.2,"end_time":2054.44,"highlight":false,"strikethrough":false},{"text":" know","start_time":2054.44,"end_time":2054.65,"highlight":false,"strikethrough":false},{"text":" it\'s","start_time":2055.07,"end_time":2055.28,"highlight":false,"strikethrough":false},{"text":" a","start_time":2055.28,"end_time":2055.34,"highlight":false,"strikethrough":false},{"text":" bit","start_time":2055.34,"end_time":2055.49,"highlight":false,"strikethrough":false},{"text":" like","start_time":2055.49,"end_time":2055.64,"highlight":false,"strikethrough":false},{"text":" that,
+                    ","start_time":2055.64,"end_time":2055.79,"highlight":false,"strikethrough":false},{"text":" isn\'t","start_time":2055.79,"end_time":2056.0,"highlight":false,"strikethrough":false},{"text":" it?","start_time":2056.0,"end_time":2056.39,"highlight":false,"strikethrough":false},{"text":" Normally","start_time":2057.08,"end_time":2057.53,"highlight":false,"strikethrough":false},{"text":" they","start_time":2057.53,"end_time":2057.68,"highlight":false,"strikethrough":false},{"text":" let","start_time":2057.68,"end_time":2058.04,"highlight":false,"strikethrough":false},{"text":" me","start_time":2058.28,"end_time":2058.73,"highlight":false,"strikethrough":false},{"text":"
+ kind","start_time":2058.73,"end_time":2058.97,"highlight":false,"strikethrough":false},{"text":" of","start_time":2058.97,"end_time":2059.12,"highlight":false,"strikethrough":false},{"text":" go","start_time":2059.12,"end_time":2059.42,"highlight":false,"strikethrough":false},{"text":" in","start_time":2059.42,"end_time":2059.6,"highlight":false,"strikethrough":false},{"text":" that","start_time":2059.6,"end_time":2059.72,"highlight":false,"strikethrough":false},{"text":" little","start_time":2059.72,"end_time":2059.96,"highlight":false,"strikethrough":false},{"text":" side","start_time":2059.96,"end_time":2060.56,"highlight":false,"strikethrough":false},{"text":" pot.","start_time":2061.07,"end_time":2061.94,"highlight":false,"strikethrough":false}]}],"quality_score":"88.04"}'

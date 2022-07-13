@@ -21,8 +21,9 @@ from dataportal.generate_results import analysis
 from dataportal.generate_raw_results import raw_analysis
 from zipfile import ZipFile 
 
-default_save = '/home/tommy/Documents/output'
-#default_save = '/home/ubuntu/webserver/DFI-cycling/output/'
+# default_save = '/home/tommy/Documents/output'
+default_save = '/home/openface/Documents/output/'
+
 dictionaryPath = 'Dictionary.txt'
 #dictionaryPath = '/home/ubuntu/webserver/DFI-cycling/Dictionary.txt'
 @login_required
