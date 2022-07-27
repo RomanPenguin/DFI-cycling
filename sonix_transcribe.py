@@ -14,9 +14,11 @@ api_url = "https://api.sonix.ai/v1/media"
 media_id = "2VdmWL5Q"
 # /v1/media/<media id>/transcript 
 download_url = api_url+"/"+media_id+"/transcript.json"
-
+sonixkeyfile = "/home/Documents/sonixkeys.txt"
+with open(sonixkeyfile) as f:
+    sonixkey = f.readlines()
 # headers = {'Accept': 'application/json'}
-headers = {'Authorization': 'Bearer SCTeZeZWnH3rJ64v936lYgtt'}
+headers = {'Authorization': sonixkey}
 fileslist = requests.get(api_url+"?page=0", headers=headers)
 
 req = requests.get(download_url, headers=headers)
