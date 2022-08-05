@@ -13,7 +13,7 @@ from bicyclewebsite.dataportal.generate_results import individual_words
 
 
 #update key file (DO NOT STORE IN PROJECT FOLDER)
-sonixkeyfile = "/home/openface/Documents/sonixkey.txt"
+sonixkeyfile = "/home/tommy/Documents/sonixKey.txt"
 
 
 
@@ -60,8 +60,8 @@ if os.path.isdir(outputFilePath) != True:
     os.mkdir(outputFilePath)
 with open(outputFilePath + "/words.csv", 'w', encoding='UTF8', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
-    writer.writeheader()
-    writer.writerows(individual_words)
+    #writer.writeheader()
+    writer.writerows(individual_words['text'])
 
 print(req)    
  
