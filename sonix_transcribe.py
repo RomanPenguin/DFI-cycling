@@ -1,3 +1,4 @@
+from turtle import textinput
 from numpy import append
 import requests
 
@@ -51,17 +52,86 @@ for item in results:
         count +=1
         specific_word.clear()
 
+sentences = []
+# start and end times are elapsed in seconds
+#format = start_time, end_time, sentence
+new_sentence = True
+
+for counter, words in enumerate(individual_words):
+    numberKey = individual_words[counter]
+    word = numberKey['text']
+    if new_sentence:
+        sentence_temp = ''
+        times_and_sentence = []
+        
+        if ('.' in word):
+            times_and_sentence.append(numberKey['start time'])
+            times_and_sentence.append(numberKey['end_time'])
+            times_and_sentence.append(word)
+            sentences.append(times_and_sentence)
+            new_sentence = True
+        else:
+            times_and_sentence.append(numberKey['start time'])
+            sentence_temp += word
+            new_sentence = False
+    else:
+        if ('.' in word):
+            times_and_sentence.append(numberKey['end_time'])
+            sentence_temp += word
+            times_and_sentence.append(sentence_temp)
+            sentences.append(times_and_sentence)
+            new_sentence = True
+        else:
+            sentence_temp += word
+            new_sentence = False
+
+        
+
+
+
    
 outputFilePath = "output/sonix1"
 # csv header
 fieldnames = ['start_time', 'end_time', 'alternatives', 'type']
-# print(data_json)
+#print(data_json)
+headerIndividualWords = ['start_time','end_time','word']
 if os.path.isdir(outputFilePath) != True:
-    os.mkdir(outputFilePath)
+   os.mkdir(outputFilePath)
 with open(outputFilePath + "/words.csv", 'w', encoding='UTF8', newline='') as f:
-    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    #writer = csv.DictWriter(f, fieldnames=fieldnames)
     #writer.writeheader()
-    writer.writerows(individual_words['text'])
+    writer = csv.writer(f)
+    writer.writerow(headerIndividualWords)
+    i = len(individual_words)
+    y = 0
+    while y < i:
+        rowToWrite = []
+        numberKey = individual_words[y]
+        rowToWrite.append(numberKey['start time'])
+        rowToWrite.append(numberKey['end_time'])
+        textWrite = numberKey['text']
+        textWrite = textWrite.replace('"', '')
+        textWrite = textWrite.replace(',', '')
+        textWrite = textWrite.replace('.', '')
+        textWrite = textWrite.strip()
+        rowToWrite.append(textWrite)
+        writer.writerow(rowToWrite)
+        y = y + 1
 
-print(req)    
+f.close()
+
+headerSentences = ['start_time','end_time','sentence']
+
+with open(outputFilePath + "/sentences.csv", 'w', encoding='UTF8', newline='') as g:
+    #writer = csv.DictWriter(f, fieldnames=fieldnames)
+    #writer.writeheader()
+    writer = csv.writer(g)
+    writer.writerow(headerSentences)
+
+    for individualSentences in sentences:
+        writer.writerow(individualSentences)
+
+g.close()
+
+
  
