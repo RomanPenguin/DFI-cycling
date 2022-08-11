@@ -16,8 +16,16 @@ from bicyclewebsite.dataportal.generate_results import individual_words
 sonixkeyfile = "/home/openface/Documents/sonixkey.txt"
 
 
+# curl -XPOST https://api.sonix.ai/v1/media -H "Authorization: Bearer <API Key>"  \
+#   -F file=@my_audio.mp3 \
+#   -F language=en \
+#   -F name='Podcast Episode 45' \
+#   -F keywords='Sonix, Bergamasco, Kairos, Chewbacca' \
+#   -F custom_data='{"internal_id": "123412", "customer_email": "joey@sonix.ai"}' 
+
 
 api_url = "https://api.sonix.ai/v1/media"
+
 media_id = "2VdmWL5Q"
 # /v1/media/<media id>/transcript 
 download_url = api_url+"/"+media_id+"/transcript.json"
@@ -25,6 +33,17 @@ with open(sonixkeyfile) as f:
     sonixkey = f.read().splitlines()
 # headers = {'Accept': 'application/json'}
 headers = {'Authorization': sonixkey[0]}
+
+files = {
+    'file': open('/home/openface/Music/sonixtest.mp3', 'rb'),
+    'language': (None, 'en'),
+    'name': (None, 'sonixtest')
+}
+
+response = requests.post('https://api.sonix.ai/v1/media', headers=headers, files=files)
+
+
+
 fileslist = requests.get(api_url+"?page=0", headers=headers)
 
 req = requests.get(download_url, headers=headers)
