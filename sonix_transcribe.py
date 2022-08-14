@@ -19,7 +19,7 @@ sonixkeyfile = "/home/tommy/Documents/sonixKey.txt"
 
 
 api_url = "https://api.sonix.ai/v1/media"
-media_id = "2VdmWL5Q"
+media_id = "QnVba9MQ"
 # /v1/media/<media id>/transcript 
 download_url = api_url+"/"+media_id+"/transcript.json"
 with open(sonixkeyfile) as f:
