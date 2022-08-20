@@ -23,7 +23,7 @@ from zipfile import ZipFile
 
 # default_save = '/home/tommy/Documents/output'
 default_save = '/home/openface/Documents/output/'
-
+sonixKeyFile = "/home/openface/Documents/sonixkey.txt"
 dictionaryPath = 'Dictionary.txt'
 #dictionaryPath = '/home/ubuntu/webserver/DFI-cycling/Dictionary.txt'
 @login_required
@@ -458,7 +458,7 @@ def generate_raw_results(request,sessionID):
             
         }
         # t = threading.Thread(target=results_gen,args=[sessionID])
-        t = threading.Thread(target=raw_analysis,args=[inputFile,default_save+str(sessionID)])
+        t = threading.Thread(target=raw_analysis,args=[inputFile,default_save+str(sessionID),sonixKeyFile])
         
     except:
         return HttpResponseForbidden()

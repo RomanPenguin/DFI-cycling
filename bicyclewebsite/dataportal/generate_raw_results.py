@@ -7,6 +7,19 @@ import json
 from dataclasses import dataclass, field
 from zipfile import ZipFile 
 
+from turtle import textinput
+from numpy import append
+import requests
+import time
+
+from requests.auth import HTTPBasicAuth
+import requests
+import os, csv
+
+import scipy as sp
+
+
+
 
 
 import time
@@ -34,7 +47,7 @@ s3 = boto3.client('s3')
 
 
 
-def raw_analysis(inputFile, outputFile) -> None:
+def raw_analysis(inputFile, outputFile, sonixKeyFile) -> None:
     #inputFile['rawAudioFile','rawVideoFile','sessionID']
     #outputFile['path_to_output_folder']
 
@@ -43,7 +56,7 @@ def raw_analysis(inputFile, outputFile) -> None:
     if inputFile['rawVideoFile'] != '':
         emotions(inputFile['rawVideoFile'],outputFile)
     if inputFile['rawAudioFile'] != '':
-        transcribe(inputFile['rawAudioFile'],outputFile)
+        transcribe(inputFile['rawAudioFile'],outputFile,sonixKeyFile)
 
     def zip_write(zip, filename):
         zip.write(filename, os.path.basename(filename))
@@ -190,301 +203,159 @@ def emotions(inputFile,outputFile):
 
 
 
-def transcribe(inputFile, outputFile):
-    # define input file and output file
-    inputFilePath = inputFile
-    outputFilePath = outputFile
-    
-    print('Input file is "' + inputFilePath)
-    print('Output file is "' + outputFilePath)
-    inputFileName = os.path.basename(inputFilePath)
+def transcribe(inputFilePath,outputFilePath,sonixkeyfile):
 
-    filename, file_extension = os.path.splitext(inputFilePath)
-    audio_format = str(file_extension)
-    accepted_format = ["mp3", "mp4", "wav", "flac", "ogg", "amr", "webm"]
-    if audio_format[1:] in accepted_format:
-        print("audio format accepted")
-    else:
-        print("audio format not supported please convert to mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm'")
-        sys.exit()
 
-    input_audio_bucket = "input-audio-dfi-web"
-    output_transcription_bucket = "transcribe-output-dfi-web"
-    create_bucket(input_audio_bucket)
-    create_bucket(output_transcription_bucket)
-    with open(inputFilePath, "rb") as f:
-        s3.upload_file(inputFilePath, input_audio_bucket, inputFileName)
+    api_url = "https://api.sonix.ai/v1/media"
 
-    # start transcription
-    transcribe = boto3.client('transcribe')
-    job_name = inputFileName
-    job_uri = "s3://" + input_audio_bucket + "/" + inputFileName
     try:
-        transcribe.delete_transcription_job(
-            TranscriptionJobName=job_name
-        )
-        timer_begin = time.perf_counter()
-        print('timer begin')
+        with open(sonixkeyfile) as f:
+            sonixkey = f.read().splitlines()
+        # headers = {'Accept': 'application/json'}
+        headers = {'Authorization': sonixkey[0]}
     except:
-        print("no existing job name clash")
-        timer_begin = time.perf_counter()
-        print('timer begin')
-    transcribe.start_transcription_job(
-        TranscriptionJobName=job_name,
-        Media={'MediaFileUri': job_uri},
-        MediaFormat=audio_format[1:],  # MediaFormat='mp3'|'mp4'|'wav'|'flac'|'ogg'|'amr'|'webm',
-        LanguageCode='en-AU',
-        OutputBucketName=output_transcription_bucket
-    )
+        print("no sonix key! please check key location")
 
-    # waiting for async response
+
+    files = {
+        'file': open(inputFilePath, 'rb'),
+        'language': (None, 'en'),
+        'name': (None, 'sonixtest')
+    }
+
+    response = requests.post('https://api.sonix.ai/v1/media', headers=headers, files=files)
+
+    uploadInfo = response.json()
+
+    # while True:
+    #     headers = {
+    #     'Authorization': sonixkey[0],
+    #     }
+
+    #     response = requests.get('https://api.sonix.ai/v1/media/'+uploadInfo["id"], headers=headers)
+    #     if response.json()["status_code"]=="200":
+    #         break
+    #     else:
+    #         time.sleep(5)
+
+    media_id = response.json()["id"]
+    # /v1/media/<media id>/transcript 
+    download_url = api_url+"/"+media_id+"/transcript.json"
+    headers = {'Authorization': sonixkey[0]}
+
     while True:
-        status = transcribe.get_transcription_job(TranscriptionJobName=job_name)
-        if status['TranscriptionJob']['TranscriptionJobStatus'] in ['COMPLETED', 'FAILED']:
+
+        req = requests.get(download_url, headers=headers)
+        req = req.json()
+        try:
+            if req["code"]==409:
+                time.sleep(5)
+        except:
             break
-        print("Not ready yet...")
-        time.sleep(5)
-    print(status)
 
-    # save transcription as json
-    timer_end = time.perf_counter()
-    print("total time taken in seconds is " + str(timer_end - timer_begin))
-    result_url = status["TranscriptionJob"]["Transcript"]["TranscriptFileUri"]
+    results = req
+    results = results['transcript']
 
-    # get the results from s3 bucket
-    entire_transcript_1, sentences_and_times_1, confidences_1, scores_1 = get_transcript_text_and_timestamps(
-        output_transcription_bucket, job_name + ".json")
-    # show_conf_hist(scores_1)
-    # show_conf_hist(scores_1)
+    wordlist = []
+    starttimelist = []
+    stoptimelist = []
+    individual_words = {}
+    specific_word={}
+    count = 0
 
-    # show_low_conf(scores_1)
+    for item in results:
+        for word in item["words"]:
+            specific_word["text"]=word["text"]
+            wordlist.append(word['text'])
+            specific_word["start time"]=word["start_time"]
+            starttimelist.append(word['start_time'])
+            specific_word["end_time"]=word["end_time"]
+            stoptimelist.append(word['end_time'])
+            individual_words[count]=specific_word.copy()
+            count +=1
+            specific_word.clear()
 
-    s3_clientobj = s3.get_object(Bucket=output_transcription_bucket, Key=job_name + ".json")
-    s3_clientdata = s3_clientobj["Body"].read().decode("utf-8")
+    sentences = []
+    # start and end times are elapsed in seconds
+    #format = start_time, end_time, sentence
+    new_sentence = True
 
-    data_json = json.loads(s3_clientdata)
-    individual_word_analysis = data_json["results"]["items"]
-    paragraphed_result = data_json["results"]["transcripts"][0]["transcript"]
+    for counter, words in enumerate(individual_words):
+        numberKey = individual_words[counter]
+        word = numberKey['text']
+        if new_sentence:
+            sentence_temp = ''
+            times_and_sentence = []
+            
+            if ('.' in word):
+                times_and_sentence.append(numberKey['start time'])
+                times_and_sentence.append(numberKey['end_time'])
+                times_and_sentence.append(word)
+                sentences.append(times_and_sentence)
+                new_sentence = True
+            else:
+                times_and_sentence.append(numberKey['start time'])
+                sentence_temp += word
+                new_sentence = False
+        else:
+            if ('.' in word):
+                times_and_sentence.append(numberKey['end_time'])
+                sentence_temp += word
+                times_and_sentence.append(sentence_temp)
+                sentences.append(times_and_sentence)
+                new_sentence = True
+            else:
+                sentence_temp += word
+                new_sentence = False
 
+            
+
+
+
+    
     # csv header
     fieldnames = ['start_time', 'end_time', 'alternatives', 'type']
-    # print(data_json)
+    #print(data_json)
+    headerIndividualWords = ['start_time','end_time','word']
     if os.path.isdir(outputFilePath) != True:
         os.mkdir(outputFilePath)
     with open(outputFilePath + "/words.csv", 'w', encoding='UTF8', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(individual_word_analysis)
+        #writer = csv.DictWriter(f, fieldnames=fieldnames)
+        #writer.writeheader()
+        writer = csv.writer(f)
+        writer.writerow(headerIndividualWords)
+        i = len(individual_words)
+        y = 0
+        while y < i:
+            rowToWrite = []
+            numberKey = individual_words[y]
+            rowToWrite.append(numberKey['start time'])
+            rowToWrite.append(numberKey['end_time'])
+            textWrite = numberKey['text']
+            textWrite = textWrite.replace('"', '')
+            textWrite = textWrite.replace(',', '')
+            textWrite = textWrite.replace('.', '')
+            textWrite = textWrite.strip()
+            rowToWrite.append(textWrite)
+            writer.writerow(rowToWrite)
+            y = y + 1
 
-    # with open(outputFilePath+".txt","w") as f:
-    #   f.write(paragraphed_result)
+    f.close()
 
-    # with open(outputFilePath + "_sentences.csv", 'w') as f:
-    #    for items in sentences_and_times_1:
-    #        print(items, file=f)
+    headerSentences = ['start_time','end_time','sentence']
 
-    with open(outputFilePath + "/sentences.csv", 'w', newline='') as f:
-        writer = csv.writer(f, delimiter=',')
-        writer.writerows(sentences_and_times_1)
-        # writer.writerows(sentences_and_times_1)
+    with open(outputFilePath + "/sentences.csv", 'w', encoding='UTF8', newline='') as g:
+        #writer = csv.DictWriter(f, fieldnames=fieldnames)
+        #writer.writeheader()
+        writer = csv.writer(g)
+        writer.writerow(headerSentences)
 
+        for individualSentences in sentences:
+            writer.writerow(individualSentences)
 
-def upload_file(file_name, bucket, object_name=None):
-    """Upload a file to an S3 bucket
-    :param file_name: File to upload
-    :param bucket: Bucket to upload to
-    :param object_name: S3 object name. If not specified then file_name is used
-    :return: True if file was uploaded, else False
-    """
-
-    # If S3 object_name was not specified, use file_name
-    if object_name is None:
-        object_name = os.path.basename(file_name)
-
-    # Upload the file
-    s3_client = boto3.client('s3')
-    try:
-        response = s3_client.upload_file(file_name, bucket, object_name)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
+    g.close()
 
 
-def create_bucket(bucket_name, region=None):
-    """Create an S3 bucket in a specified region
-    If a region is not specified, the bucket is created in the S3 default
-    region (us-east-1).
-    :param bucket_name: Bucket to create
-    :param region: String region to create bucket in, e.g., 'us-west-2'
-    :return: True if bucket created, else False
-    """
-
-    # Create bucket
-    try:
-        if region is None:
-            s3_client = boto3.client('s3')
-            s3_client.create_bucket(Bucket=bucket_name)
-        else:
-            s3_client = boto3.client('s3', region_name=region)
-            location = {'LocationConstraint': region}
-            s3_client.create_bucket(Bucket=bucket_name,
-                                    CreateBucketConfiguration=location)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
-
-
-def get_transcript_text_and_timestamps(bucket_name, file_name):
-    """take json file from S3 bucket and returns a tuple of:
-       entire transcript, list object of tuples of timestamp and individual sentences
-
-    Args:
-        bucket_name (str): name of s3 bucket
-        file_name (str): name of file
-    Returns:
-        (
-        entire_transcript: str,
-        sentences_and_times: [ {start_time (sec) : float,
-                                end_time (sec)   : float,
-                                sentence         : str,
-                                min_confidence   : float (minimum confidence score of that sentence)
-                                } ],
-        confidences:  [ {start_time (sec) : float,
-                         end_time (sec)   : float,
-                         content          : str, (single word/phrase)
-                         confidence       : float (confidence score of the word/phrase)
-                         } ],
-        scores: list of confidence scores
-        )
-    """
-    s3_clientobj = s3.get_object(Bucket=bucket_name, Key=file_name)
-    s3_clientdata = s3_clientobj["Body"].read().decode("utf-8")
-
-    original = json.loads(s3_clientdata)
-    items = original["results"]["items"]
-    entire_transcript = original["results"]["transcripts"]
-
-    sentences_and_times = []
-    temp_sentence = ""
-    temp_start_time = 0
-    temp_min_confidence = 1.0
-    newSentence = True
-
-    confidences = []
-    scores = []
-    temp = []
-
-    i = 0
-    for item in items:
-        # always add the word
-        if item["type"] == "punctuation":
-            temp_sentence = (
-                    temp_sentence.strip() + item["alternatives"][0]["content"] + " "
-            )
-        else:
-            temp_sentence = temp_sentence + item["alternatives"][0]["content"] + " "
-            temp_min_confidence = min(temp_min_confidence,
-                                      float(item["alternatives"][0]["confidence"]))
-            confidences.append({"start_time": float(item["start_time"]),
-                                "end_time": float(item["end_time"]),
-                                "content": item["alternatives"][0]["content"],
-                                "confidence": float(item["alternatives"][0]["confidence"])
-                                })
-            scores.append(float(item["alternatives"][0]["confidence"]))
-
-        # if this is a new sentence, and it starts with a word, save the time
-        if newSentence == True:
-            if item["type"] == "pronunciation":
-                temp_start_time = float(item["start_time"])
-            newSentence = False
-        # else, keep going until you hit a punctuation
-        else:
-            if (
-                    item["type"] == "punctuation"
-                    and item["alternatives"][0]["content"] != ","
-            ):
-                # end time of sentence is end_time of previous word
-                end_time = items[i - 1]["end_time"] if i - 1 >= 0 else items[0]["end_time"]
-
-                temp = []
-                temp.append(temp_start_time)
-                temp.append(float(end_time))
-                temp.append(temp_sentence.strip())
-                temp.append(temp_min_confidence)
-
-                sentences_and_times.append(temp)
-
-                temp = []
-
-                # sentences_and_times.append(temp_start_time)
-                # sentences_and_times.append(end_time)
-                # sentences_and_times.append(temp_sentence.strip())
-                # sentences_and_times.append(temp_min_confidence)
-
-                # sentences_and_times.append(
-                #    {temp_start_time,
-                #     end_time,
-                #     temp_sentence.strip(),
-                #    temp_min_confidence
-                #    }
-                # )
-                # reset the temp sentence and relevant variables
-                newSentence = True
-                temp_sentence = ""
-                temp_min_confidence = 1.0
-
-        i = i + 1
-
-    temp.append(temp_start_time)
-    temp.append(confidences[-1]["end_time"])
-    temp.append(temp_sentence.strip())
-    temp.append(temp_min_confidence)
-
-    sentences_and_times.append(temp)
-
-    # sentences_and_times.append(temp_start_time)
-    # sentences_and_times.append(confidences[-1]["end_time"])
-    # sentences_and_times.append(temp_sentence.strip())
-    # sentences_and_times.append(temp_min_confidence)
-    # sentences_and_times.append(
-    #     {"start_time": temp_start_time,
-    #      "end_time": confidences[-1]["end_time"],
-    #     "sentence": temp_sentence.strip(),
-    #     "min_confidence": temp_min_confidence
-    #     }
-    # )
-    return entire_transcript, sentences_and_times, confidences, scores
-
-
-def show_conf_hist(all_scores):
-    plt.style.use('ggplot')
-
-    # flat_scores_list = [j for sub in all_scores for j in sub]
-    flat_scores_list = all_scores
-
-    plt.xlim([min(flat_scores_list) - 0.1, max(flat_scores_list) + 0.1])
-    plt.hist(flat_scores_list, bins=20, alpha=0.5)
-    plt.title('Distribution of confidence scores')
-    plt.xlabel('Confidence score')
-    plt.ylabel('Frequency')
-    plt.show()
-
-
-def show_low_conf(all_scores):
-    THRESHOLD = 0.4
-    # flat_scores_list = [j for sub in all_scores for j in sub]
-    flat_scores_list = all_scores
-    # Filter scores that are less than THRESHOLD
-    all_bad_scores = [i for i in flat_scores_list if i < THRESHOLD]
-    print(f"There are {len(all_bad_scores)} words that have confidence score less than {THRESHOLD}")
-    plt.xlim([min(all_bad_scores) - 0.1, max(all_bad_scores) + 0.1])
-    plt.hist(all_bad_scores, bins=20, alpha=0.5)
-    plt.title(f'Distribution of confidence scores less than {THRESHOLD}')
-    plt.xlabel('Confidence score')
-    plt.ylabel('Frequency')
-    plt.show()
 
 
 
