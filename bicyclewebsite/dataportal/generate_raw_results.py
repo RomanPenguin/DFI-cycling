@@ -44,7 +44,7 @@ from dataportal.emonet.basic import emonet_analysis
 s3 = boto3.client('s3')
 
 
-
+#to switch back to AWS, use generate_raw_results_aws.py instead
 
 
 def raw_analysis(inputFile, outputFile, sonixKeyFile) -> None:

@@ -8,6 +8,7 @@ import time
 import json
 from dataclasses import dataclass, field
 from zipfile import ZipFile 
+from gpxcsv import gpxtolist
 
 
 
@@ -402,7 +403,7 @@ class individual_words:
         with open(self.file_path) as transcribed_words:
             word_reader = csv.reader(transcribed_words)
             for individual_words in word_reader:
-                # if not individual_words[0].isalnum():
+                #if not individual_words[0].isalnum():
                 if skip_first == False:
                     word_time = float(individual_words[0])
                     plus_start = timedelta(seconds=word_time)
@@ -759,7 +760,7 @@ def analysis(inputFile, outputFile) -> None:
         emotions_gps_match_index = GPS.matching_indexes(Emotions.times)
         # check if the indexes exist
         if emotions_gps_match_index is None:
-            print(f"GPS times and emotions times have no overlaps. Must have input wrong files, double check you have input everything correctly.")
+            print(f"GPS times and emotions times have no overlaps. Must have input wrong files")
             print(f"The emotions 1st time is {Emotions.times[0]} and the gps first time is: {GPS.gps_times[0]}")
             exit()
     else:

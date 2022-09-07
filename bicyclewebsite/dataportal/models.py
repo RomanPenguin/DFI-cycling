@@ -70,6 +70,14 @@ class GPS(models.Model):
     def __str__(self):
         return self.fileName
 
+class GPX(models.Model):
+    fileName=models.CharField(max_length=200)
+    recordedTime=models.DateTimeField('date recorded')
+    #recordingSession= models.OneToOneField(RecordingSession, on_delete=models.CASCADE)
+    media = models.FileField(upload_to="media", null=True, blank=True)      
+    def __str__(self):
+        return self.fileName
+
 class Results(models.Model):
     fileName=models.CharField(max_length=200)
     #recordedTime=models.DateTimeField('date recorded')
@@ -89,6 +97,8 @@ class RecordingSession(models.Model):
     empatica_TEMP=models.OneToOneField(Empatica_TEMP,on_delete=models.CASCADE,null=True,blank=True)
     textFile=models.OneToOneField(TextFile,on_delete=models.CASCADE,null=True,blank=True)
     gPS=models.OneToOneField(GPS,on_delete=models.CASCADE,null=True,blank=True)
+    gPX=models.OneToOneField(GPX,on_delete=models.CASCADE,null=True,blank=True)
+
     results=models.OneToOneField(Results,on_delete=models.CASCADE,null=True,blank=True)
     def __str__(self):
         return self.sessionID

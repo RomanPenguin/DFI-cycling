@@ -12,7 +12,7 @@ from django.urls import reverse
 from django.http import HttpResponse
 from django.utils.translation import templatize
 from django import forms 
-from .models import AudioInput, Empatica_EDA, RecordingSession,  VideoInput, AudioWords, Empatica_EDA, Empatica_TEMP, TextFile, GPS, HRV, Results, RawVideoInput, RawAudioInput, RawProcessingResults
+from .models import AudioInput, Empatica_EDA, RecordingSession,  VideoInput, AudioWords, Empatica_EDA, Empatica_TEMP, TextFile, GPS, GPX, HRV, Results, RawVideoInput, RawAudioInput, RawProcessingResults
 from django.forms import ModelForm
 from django.utils.timezone import localtime
 from django.contrib.auth.decorators import login_required
@@ -125,13 +125,18 @@ def detail(request, sessionID):
         gps = session.gPS
     except session.gPS.DoesNotExist: 
         raise Http404("gps file does not exist")
+    
+    try:
+        gpx = session.gPX
+    except session.gPX.DoesNotExist: 
+        raise Http404("gpx file does not exist")
 
     try:
         results = session.results
     except session.results.DoesNotExist: 
         results = Results(fileNme='no results')
 
-    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'audioWords': audioWords, 'empatica_EDA':empatica_EDA, 'empatica_TEMP':empatica_TEMP, 'textFile':textFile, 'gPS':gps, 'results':results})
+    return render(request, 'dataportal/detail.html', {'session': session, 'audioInput':audio, 'videoInput':video,'hRV':hrv, 'audioWords': audioWords, 'empatica_EDA':empatica_EDA, 'empatica_TEMP':empatica_TEMP, 'textFile':textFile, 'gPS':gps,'gPX':gpx, 'results':results})
     #return HttpResponse("You are looking at session %s" % sessionID)
 
 @login_required
@@ -176,6 +181,8 @@ def newSession(request):
         empatica_TEMPUpload=forms.FileField(allow_empty_file=True, required= False)
         textFileUpload=forms.FileField(allow_empty_file=True, required= False)
         gpsUpload=forms.FileField(allow_empty_file=True, required= False)
+        gpxUpload=forms.FileField(allow_empty_file=True, required= False)
+
 
         sessionID=forms.CharField(max_length=100)
         participantID=forms.CharField(max_length=100)
@@ -231,8 +238,14 @@ def newSession(request):
                 newGpsFile.save()
             except:
                 newGpsFile = None
+            
+            try:
+                newGpxFile=GPX(fileName=request.FILES['gpxUpload'].name,recordedTime=timezone.localtime(),media=request.FILES['gpxUpload'])
+                newGpxFile.save()
+            except:
+                newGpxFile = None
 
-            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile,hRV=newHrvFile,audioWords=newAudioWordsFile, empatica_EDA=newEmpatica_EDAFile,empatica_TEMP=newEmpatica_TEMPFile, textFile=newTextFileFile, gPS=newGpsFile)
+            session=RecordingSession(sessionID=form.cleaned_data['sessionID'],participantID=form.cleaned_data['participantID'],audioInput=newAudioFile,videoInput=newVideoFile,hRV=newHrvFile,audioWords=newAudioWordsFile, empatica_EDA=newEmpatica_EDAFile,empatica_TEMP=newEmpatica_TEMPFile, textFile=newTextFileFile, gPS=newGpsFile, gPX=newGpxFile)
             session.save()
             return HttpResponseRedirect(reverse('dataportal:detail', args=(form.cleaned_data['sessionID'],))) 
     else:
@@ -267,6 +280,10 @@ def generate_results(request,sessionID):
             gpsFile = session.gPS.media.path
         except:
             gpsFile=''
+        try:
+            gpxFile = session.gPX.media.path
+        except:
+            gpxFile=''
         try:     
             emotionsFile = session.videoInput.media.path
         except:
@@ -302,6 +319,7 @@ def generate_results(request,sessionID):
         inputFile= {
             'sessionID' : str(sessionID),
             'gps' : gpsFile,
+            'gpx' : gpxFile,
             'emotions' : emotionsFile,
             'audio_sentences' : audioSentencesFile,
             'audio_words' : audioWordsFile,
