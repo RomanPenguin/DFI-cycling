@@ -217,13 +217,14 @@ def transcribe(inputFilePath,outputFilePath,sonixkeyfile):
         print("no sonix key! please check key location")
 
 
+    filename = os.path.basename(inputFilePath)
     files = {
         'file': open(inputFilePath, 'rb'),
         'language': (None, 'en'),
-        'name': (None, 'sonixtest')
+        'name': (None, filename)
     }
 
-    response = requests.post('https://api.sonix.ai/v1/media', headers=headers, files=files)
+    response = requests.post('https://api.sonix.ai/v1/media', headers=headers, files=files, timeout = 180)
 
     uploadInfo = response.json()
 
