@@ -16,7 +16,8 @@ from natsort import natsorted
 from dataportal.emonet.emonet.models import EmoNet
 import matplotlib.pyplot as plt
 import csv, os, array
-
+import time
+import numpy as np
 
 def emonet_analysis(inputImage):
 
@@ -68,44 +69,58 @@ def emonet_analysis(inputImage):
     progress = 0
     totalcount = len(allpics)
     for i in allpics:
+        start_time = time.perf_counter()
         progress += 1
         print(f"{progress}/{totalcount}\n")
-        image1 = DeepFace.detectFace(imagefolder+"/"+i, target_size = (256, 256), detector_backend = backends[0], enforce_detection = False )
-        # plt.imshow(image1)
         
-        # plt.imshow(  image1.permute(1, 2, 0) )
+        try:
+            image1 = DeepFace.detectFace(imagefolder+"/"+i, target_size = (256, 256), detector_backend = backends[5], enforce_detection = True )
+        
+            
+            # plt.imshow(image1)
+            
+            # plt.imshow(  image1.permute(1, 2, 0) )
 
 
-        image1 = np.ascontiguousarray(image1)
+            image1 = np.ascontiguousarray(image1)
 
-        test_image1 = transform_image_og(image1)
-        # plt.imshow(  test_image2.permute(1, 2, 0) )
+            test_image1 = transform_image_og(image1)
+            plt.imshow(  test_image1.permute(1, 2, 0) )
 
-        # test_image = [test_image1,test_image2]
+            # test_image = [test_image1,test_image2]
 
-        test_image1 = test_image1.unsqueeze(0)
+            test_image1 = test_image1.unsqueeze(0)
 
-        images1 = test_image1.to(device)
-        with torch.no_grad():
-            out1 = net(images1)
+            images1 = test_image1.to(device)
+            with torch.no_grad():
+                out1 = net(images1)
 
 
-        # print(out1)
+            # print(out1)
 
-        expression_pred = out1['expression']
-        emo_pred = out1['expression'].numpy()[0]
-        emo_pred = np.where(emo_pred == np.amax(emo_pred))[0]
-        emo_pred = expressions_list[emo_pred[0]]
-        valence_pred = out1['valence']
-        arousal_pred = out1['arousal'] 
+            expression_pred = out1['expression']
+            emo_pred = out1['expression'].numpy()[0]
+            emo_pred = np.where(emo_pred == np.amax(emo_pred))[0]
+            emo_pred = expressions_list[emo_pred[0]]
+            valence_pred = out1['valence']
+            arousal_pred = out1['arousal'] 
 
-        result= {"filename":i, 
-            "expression_pred" : expression_pred, 
-            "valence_pred" : valence_pred, 
-            "arousal_pred" : arousal_pred,
-            "emo_pred" : emo_pred }
+            result= {"filename":i, 
+                "expression_pred" : expression_pred, 
+                "valence_pred" : valence_pred, 
+                "arousal_pred" : arousal_pred,
+                "emo_pred" : emo_pred }
+        
+        except:
+            result= {"filename":i, 
+                "expression_pred" : "no face", 
+                "valence_pred" : torch.tensor([0]), 
+                "arousal_pred" : torch.tensor([0]),
+                "emo_pred" : "no face" }
+            print("no face detected")
         predictions.append(result)
-
+        end_time = time.perf_counter()
+        print(f"image processed in {start_time - end_time:0.4f} seconds")
     
     return predictions
 

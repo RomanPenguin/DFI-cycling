@@ -10,10 +10,6 @@ from zipfile import ZipFile
 from turtle import textinput
 from numpy import append
 import requests
-import time
-
-from requests.auth import HTTPBasicAuth
-import requests
 import os, csv
 
 import scipy as sp
@@ -224,7 +220,7 @@ def transcribe(inputFilePath,outputFilePath,sonixkeyfile):
         'name': (None, filename)
     }
 
-    response = requests.post('https://api.sonix.ai/v1/media', headers=headers, files=files, timeout = 180)
+    response = requests.post('https://api.sonix.ai/v1/media', headers=headers, files=files, timeout = 5)
 
     uploadInfo = response.json()
 
